@@ -8,7 +8,15 @@
   - Arch/Fedora: stock `python`/`python3` already bundles both.
   - macOS: any `python3` on `PATH` (python.org, Homebrew, or Xcode CLT).
 
-Disk: ~400MB for SDK + venv, plus ~3.5GB once the editor builds `.godot/imported`. GPU/Vulkan drivers only matter for the graphical editor; headless import and tests run display-less.
+Disk: repo checkout is ~200MB; allow ~3.5GB more once the editor builds `.godot/imported`. GPU/Vulkan drivers only matter for the graphical editor; headless import and tests run display-less.
+
+## Install (overlay)
+
+This repo is a patch set, not a full SDK: `docs/`, `python/` (Windows-only bundle), and `FbExportData/` (level list, export data, thumbnails — required at runtime) are pruned and must come from the official SDK. Extract pristine **2.1.1.0**, then copy this repo over it:
+
+```bash
+rsync -a --exclude='.godot' --exclude='venv/' ./ /path/to/PortalSDK-2.1.1.0/
+```
 
 ## Start
 
@@ -24,20 +32,21 @@ godot --editor --path GodotProject
 
 Opening the project needs no setup. Exporting levels or experience bundles does — both run through the Python environment. Press the Portal Tools dock's **Setup** button in the editor before exporting.
 
-Requires native Python 3 with venv/pip support and network access for installation. No Wine, PowerShell, or Windows Python is used on Linux.
+Requires native Python 3 with venv/pip support. No Wine, PowerShell, or Windows Python is used on Linux.
 
 ## Provenance and changes
 
 Linux port originally developed against 1.3.2.0/1.3.3.0 and refined on 1.4.3.0, re-applied here onto pristine **2.1.1.0** (which retains its new carrier/community-map data, terrain_3d plugin, and bundle exporter schema — no older SDK files were substituted wholesale).
 
 - Native setup and level export, with project-relative paths resolved to absolute paths (`portal_plugin.gd`: `read_config()` + `venv_python()`).
-- Setup passes argument arrays via `setup_portal.py` rather than interpolating paths into shell/powershell commands; existing environments are updated, not recursively deleted (`portal_tools_dock.gd`).
+- Setup calls `python3 -m venv` / `pip` directly via `OS.execute` argv arrays — no shell strings, no helper scripts; existing environments are updated, not recursively deleted (`portal_tools_dock.gd`).
 - Native cryptographic UUIDv4 generation for experience attachments, no Windows-Python subprocess (`attachment.gd`).
 - Fixed experience export directory creation and write-error handling (`experience_exporter_export.gd`, also `.spatial.json` export-path lookup).
 - Corrected gameplay resource capitalization in 89 supplied scenes (`tests/fix_resource_case.py`; originals under `.linux-port-backup/`, which is git-ignored and not committed).
 - Fixed the detached object-library preview viewport leaking at shutdown (`scene_library.gd`).
 - Matching plugin changes live in the single canonical copy at `GodotProject/addons` (the copy Godot loads; upstream's `code/gdplugins` staging duplicates are untracked — they had already drifted, e.g. stale `terrain_decal/bounds.json`).
 - New: `tests/` (case-fix audit + headless smoke test), `export/levels/`.
+- Dropped bulk (overlay from the official SDK): `docs/`, `python/`, `FbExportData/`. Note this also drops Windows setup support — `python/` was the Windows interpreter bundle, and that path is untested here.
 
 ## Validation (2026-10-20, Godot 4.7.2.stable.arch_linux.ed1daf0bf)
 
@@ -65,16 +74,17 @@ Battlefield/web-builder upload, in-game behavior, remote downloads, and exhausti
 
 ## Tracking future SDK updates
 
-This repo mirrors the official SDK so upstream changes stay visible as diffs. When a new SDK drops:
+This repo tracks the official SDK as an overlay, so upstream changes stay visible as diffs. When a new SDK drops, sync its tracked subset over a clean checkout:
 
 ```bash
 rsync -a --delete --exclude='.godot' --exclude='*.exe' --exclude='venv/' \
-  --exclude='__pycache__/' "/path/to/new/SDK/" .
+  --exclude='__pycache__/' --exclude='docs/' --exclude='python/' \
+  --exclude='FbExportData/' "/path/to/new/SDK/" .
 git status  # review, then commit the pristine update first, port fixes second
 ```
 
 Notes:
 
-- Keep the two-commit discipline (pristine update, then Linux-port re-application) so the port stays rebaseable.
+- Keep the commit discipline (pristine update, then Linux-port re-application, then docs) so the port stays rebaseable.
 - `code/gdplugins/bf_portal/` and `code/gdplugins/scene-library/` are intentionally untracked. Diff the new SDK's copies of those trees against this repo's `GodotProject/addons/` before assuming they match — upstream lets them drift.
 - Never commit `.godot/`, `venv/`, `export/` contents, `*.uid` noise, or validation logs (all ignored).
