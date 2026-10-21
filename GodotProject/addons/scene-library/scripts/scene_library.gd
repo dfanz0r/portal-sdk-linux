@@ -389,6 +389,11 @@ func _exit_tree() -> void:
 	if _thread.is_started():
 		_thread.wait_to_finish()
 
+	# Detached nodes are not freed with their parent. Release the preview world
+	# only after its worker has stopped using it.
+	_viewport.free()
+	_viewport = null
+
 
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	if not _item_list.get_rect().has_point(at_position):

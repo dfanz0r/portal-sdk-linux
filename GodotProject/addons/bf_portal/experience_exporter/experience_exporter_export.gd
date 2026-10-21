@@ -188,9 +188,14 @@ func _export_experience(_mod_package: ModPackage, _selected_levels: Array[Dictio
 		_skel_data["workspace"] = _workspace["workspace"]
 		_skel_data["mapRotation"] = _map_rotation["mapRotation"]	
 		
-		DirAccess.make_dir_recursive_absolute(_config["modExportDir"].path_join(_target_full_path))
+		if DirAccess.make_dir_recursive_absolute(_target_full_path) != OK:
+			printerr("Cannot create export directory: %s" % _target_full_path)
+			return
 		print(_target_full_path.path_join(_target_file_name))
 		var _output = FileAccess.open(_target_full_path.path_join(_target_file_name), FileAccess.WRITE)
+		if _output == null:
+			printerr("Cannot write experience bundle: %s" % FileAccess.get_open_error())
+			return
 		_output.store_string(JSON.stringify(_skel_data))
 		_output.close()
 		
@@ -207,16 +212,13 @@ func _sanitize(_str: String ) -> String:
 	return _regex.sub(_str, "", true).to_lower()
 
 func _enforce_export_dir(_dir: String) -> bool: 
-	var _dir_access = DirAccess.open("res://")
-
 	if not _dir:
 		printerr("modExportDir not defined in config")
 		return false
-	else:
-		if not _dir_access.dir_exists(_dir):
-			_dir_access.make_dir(_dir)
-			
-	return true
+	var error = DirAccess.make_dir_recursive_absolute(_dir)
+	if error != OK:
+		printerr("Cannot create export directory %s: %s" % [_dir, error_string(error)])
+	return error == OK
 
 func _export_success_window(mod_export_info: ModExportInfo) -> void:
 	var window_success: Window = _window_success.instantiate()

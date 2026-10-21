@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://cwah5lwktvild"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_yltdr"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="1_yltdr"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_1dfgw"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_7mmav"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="4_1rowh"]
 [ext_resource type="PackedScene" path="res://static/MP_Abbasid_Terrain.tscn" id="5_8goo6"]
 [ext_resource type="PackedScene" path="res://static/MP_Abbasid_Assets.tscn" id="6_uy26l"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/Sector.tscn" id="7_uyi5m"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/AreaTrigger.tscn" id="9_ab7su"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Rush/MCOM.tscn" id="77_4rhrh"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="81_ja226"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/Sector.tscn" id="7_uyi5m"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/AreaTrigger.tscn" id="9_ab7su"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/rush/MCOM.tscn" id="77_4rhrh"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="81_ja226"]
 
 [node name="MP_Abbasid" type="Node3D" unique_id=555030307]
 

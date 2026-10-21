@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/VehicleSpawner.tscn" id="1_tpxny"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="2_4pgwx"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="5_ik4sk"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="5_ik4sk"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="6_rj4xk"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="7_ani47"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="8_j2mdv"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="7_ani47"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="8_j2mdv"]
 [ext_resource type="PackedScene" path="res://objects/fx/FX_Cloud_Cluster.tscn" id="9_6ebwl"]
 [ext_resource type="PackedScene" path="res://objects/fx/FX_Cloud_Cluster_Storm.tscn" id="9_6ebwm"]
 [ext_resource type="PackedScene" path="res://objects/fx/FX_Cloud_Cluster_Towering.tscn" id="9_6ebwn"]

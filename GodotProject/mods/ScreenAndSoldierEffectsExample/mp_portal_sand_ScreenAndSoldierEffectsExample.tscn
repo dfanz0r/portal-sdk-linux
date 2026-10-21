@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dyydaf1so21ng"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_8hs3b"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="1_8hs3b"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_7oknr"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_rniik"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_gok6l"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_t5gch"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="4_gok6l"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_t5gch"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/Sector.tscn" id="6_3b3e3"]
 [ext_resource type="PackedScene" path="res://objects/props/FridgeShop_01.tscn" id="7_eb5ee"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/InteractPoint.tscn" id="8_8jsjf"]

@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://c37c04kbpq4c5"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_1sfqm"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="4_1sfqm"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="5_mis5y"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/Sector.tscn" id="6_xg67a"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="7_sqw0o"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/Sector.tscn" id="6_xg67a"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="7_sqw0o"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="8_rbytg"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/VehicleSpawner.tscn" id="9_rkcwc"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Conquest/CapturePoint.tscn" id="10_sbw5s"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/AI/AI_Spawner.tscn" id="11_71y02"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/conquest/CapturePoint.tscn" id="10_sbw5s"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/ai/AI_Spawner.tscn" id="11_71y02"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/FixedCamera.tscn" id="11_s3sla"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/vehicles/VEH_Stationary_AutomaticAA.tscn" id="12_27er3"]
 [ext_resource type="PackedScene" path="res://objects/props/MannequinRotation_01.tscn" id="12_848du"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/InteractPoint.tscn" id="13_qyfuu"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/InteractPoint.tscn" id="13_qyfuu"]
 
 [node name="Conquest Prefab" type="Node3D" unique_id=678019033]
 

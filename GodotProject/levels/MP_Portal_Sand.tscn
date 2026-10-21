@@ -2,10 +2,10 @@
 
 [ext_resource type="PackedScene" path="res://static/MP_Portal_Sand_Terrain.tscn" id="0"]
 [ext_resource type="PackedScene" path="res://static/MP_Portal_Sand_Assets.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="3_gpygh"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="3_gpygh"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="4_rqhvo"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_rqhvo"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="5_yekfn"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_rqhvo"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="5_yekfn"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="6_m4cx0"]
 
 [node name="MP_Portal_Sand" type="Node3D" unique_id=1809329412]

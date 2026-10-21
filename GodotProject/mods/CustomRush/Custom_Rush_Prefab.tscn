@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://d1xdufad40afs"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="1_8dyvm"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="1_8dyvm"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_tp3ni"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/Sector.tscn" id="3_x6ptw"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/Sector.tscn" id="3_x6ptw"]
 [ext_resource type="Script" uid="uid://ck5uniw0pl6u8" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.gd" id="4_cyk6q"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/AreaTrigger.tscn" id="5_mmp2v"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="6_vtlpb"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/AreaTrigger.tscn" id="5_mmp2v"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="6_vtlpb"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="7_vco5b"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Rush/MCOM.tscn" id="8_e7010"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/rush/MCOM.tscn" id="8_e7010"]
 [ext_resource type="PackedScene" uid="uid://btx1qxeulw3v7" path="res://objects/gameplay/common/VehicleSpawner.tscn" id="9_d5o2j"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/FixedCamera.tscn" id="11_7scan"]
 [ext_resource type="PackedScene" path="res://objects/props/MannequinRotation_01.tscn" id="11_qmpwe"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/InteractPoint.tscn" id="12_dcx34"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/InteractPoint.tscn" id="12_dcx34"]
 
 [node name="Rush_Prefab" type="Node3D" unique_id=1805283953]
 
