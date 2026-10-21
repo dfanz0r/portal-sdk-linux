@@ -12,7 +12,7 @@ Disk: repo checkout is ~200MB; allow ~3.5GB more once the editor builds `.godot/
 
 ## Install (overlay)
 
-This repo is a patch set, not a full SDK: `docs/`, `python/` (Windows-only bundle), and `FbExportData/` (level list, export data, thumbnails — required at runtime) are pruned and must come from the official SDK. Extract pristine **2.1.1.0**, then copy this repo over it:
+This repo is a patch set, not a full SDK: `docs/`, `python/` (Windows-only bundle), `FbExportData/` (level list, export data, thumbnails — required at runtime), `GodotProject/raw/` (editor-ignored source metadata), and `code/gdplugins/terrain_3d/` (dormant, unwired upstream staging) are pruned and must come from the official SDK. Extract pristine **2.1.1.0**, then copy this repo over it:
 
 ```bash
 rsync -a --exclude='.godot' --exclude='venv/' ./ /path/to/PortalSDK-2.1.1.0/
@@ -46,7 +46,7 @@ Linux port originally developed against 1.3.2.0/1.3.3.0 and refined on 1.4.3.0, 
 - Fixed the detached object-library preview viewport leaking at shutdown (`scene_library.gd`).
 - Matching plugin changes live in the single canonical copy at `GodotProject/addons` (the copy Godot loads; upstream's `code/gdplugins` staging duplicates are untracked — they had already drifted, e.g. stale `terrain_decal/bounds.json`).
 - New: `tests/` (case-fix audit + headless smoke test), `export/levels/`.
-- Dropped bulk (overlay from the official SDK): `docs/`, `python/`, `FbExportData/`. Note this also drops Windows setup support — `python/` was the Windows interpreter bundle, and that path is untested here.
+- Dropped bulk (overlay from the official SDK): `docs/`, `python/`, `FbExportData/`, `GodotProject/raw/`, `code/gdplugins/terrain_3d/`. Note this also drops Windows setup support — `python/` was the Windows interpreter bundle, and that path is untested here.
 
 ## Validation (2026-10-20, Godot 4.7.2.stable.arch_linux.ed1daf0bf)
 
@@ -79,7 +79,8 @@ This repo tracks the official SDK as an overlay, so upstream changes stay visibl
 ```bash
 rsync -a --delete --exclude='.godot' --exclude='*.exe' --exclude='venv/' \
   --exclude='__pycache__/' --exclude='docs/' --exclude='python/' \
-  --exclude='FbExportData/' "/path/to/new/SDK/" .
+  --exclude='FbExportData/' --exclude='GodotProject/raw/' \
+  --exclude='code/gdplugins/terrain_3d/' "/path/to/new/SDK/" .
 git status  # review, then commit the pristine update first, port fixes second
 ```
 
