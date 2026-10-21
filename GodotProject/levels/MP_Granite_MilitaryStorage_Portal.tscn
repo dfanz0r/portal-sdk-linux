@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://caeohfmx5yyfs"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_i1ryn"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="1_i1ryn"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_cjtf1"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_4ppnw"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="4_dgvll"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="5_2on1q"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="4_dgvll"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="5_2on1q"]
 [ext_resource type="PackedScene" path="res://static/MP_Granite_MilitaryStorage_Portal_Terrain.tscn" id="6_r0lb4"]
 [ext_resource type="PackedScene" path="res://static/MP_Granite_MilitaryStorage_Portal_Assets.tscn" id="7_ey7ld"]
 [ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_7m8m6"]

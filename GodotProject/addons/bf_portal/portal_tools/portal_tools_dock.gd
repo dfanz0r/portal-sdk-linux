@@ -76,7 +76,7 @@ func change_scene(scene: Node) -> void:
 
 
 func _setup() -> void:
-	if not _config["setupEnabled"]:
+	if not _config["setupEnabled"] or _thread.is_started():
 		return
 
 	portal_tools_plugin.show_log_panel()
@@ -89,14 +89,14 @@ func _setup() -> void:
 		scene_library.load_library(library_path)
 
 	var platform = OS.get_name()
-	if platform == "Windows":
-		_thread.start(_setup_work_windows)
+	if platform in ["Windows", "Linux", "macOS", "FreeBSD"]:
 		_setup_dialog = AcceptDialog.new()
 		_setup_dialog.title = "Setup"
 		_setup_dialog.dialog_text = "Please wait while setup finishes..."
 		_setup_dialog.get_ok_button().visible = false
 		_setup_dialog.dialog_close_on_escape = false
 		EditorInterface.popup_dialog_centered(_setup_dialog)
+		_thread.start(_setup_work)
 	else:
 		var dialog = AcceptDialog.new()  # not member variable because simply one-off
 		var msg = "Setup has not been implemented for your platform: %s" % platform
@@ -105,53 +105,54 @@ func _setup() -> void:
 		printerr(msg)
 
 
-func _setup_work_windows() -> void:
+func _setup_work() -> void:
+	# Preserve existing environments rather than recursively deleting user files.
+	# All paths here are absolute (see PortalPlugin.read_config) and passed as
+	# argv, never interpolated into shell strings, so folders with spaces or
+	# parentheses work as-is and no shell is involved on any platform.
 	var output = []
-	var exit_code = 0
 	var venv_path: String = _config["venv"]
+	var gdconverter_path: String = _config["gdconverter"]
+	var gdconverter_requirements = gdconverter_path.path_join("requirements.txt")
 
-	if DirAccess.dir_exists_absolute(venv_path):
-		print("Cleaning previous virtual environment")
-		OS.execute("powershell.exe", ["-Command", "Remove-Item -Recurse -Force %s -ErrorAction SilentlyContinue" % venv_path], output, true)
-		if DirAccess.dir_exists_absolute(venv_path):
-			printerr(output)
-			printerr("Failed to cleanup previous setup")
-			call_deferred("_setup_error", "Failed to cleanup previous setup")
-			return
-		output.pop_back()
+	var python: String = str(_config["python"]).path_join("python.exe") if OS.get_name() == "Windows" else "python3"
 
-	print("Creating virtual environment...")
-	var python = "%s/python.exe" % _config["python"]
-	exit_code = OS.execute(python, ["-m", "venv", venv_path], output, true)
+	print("Creating/updating virtual environment: %s" % venv_path)
+	var exit_code = OS.execute(python, ["-m", "venv", venv_path], output, true)
+	for line in output:
+		print(line)
 	if exit_code != 0:
-		printerr(output)
-		printerr("Failed to create virtual environment")
-		call_deferred("_setup_error", "Failed to create virtual environment")
+		call_deferred("_setup_error", "Failed to create virtual environment. Install Python 3 with venv support and check the Output log.")
 		return
-	output.pop_back()
 
-	print("Installing packages to virtual environment...")
-	var python_venv = "%s/Scripts/python.exe" % venv_path
+	var python_venv = PortalPlugin.venv_python(_config)
+	print("Upgrading pip...")
+	output.clear()
 	exit_code = OS.execute(python_venv, ["-m", "pip", "install", "--upgrade", "pip"], output, true)
+	for line in output:
+		print(line)
 	if exit_code != 0:
-		printerr(output)
-		printerr("Upgrading pip failed")
-		call_deferred("_setup_error", "Upgrading pip failed")
+		call_deferred("_setup_error", "Upgrading pip failed. Check the Output log.")
 		return
-	output.pop_back()
 
-	# requirements.txt uses relative paths and cannot change cwd with OS.execute yet so need pwsh here
-	var venv_path_split = venv_path.rsplit("venv", true, 1)
-	var base_path = venv_path_split[0] if venv_path_split.size() > 1 else "."
-	var args = "cd %s ; venv/Scripts/python.exe -m pip install -r ./requirements.txt" % base_path
-	exit_code = OS.execute("powershell.exe", ["-Command", args], output, true)
+	# Install the exporter the same way requirements.txt describes it
+	# (-e ./code/gdconverter plus its own requirements file), but with
+	# absolute paths: OS.execute cannot set a working directory, and the
+	# relative entries would otherwise resolve against the editor's cwd.
+	print("Installing requirements...")
+	output.clear()
+	exit_code = OS.execute(python_venv, ["-m", "pip", "install", "-e", gdconverter_path, "-r", gdconverter_requirements], output, true)
+	for line in output:
+		print(line)
 	if exit_code != 0:
-		print(output)
-		printerr("Installing requirements failed")
-		call_deferred("_setup_error", "Installing requirements failed")
+		call_deferred("_setup_error", "Installing requirements failed. Check the Output log.")
 		return
-	print("Completed setup")
 	call_deferred("_setup_success", "Completed setup")
+
+
+func _exit_tree() -> void:
+	if _thread.is_started():
+		_thread.wait_to_finish()
 
 
 func _setup_error(msg: String = "") -> void:
@@ -165,12 +166,9 @@ func _setup_success(msg: String = "") -> void:
 
 
 func _export_levels() -> void:
-	if OS.get_name() != "Windows":
-		return
-
 	var dialog = AcceptDialog.new()
 	var output = []
-	var python_venv = "%s/Scripts/python.exe" % _config["venv"]
+	var python_venv = PortalPlugin.venv_python(_config)
 	if not FileAccess.file_exists(python_venv):
 		portal_tools_plugin.show_log_panel()
 		var msg = "Cannot export level when python is not in a virtual environment. Has setup been ran yet?"
@@ -189,7 +187,7 @@ func _export_levels() -> void:
 	if exit_code != 0:
 		dialog.title = "Error"
 		dialog_text = "Failed to export %s\n" % level_name
-		var err: String = (output.pop_back() as String).replace("\r\n", "\n").strip_edges()
+		var err: String = "\n".join(output).replace("\r\n", "\n").strip_edges()
 		if err:
 			var err_lines = err.split("\n", true)
 			var line_count_limit = 15
@@ -214,7 +212,7 @@ func _on_open_exports() -> void:
 
 	if _current_export_level_path:
 		var file = _current_export_level_path.get_file()
-		var json_file = file.replace(".tscn", ".json")
+		var json_file = file.replace(".tscn", ".spatial.json")
 		var supposed_path = _output_dir + "/" + json_file
 		if FileAccess.file_exists(supposed_path):
 			OS.shell_show_in_file_manager(supposed_path)

@@ -48,23 +48,15 @@ func _init(p_full_path: String,
 
 
 func _generate_uuid() -> String:
-	var _config = PortalPlugin.read_config()
-	var _python = "%s/python.exe" % _config["python"]
-	if not FileAccess.file_exists(_python):
-		var _venv_path = _config["venv"]
-		_python = "%s/Scripts/python.exe" % _venv_path
-		if not FileAccess.file_exists(_python):
-			printerr("Failed to generate UUID. Expected python to exist at %s" % _python)
-			return ""
-
-	var _out = []
-	var _exit_code = OS.execute(_python, ["-c", "import uuid; print(uuid.uuid4())"], _out, false, false)
-	if _exit_code == 0 and _out.size() > 0:
-		return _out[0].strip_edges()
-	else:
+	# RFC 9562 UUIDv4: no external Python process required on any platform.
+	var bytes = Crypto.new().generate_random_bytes(16)
+	if bytes.size() != 16:
 		printerr("Failed to generate UUID")
-		is_valid = false
 		return ""
+	bytes[6] = (bytes[6] & 0x0f) | 0x40
+	bytes[8] = (bytes[8] & 0x3f) | 0x80
+	var hex = bytes.hex_encode()
+	return "%s-%s-%s-%s-%s" % [hex.substr(0, 8), hex.substr(8, 4), hex.substr(12, 4), hex.substr(16, 4), hex.substr(20, 12)]
 
 func get_dict() -> Dictionary:
 	

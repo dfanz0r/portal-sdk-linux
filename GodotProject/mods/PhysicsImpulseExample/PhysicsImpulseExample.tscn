@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://c36wnv7eqm2ud"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_gufxj"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="1_gufxj"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_hrcbv"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_mdqso"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_0m11i"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_kkxxc"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="4_0m11i"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_kkxxc"]
 [ext_resource type="PackedScene" path="res://static/MP_Portal_Sand_Terrain.tscn" id="6_mm1kq"]
 [ext_resource type="PackedScene" path="res://static/MP_Portal_Sand_Assets.tscn" id="7_p5pvj"]
 [ext_resource type="PackedScene" path="res://objects/nature/ConcreteRamp_01.tscn" id="8_722sd"]

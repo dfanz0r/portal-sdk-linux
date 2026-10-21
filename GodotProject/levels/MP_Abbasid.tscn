@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://bw6q4jq4f0h5u"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="2_23jsc"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="2_23jsc"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_cjtf1"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_2jayb"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_qpc8q"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_a0nxt"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="4_qpc8q"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_a0nxt"]
 [ext_resource type="PackedScene" path="res://static/MP_Abbasid_Terrain.tscn" id="6_d5aji"]
 [ext_resource type="PackedScene" path="res://static/MP_Abbasid_Assets.tscn" id="7_qnn7w"]
 

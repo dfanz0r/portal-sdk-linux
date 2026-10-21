@@ -2,11 +2,11 @@
 
 [ext_resource type="PackedScene" path="res://static/MP_Portal_CommunityMap_1_Assets.tscn" id="1_d2ms4"]
 [ext_resource type="PackedScene" path="res://static/MP_Portal_CommunityMap_1_Terrain.tscn" id="2_rp7h3"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="3_1mwpk"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="3_1mwpk"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="4_2bte5"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="5_3e5ae"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="6_5kx3f"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="7_c28tw"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="6_5kx3f"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="7_c28tw"]
 
 [node name="MP_Portal_CommunityMap_1" type="Node3D" unique_id=397386889]
 

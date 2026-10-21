@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://jo05rbqjwgd5"]
 
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_vc1v3"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="1_vc1v3"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_7id7p"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_fplcs"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_wj7a2"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_lv4sv"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="4_wj7a2"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_lv4sv"]
 [ext_resource type="PackedScene" path="res://static/MP_Atoll_Assets.tscn" id="6_wre05"]
 [ext_resource type="PackedScene" path="res://static/MP_Atoll_Terrain.tscn" id="7_325s3"]
 [ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_325s3"]

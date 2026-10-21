@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://6i4bq4jdbto1"]
 
 [ext_resource type="PackedScene" path="res://static/MP_Tungsten_Terrain.tscn" id="1_qj2i4"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_xpspq"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="1_xpspq"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="2_33chp"]
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_cjtf1"]
 [ext_resource type="PackedScene" path="res://static/MP_Tungsten_Assets.tscn" id="2_ifhy4"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="3_bns7u"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_1imjp"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="3_bns7u"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_1imjp"]
 [ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_51hf0"]
 
 [node name="MP_Tungsten" type="Node3D" unique_id=389247693]

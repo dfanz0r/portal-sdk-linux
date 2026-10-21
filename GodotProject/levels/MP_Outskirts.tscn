@@ -1,11 +1,11 @@
 [gd_scene format=3 uid="uid://833orvdxqpyd"]
 
 [ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_cjtf1"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="3_0un4h"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/HQ_PlayerSpawner.tscn" id="3_0un4h"]
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_qpcp7"]
 [ext_resource type="PackedScene" path="res://static/MP_Outskirts_Terrain.tscn" id="5_3mbf5"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_4g1tu"]
-[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="6_gmwe0"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_4g1tu"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="6_gmwe0"]
 [ext_resource type="PackedScene" path="res://static/MP_Outskirts_Assets.tscn" id="6_sm1nk"]
 
 [node name="MP_Outskirts" type="Node3D" unique_id=1541676447]
