@@ -2,13 +2,11 @@
 
 ## Prerequisites
 
-- **Godot 4.7** (`godot` on `PATH`; the smoke script also honors `GODOT_BIN`).
+- **Godot 4.7** (`godot` on `PATH`).
 - **Python 3 with `venv` + `pip`**, reachable as `python3`:
   - Debian/Ubuntu: `apt install python3 python3-venv` (`python3` alone is not enough).
   - Arch/Fedora: stock `python`/`python3` already bundles both.
   - macOS: any `python3` on `PATH` (python.org, Homebrew, or Xcode CLT).
-
-Disk: repo checkout is ~200MB; allow ~3.5GB more once the editor builds `.godot/imported`. GPU/Vulkan drivers only matter for the graphical editor; headless import and tests run display-less.
 
 ## Install (overlay)
 
@@ -32,8 +30,6 @@ godot --editor --path GodotProject
 
 Opening the project needs no setup. Exporting levels or experience bundles does — both run through the Python environment. Press the Portal Tools dock's **Setup** button in the editor before exporting.
 
-Requires native Python 3 with venv/pip support. No Wine, PowerShell, or Windows Python is used on Linux.
-
 ## Provenance and changes
 
 Linux port originally developed against 1.3.2.0/1.3.3.0 and refined on 1.4.3.0, re-applied here onto pristine **2.1.1.0** (which retains its new carrier/community-map data, terrain_3d plugin, and bundle exporter schema — no older SDK files were substituted wholesale).
@@ -45,32 +41,12 @@ Linux port originally developed against 1.3.2.0/1.3.3.0 and refined on 1.4.3.0, 
 - Corrected gameplay resource capitalization in 89 supplied scenes (`tests/fix_resource_case.py`; originals under `.linux-port-backup/`, which is git-ignored and not committed).
 - Fixed the detached object-library preview viewport leaking at shutdown (`scene_library.gd`).
 - Matching plugin changes live in the single canonical copy at `GodotProject/addons` (the copy Godot loads; upstream's `code/gdplugins` staging duplicates are untracked — they had already drifted, e.g. stale `terrain_decal/bounds.json`).
-- New: `tests/` (case-fix audit + headless smoke test), `export/levels/`.
+- New: `tests/` (scene case-fix audit), `export/levels/`.
 - Dropped bulk (overlay from the official SDK): `docs/`, `python/`, `FbExportData/`, `GodotProject/raw/`, `code/gdplugins/terrain_3d/`. Note this also drops Windows setup support — `python/` was the Windows interpreter bundle, and that path is untested here.
-
-## Validation (2026-10-20, Godot 4.7.2.stable.arch_linux.ed1daf0bf)
-
-- `tests/fix_resource_case.py`: 89 scenes fixed, 0 remaining.
-- gdconverter: all 85 pytest tests passed.
-- Headless editor import completed and built the script-class cache (first scan takes ~30+ min on this ~68k-file project; note: `--quit-after N` does not advance while headless, so the run was left until the scan finished, then stopped — same precaution as the 1.4.3.0 port notes).
-- `bash tests/run-linux-smoke.sh`: **LINUX SMOKE: PASS** — Python lookup, absolute config paths, attachment UUID/base64, real experience-bundle creation, object-library generation, and WaterExample load/save/re-export with no script/resource errors.
-- Graphical editor launch was not re-tested here (it was verified on the 1.4.3.0 port); expect only environmental GTK/Wayland warnings.
-
-Re-run (Godot 4.7 expected on `PATH`, or set `GODOT_BIN`):
-
-```bash
-bash tests/run-linux-smoke.sh
-venv/bin/python3 -m pip install pytest
-(cd code/gdconverter && ../../venv/bin/python3 -m pytest -q)
-```
-
-Do not force an automated editor quit during its initial filesystem scan: an early frame-limited test triggered a native Godot crash on the 1.4.3.0 port; a completed import followed by a longer editor test exited cleanly.
 
 ## Asset-cache caveat
 
 This repo does **not** track `GodotProject/.godot/imported` (git-ignored), and the SDK ships no source `.glb` files in `GodotProject/raw/models` (only import metadata). On first editor launch Godot will import what it can; pre-existing cached models load if you reuse a `.godot` directory from a matching SDK copy. **Do not delete `.godot` to troubleshoot** unless you have first obtained the matching model sources. The Portal Tools model download remains available.
-
-Battlefield/web-builder upload, in-game behavior, remote downloads, and exhaustive visual inspection of every asset were not tested. Windows execution was retained in the setup code but was not run on this Linux machine.
 
 ## Tracking future SDK updates
 

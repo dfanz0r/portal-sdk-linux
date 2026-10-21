@@ -18,12 +18,14 @@ TestGodotProject_Out/
 # docs/ is generated HTML, python/ is the Windows-only bundle,
 # FbExportData/ is required at runtime (level list, export data, thumbnails),
 # raw/ is editor-ignored source metadata (.gdignore) with no local sources,
-# terrain_3d/ is dormant upstream staging (unwired, self-referential).
+# terrain_3d/ is dormant upstream staging (unwired, self-referential),
+# README.html is superseded by README.md.
 docs/
 python/
 FbExportData/
 GodotProject/raw/
 code/gdplugins/terrain_3d/
+README.html
 
 # Duplicate upstream staging copies — canonical live plugins are tracked at
 # GodotProject/addons/ (the copy Godot actually loads; also newer upstream,
