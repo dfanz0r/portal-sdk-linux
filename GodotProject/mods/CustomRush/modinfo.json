@@ -1,0 +1,37 @@
+{
+    "manifest_version": "1",
+    "name": "Custom Rush",
+    "mod_version": "4.0",
+    "author": "Viper Studios Andy",
+    "description": "Attackers vs. Defenders. Attackers win by destroying enemy M-COMs. Defenders win by eliminating all enemy reinforcements. Recommended for 32 players.\nListed below are levels that have been pre-configured to immediately work with this Rush Template once imported into the Battlefield 6 Web Builder.\nTo use your custom levels, you will need to export them and upload them to the web-builder separately.",
+    "workspace": "rush_template_4.0.json",
+    "base_skel": "custom_rush_skel.json",
+    "icon": "rush.svg",
+    "game_mode": "ModBuilderCustom0",
+    "maps": [
+        {
+            "map_name": "MP_Abbasid",
+            "file_stem": "MP_Abbasid_CustomRush"
+        },
+        {
+            "map_name": "MP_Eastwood",
+            "file_stem": "MP_Eastwood_Rush"
+        },
+        {
+            "map_name": "MP_Granite_ClubHouse_Portal",
+            "file_stem": "MP_Granite_ClubHouse_Portal_CustomRush"
+        },
+        {
+            "map_name": "MP_Granite_MilitaryStorage_Portal",
+            "file_stem": "MP_Granite_MilitaryStorage_Portal_Rush"
+        },
+        {
+            "map_name": "MP_Granite_TechCampus_Portal",
+            "file_stem": "MP_Granite_TechCampus_Portal_CustomRush"
+        },
+        {
+            "map_name": "MP_Plaza",
+            "file_stem": "MP_Plaza_Rush"
+        }
+    ]
+}

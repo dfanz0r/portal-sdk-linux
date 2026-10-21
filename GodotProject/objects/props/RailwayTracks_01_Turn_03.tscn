@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/RailwayTracks_01_Turn_03.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/props/RailwayTracks_01_Turn_03.gd" type="Script" id="2"]
+
+
+[node name="RailwayTracks_01_Turn_03" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

@@ -1,0 +1,2794 @@
+{
+    "Portal_Dynamic": [
+        {
+            "name": "DeployCam",
+            "type": "DeployCam",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 0.101056,
+                "z": -0.994881
+            },
+            "front": {
+                "x": 0,
+                "y": 0.994881,
+                "z": 0.101056
+            },
+            "position": {
+                "x": -114.262,
+                "y": 504.195,
+                "z": 56.3131
+            },
+            "id": "Camera3D/DeployCam",
+            "ObjId": 0
+        },
+        {
+            "name": "CombatArea",
+            "CombatVolume": "Rush/CombatArea/InfantryArea",
+            "SurroundingVolume": "Rush/CombatArea/AirCombat",
+            "type": "CombatArea",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -89.70943,
+                "y": 234.52255,
+                "z": 39.024815
+            },
+            "id": "Rush/CombatArea",
+            "linked": [
+                "CombatVolume",
+                "SurroundingVolume"
+            ]
+        },
+        {
+            "name": "InfantryArea",
+            "type": "PolygonVolume",
+            "id": "Rush/CombatArea/InfantryArea",
+            "height": 0,
+            "points": [
+                {
+                    "x": -444.24403,
+                    "y": 284.52255,
+                    "z": 27.049456
+                },
+                {
+                    "x": -356.20083,
+                    "y": 284.52255,
+                    "z": -79.923505
+                },
+                {
+                    "x": -317.26911,
+                    "y": 284.52255,
+                    "z": -98.353805
+                },
+                {
+                    "x": -214.81049,
+                    "y": 284.52255,
+                    "z": -118.545185
+                },
+                {
+                    "x": -163.56235,
+                    "y": 284.52255,
+                    "z": -109.878065
+                },
+                {
+                    "x": -92.5332673,
+                    "y": 284.52255,
+                    "z": -58.271579
+                },
+                {
+                    "x": -61.290206,
+                    "y": 284.52255,
+                    "z": -60.50642
+                },
+                {
+                    "x": 84.9102,
+                    "y": 284.52255,
+                    "z": -112.325375
+                },
+                {
+                    "x": 89.65442,
+                    "y": 284.52255,
+                    "z": -117.643085
+                },
+                {
+                    "x": 92.41754,
+                    "y": 284.52255,
+                    "z": -124.003455
+                },
+                {
+                    "x": 90.04585,
+                    "y": 284.52255,
+                    "z": -167.139325
+                },
+                {
+                    "x": 92.25721,
+                    "y": 284.52255,
+                    "z": -177.441635
+                },
+                {
+                    "x": 98.59237,
+                    "y": 284.52255,
+                    "z": -188.104765
+                },
+                {
+                    "x": 108.74705,
+                    "y": 284.52255,
+                    "z": -192.533425
+                },
+                {
+                    "x": 148.73892,
+                    "y": 284.52255,
+                    "z": -198.447395
+                },
+                {
+                    "x": 159.53813,
+                    "y": 284.52255,
+                    "z": -202.709575
+                },
+                {
+                    "x": 166.51201,
+                    "y": 284.52255,
+                    "z": -203.781265
+                },
+                {
+                    "x": 173.515,
+                    "y": 284.52255,
+                    "z": -202.839475
+                },
+                {
+                    "x": 179.64867,
+                    "y": 284.52255,
+                    "z": -200.424645
+                },
+                {
+                    "x": 182.46019,
+                    "y": 284.52255,
+                    "z": -207.060935
+                },
+                {
+                    "x": 232.15245,
+                    "y": 284.52255,
+                    "z": -207.145535
+                },
+                {
+                    "x": 383.49864,
+                    "y": 284.52255,
+                    "z": -213.566065
+                },
+                {
+                    "x": 416.76017,
+                    "y": 284.52255,
+                    "z": -206.263725
+                },
+                {
+                    "x": 446.24571,
+                    "y": 284.52255,
+                    "z": -183.837285
+                },
+                {
+                    "x": 454.78032,
+                    "y": 284.52255,
+                    "z": -160.536845
+                },
+                {
+                    "x": 448.92503,
+                    "y": 284.52255,
+                    "z": -136.802825
+                },
+                {
+                    "x": 429.72892,
+                    "y": 284.52255,
+                    "z": -114.199105
+                },
+                {
+                    "x": 372.48533,
+                    "y": 284.52255,
+                    "z": -87.880855
+                },
+                {
+                    "x": 312.43412,
+                    "y": 284.52255,
+                    "z": -57.470225
+                },
+                {
+                    "x": 268.3322,
+                    "y": 284.52255,
+                    "z": -28.08768
+                },
+                {
+                    "x": 222.89697,
+                    "y": 284.52255,
+                    "z": 34.46032
+                },
+                {
+                    "x": 158.05319,
+                    "y": 284.52255,
+                    "z": 76.657959
+                },
+                {
+                    "x": 118.41757,
+                    "y": 284.52255,
+                    "z": 152.732535
+                },
+                {
+                    "x": 14.32295,
+                    "y": 284.52255,
+                    "z": 232.593055
+                },
+                {
+                    "x": -52.88352,
+                    "y": 284.52255,
+                    "z": 256.650485
+                },
+                {
+                    "x": -112.637134,
+                    "y": 284.52255,
+                    "z": 250.802545
+                },
+                {
+                    "x": -204.505374,
+                    "y": 284.52255,
+                    "z": 184.816055
+                },
+                {
+                    "x": -246.22843,
+                    "y": 284.52255,
+                    "z": 162.012075
+                },
+                {
+                    "x": -289.6442,
+                    "y": 284.52255,
+                    "z": 154.41718
+                },
+                {
+                    "x": -416.05141,
+                    "y": 284.52255,
+                    "z": 210.140785
+                },
+                {
+                    "x": -471.08705,
+                    "y": 284.52255,
+                    "z": 179.620135
+                },
+                {
+                    "x": -480.94943,
+                    "y": 284.52255,
+                    "z": 126.542885
+                }
+            ]
+        },
+        {
+            "name": "AirCombat",
+            "type": "PolygonVolume",
+            "id": "Rush/CombatArea/AirCombat",
+            "height": 0,
+            "points": [
+                {
+                    "x": -452.86971,
+                    "y": 284.52255,
+                    "z": -17.740947
+                },
+                {
+                    "x": -342.3338,
+                    "y": 284.52255,
+                    "z": -121.429805
+                },
+                {
+                    "x": -48.677337,
+                    "y": 284.52255,
+                    "z": -212.777145
+                },
+                {
+                    "x": 273.56022,
+                    "y": 284.52255,
+                    "z": -237.435325
+                },
+                {
+                    "x": 418.14671,
+                    "y": 284.52255,
+                    "z": -223.985405
+                },
+                {
+                    "x": 475.86937,
+                    "y": 284.52255,
+                    "z": -183.075235
+                },
+                {
+                    "x": 469.14437,
+                    "y": 284.52255,
+                    "z": -111.342405
+                },
+                {
+                    "x": 243.77977,
+                    "y": 284.52255,
+                    "z": 102.092215
+                },
+                {
+                    "x": 49.87681,
+                    "y": 284.52255,
+                    "z": 256.766275
+                },
+                {
+                    "x": -96.3910096,
+                    "y": 284.52255,
+                    "z": 283.105685
+                },
+                {
+                    "x": -275.16278,
+                    "y": 284.52255,
+                    "z": 268.534915
+                },
+                {
+                    "x": -447.26558,
+                    "y": 284.52255,
+                    "z": 219.874245
+                },
+                {
+                    "x": -493.2195,
+                    "y": 284.52255,
+                    "z": 185.128605
+                },
+                {
+                    "x": -504.42775,
+                    "y": 284.52255,
+                    "z": 119.560245
+                }
+            ]
+        },
+        {
+            "name": "Sector0",
+            "ObjId": 100,
+            "SectorArea": "Rush/Sectors/Sector0/PolygonVolume0",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -421.57583,
+                "y": 226.479291,
+                "z": 138.157975
+            },
+            "id": "Rush/Sectors/Sector0",
+            "linked": [
+                "SectorArea"
+            ]
+        },
+        {
+            "name": "PolygonVolume0",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0.067755,
+                0.524596,
+                1,
+                0.42
+            ],
+            "id": "Rush/Sectors/Sector0/PolygonVolume0",
+            "height": 100,
+            "points": [
+                {
+                    "x": -416.1239257,
+                    "y": 216.479291,
+                    "z": 209.776215
+                },
+                {
+                    "x": -289.72482,
+                    "y": 216.479291,
+                    "z": 153.917405
+                },
+                {
+                    "x": -283.54223,
+                    "y": 216.479291,
+                    "z": 84.177361
+                },
+                {
+                    "x": -288.09817,
+                    "y": 216.479291,
+                    "z": 70.186945
+                },
+                {
+                    "x": -318.96636,
+                    "y": 216.479291,
+                    "z": 52.271045
+                },
+                {
+                    "x": -306.90121,
+                    "y": 216.479291,
+                    "z": 27.69764
+                },
+                {
+                    "x": -309.95907,
+                    "y": 216.479291,
+                    "z": -55.699595
+                },
+                {
+                    "x": -317.139154,
+                    "y": 216.479291,
+                    "z": -97.971225
+                },
+                {
+                    "x": -356.00192,
+                    "y": 216.479291,
+                    "z": -79.815225
+                },
+                {
+                    "x": -443.867792,
+                    "y": 216.479291,
+                    "z": 27.390195
+                },
+                {
+                    "x": -480.492914,
+                    "y": 216.479291,
+                    "z": 126.516091
+                },
+                {
+                    "x": -470.693872,
+                    "y": 216.479291,
+                    "z": 179.348755
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 600,
+            "Area": "Rush/Sectors/Sector0/PolygonVolume0",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -421.57583,
+                "y": 246.479291,
+                "z": 138.157975
+            },
+            "id": "Rush/Sectors/Sector0/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "Sector1",
+            "ObjId": 101,
+            "MCOMs": [
+                "Rush/Sectors/Sector1/MCOM-A",
+                "Rush/Sectors/Sector1/MCOM-B"
+            ],
+            "SectorArea": "Rush/Sectors/Sector1/PolygonVolume1",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -264.47919,
+                "y": 234.522534741211,
+                "z": 49.366536
+            },
+            "id": "Rush/Sectors/Sector1",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume1",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Rush/Sectors/Sector1/PolygonVolume1",
+            "height": 100,
+            "points": [
+                {
+                    "x": -246.100497,
+                    "y": 224.522534741211,
+                    "z": 161.759706
+                },
+                {
+                    "x": -204.217853,
+                    "y": 224.522534741211,
+                    "z": 184.578146
+                },
+                {
+                    "x": -159.12369,
+                    "y": 224.522534741211,
+                    "z": -19.060424
+                },
+                {
+                    "x": -174.699756,
+                    "y": 224.522534741211,
+                    "z": -55.120744
+                },
+                {
+                    "x": -163.64557,
+                    "y": 224.522534741211,
+                    "z": -109.531784
+                },
+                {
+                    "x": -214.86928,
+                    "y": 224.522534741211,
+                    "z": -118.298034
+                },
+                {
+                    "x": -317.14191,
+                    "y": 224.522534741211,
+                    "z": -97.970654
+                },
+                {
+                    "x": -309.962344,
+                    "y": 224.522534741211,
+                    "z": -55.699008
+                },
+                {
+                    "x": -306.90204,
+                    "y": 224.522534741211,
+                    "z": 27.697265
+                },
+                {
+                    "x": -318.967837,
+                    "y": 224.522534741211,
+                    "z": 52.271737
+                },
+                {
+                    "x": -288.10004,
+                    "y": 224.522534741211,
+                    "z": 70.187783
+                },
+                {
+                    "x": -283.548587,
+                    "y": 224.522534741211,
+                    "z": 84.178613
+                },
+                {
+                    "x": -289.739566,
+                    "y": 224.522534741211,
+                    "z": 153.914996
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 601,
+            "Area": "Rush/Sectors/Sector1/PolygonVolume1",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -264.47919,
+                "y": 254.522534741211,
+                "z": 49.366536
+            },
+            "id": "Rush/Sectors/Sector1/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ1",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 301,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_1",
+                "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_2",
+                "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_3",
+                "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_4"
+            ],
+            "metadata/_edit_group_": true,
+            "HQArea": "Rush/Sectors/Sector0/PolygonVolume0",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -410.59488,
+                "y": 226.873258041211,
+                "z": 128.933336
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_1_HQ1",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.38799825,
+                "y": 0,
+                "z": -0.9216601
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.9216601,
+                "y": 0,
+                "z": -0.38799825
+            },
+            "position": {
+                "x": -450.036103,
+                "y": 226.942441391211,
+                "z": 153.07567
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.9783359,
+                "y": 0,
+                "z": -0.20702381
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.20702381,
+                "y": 0,
+                "z": -0.9783359
+            },
+            "position": {
+                "x": -438.131165,
+                "y": 226.999722881211,
+                "z": 170.968906
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.82667816,
+                "y": 0,
+                "z": -0.562675
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.562675,
+                "y": 0,
+                "z": -0.82667816
+            },
+            "position": {
+                "x": -388.27997,
+                "y": 226.858792709211,
+                "z": 147.540575
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.90064514,
+                "y": 0,
+                "z": -0.43455532
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.43455532,
+                "y": 0,
+                "z": -0.90064514
+            },
+            "position": {
+                "x": -413.2899484,
+                "y": 226.986829211211,
+                "z": 168.412506
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_1_HQ1/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ1",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 401,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_1",
+                "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_2",
+                "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_3",
+                "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_4"
+            ],
+            "HQArea": "Rush/Sectors/Sector2/PolygonVolume2",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -112.99955,
+                "y": 234.894574541211,
+                "z": 63.503041
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_2_HQ1",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.8419631,
+                "y": 0,
+                "z": 0.53953505
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.53953505,
+                "y": 0,
+                "z": -0.8419631
+            },
+            "position": {
+                "x": -90.607987,
+                "y": 234.510938071211,
+                "z": 173.499471
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.96417415,
+                "y": 0,
+                "z": 0.26526996
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.26526996,
+                "y": 0,
+                "z": -0.96417415
+            },
+            "position": {
+                "x": -98.464844,
+                "y": 234.899594682811,
+                "z": 12.899081
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.6635345,
+                "y": 0,
+                "z": 0.74814564
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.74814564,
+                "y": 0,
+                "z": 0.6635345
+            },
+            "position": {
+                "x": -99.57383,
+                "y": 235.378720661211,
+                "z": 29.799706
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.7101362,
+                "y": 0,
+                "z": 0.70406437
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.70406437,
+                "y": 0,
+                "z": 0.7101362
+            },
+            "position": {
+                "x": -93.157715,
+                "y": 234.974942581211,
+                "z": 116.144646
+            },
+            "id": "Rush/Sectors/Sector1/TEAM_2_HQ1/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM-A",
+            "ObjId": 201,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": 0.16277492,
+                "y": 0,
+                "z": 0.98666346
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.98666346,
+                "y": 0,
+                "z": 0.16277492
+            },
+            "position": {
+                "x": -250.396869,
+                "y": 232.056058341211,
+                "z": 8.540379
+            },
+            "id": "Rush/Sectors/Sector1/MCOM-A"
+        },
+        {
+            "name": "MCOM-B",
+            "ObjId": 202,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": -0.98052907,
+                "y": 0,
+                "z": -0.19637404
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.19637404,
+                "y": 0,
+                "z": -0.98052907
+            },
+            "position": {
+                "x": -216.00699,
+                "y": 233.758130441211,
+                "z": 74.274056
+            },
+            "id": "Rush/Sectors/Sector1/MCOM-B"
+        },
+        {
+            "name": "VehicleSpawner",
+            "ObjId": 1150,
+            "VehicleType": "Flyer60",
+            "P_DefaultRespawnTime": 45,
+            "metadata/_edit_group_": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": -0.5836263,
+                "y": 0,
+                "z": -0.81202245
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.81202245,
+                "y": 0,
+                "z": -0.5836263
+            },
+            "position": {
+                "x": -435.37097,
+                "y": 227.518613241211,
+                "z": 141.868456
+            },
+            "id": "Rush/Sectors/Sector1/VehicleSpawner"
+        },
+        {
+            "name": "VehicleSpawner2",
+            "ObjId": 1151,
+            "VehicleType": "DirtBike",
+            "P_DefaultRespawnTime": 45,
+            "metadata/_edit_group_": true,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": -0.7141429,
+                "y": 0,
+                "z": -0.69999987
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.69999987,
+                "y": 0,
+                "z": -0.7141429
+            },
+            "position": {
+                "x": -425.91043,
+                "y": 227.490476041211,
+                "z": 154.918386
+            },
+            "id": "Rush/Sectors/Sector1/VehicleSpawner2"
+        },
+        {
+            "name": "Sector2",
+            "ObjId": 102,
+            "MCOMs": [
+                "Rush/Sectors/Sector2/MCOM-A",
+                "Rush/Sectors/Sector2/MCOM-B"
+            ],
+            "SectorArea": "Rush/Sectors/Sector2/PolygonVolume2",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -105.774226,
+                "y": 234.52255,
+                "z": 67.957283
+            },
+            "id": "Rush/Sectors/Sector2",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume2",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Rush/Sectors/Sector2/PolygonVolume2",
+            "height": 100,
+            "points": [
+                {
+                    "x": -112.578921,
+                    "y": 224.52255,
+                    "z": 250.461223
+                },
+                {
+                    "x": -52.925723,
+                    "y": 224.52255,
+                    "z": 256.252783
+                },
+                {
+                    "x": -35.429226,
+                    "y": 224.52255,
+                    "z": 156.642993
+                },
+                {
+                    "x": -45.376422,
+                    "y": 224.52255,
+                    "z": 99.400223
+                },
+                {
+                    "x": -44.099046,
+                    "y": 224.52255,
+                    "z": 14.72784
+                },
+                {
+                    "x": -61.060099,
+                    "y": 224.52255,
+                    "z": -59.984287
+                },
+                {
+                    "x": -92.612857,
+                    "y": 224.52255,
+                    "z": -57.873927
+                },
+                {
+                    "x": -163.646609,
+                    "y": 224.52255,
+                    "z": -109.532977
+                },
+                {
+                    "x": -174.701376,
+                    "y": 224.52255,
+                    "z": -55.120527
+                },
+                {
+                    "x": -159.125033,
+                    "y": 224.52255,
+                    "z": -19.060317
+                },
+                {
+                    "x": -204.222446,
+                    "y": 224.52255,
+                    "z": 184.574433
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 602,
+            "Area": "Rush/Sectors/Sector2/PolygonVolume2",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -105.774226,
+                "y": 254.52255,
+                "z": 67.957283
+            },
+            "id": "Rush/Sectors/Sector2/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 302,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_1",
+                "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_2",
+                "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_3",
+                "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_4"
+            ],
+            "metadata/_edit_group_": true,
+            "HQArea": "Rush/Sectors/Sector1/PolygonVolume1",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -256.385986,
+                "y": 230.5481542,
+                "z": 34.125103
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_1_HQ2",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.6730513,
+                "y": 0,
+                "z": -0.7395959
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.7395959,
+                "y": 0,
+                "z": -0.6730513
+            },
+            "position": {
+                "x": -264.9380795,
+                "y": 232.1663183,
+                "z": -2.580059
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.74399674,
+                "y": 0,
+                "z": -0.6681833
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.6681833,
+                "y": 0,
+                "z": 0.74399674
+            },
+            "position": {
+                "x": -263.103271,
+                "y": 232.2413152,
+                "z": 9.397865
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.9908211,
+                "y": 0,
+                "z": -0.13517961
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.13517961,
+                "y": 0,
+                "z": 0.9908211
+            },
+            "position": {
+                "x": -262.310577,
+                "y": 231.02807363,
+                "z": 64.286933
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.9998253,
+                "y": 0,
+                "z": 0.018691286
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.018691286,
+                "y": 0,
+                "z": 0.9998253
+            },
+            "position": {
+                "x": -236.088913,
+                "y": 231.1321386,
+                "z": 63.124893
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_1_HQ2/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ2",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 402,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_1",
+                "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_2",
+                "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_3",
+                "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_4"
+            ],
+            "metadata/_edit_group_": true,
+            "HQArea": "Rush/Sectors/Sector3/PolygonVolume3",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 53.897424,
+                "y": 234.3972143,
+                "z": 25.684906
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_2_HQ2",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": 10.202867,
+                "y": 233.6389135,
+                "z": 35.869141
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": 17.241666,
+                "y": 232.3779119,
+                "z": 93.278572
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.7205389,
+                "y": 0,
+                "z": 0.69341445
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.69341445,
+                "y": 0,
+                "z": 0.7205389
+            },
+            "position": {
+                "x": 60.8731587,
+                "y": 228.127622,
+                "z": 123.174576
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.73938435,
+                "y": 0,
+                "z": 0.67328364
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.67328364,
+                "y": 0,
+                "z": 0.73938435
+            },
+            "position": {
+                "x": 46.2836087,
+                "y": 234.53608454,
+                "z": 39.954166
+            },
+            "id": "Rush/Sectors/Sector2/TEAM_2_HQ2/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM-A",
+            "ObjId": 203,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": -0.9738177,
+                "y": 0,
+                "z": -0.22733122
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.22733122,
+                "y": 0,
+                "z": -0.9738177
+            },
+            "position": {
+                "x": -109.792384,
+                "y": 234.78896846,
+                "z": 31.030883
+            },
+            "id": "Rush/Sectors/Sector2/MCOM-A"
+        },
+        {
+            "name": "MCOM-B",
+            "ObjId": 204,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": -0.17339046,
+                "y": 0,
+                "z": 0.98485315
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.98485315,
+                "y": 0,
+                "z": -0.17339046
+            },
+            "position": {
+                "x": -71.75043,
+                "y": 235.1945623,
+                "z": 165.402908
+            },
+            "id": "Rush/Sectors/Sector2/MCOM-B"
+        },
+        {
+            "name": "Sector3",
+            "ObjId": 103,
+            "MCOMs": [
+                "Rush/Sectors/Sector3/MCOM-A",
+                "Rush/Sectors/Sector3/MCOM-B"
+            ],
+            "SectorArea": "Rush/Sectors/Sector3/PolygonVolume3",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 54.77171,
+                "y": 234.52255,
+                "z": 29.404667
+            },
+            "id": "Rush/Sectors/Sector3",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume3",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Rush/Sectors/Sector3/PolygonVolume3",
+            "height": 100,
+            "points": [
+                {
+                    "x": 13.922925,
+                    "y": 224.52255,
+                    "z": 232.286467
+                },
+                {
+                    "x": 118.04008,
+                    "y": 224.52255,
+                    "z": 152.511341
+                },
+                {
+                    "x": 157.82312,
+                    "y": 224.52255,
+                    "z": 76.34623
+                },
+                {
+                    "x": 168.04036,
+                    "y": 224.52255,
+                    "z": 47.556572
+                },
+                {
+                    "x": 160.68934,
+                    "y": 224.52255,
+                    "z": -1.643698
+                },
+                {
+                    "x": 147.05459,
+                    "y": 224.52255,
+                    "z": -28.89127
+                },
+                {
+                    "x": 124.36296,
+                    "y": 224.52255,
+                    "z": -54.460873
+                },
+                {
+                    "x": 85.169308,
+                    "y": 224.52255,
+                    "z": -112.080703
+                },
+                {
+                    "x": -61.06125,
+                    "y": 224.52255,
+                    "z": -59.983483
+                },
+                {
+                    "x": -44.10514,
+                    "y": 224.52255,
+                    "z": 14.730304
+                },
+                {
+                    "x": -45.38349,
+                    "y": 224.52255,
+                    "z": 99.395847
+                },
+                {
+                    "x": -35.43305,
+                    "y": 224.52255,
+                    "z": 156.641207
+                },
+                {
+                    "x": -52.942844,
+                    "y": 224.52255,
+                    "z": 256.243717
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 603,
+            "Area": "Rush/Sectors/Sector3/PolygonVolume3",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 54.77171,
+                "y": 254.52255,
+                "z": 29.404667
+            },
+            "id": "Rush/Sectors/Sector3/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ3",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 303,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_1",
+                "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_2",
+                "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_3",
+                "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_4"
+            ],
+            "metadata/_edit_group_": true,
+            "HQArea": "Rush/Sectors/Sector2/PolygonVolume2",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -119.45952,
+                "y": 234.7958349,
+                "z": 62.782761
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_1_HQ3",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": -1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -99.162141,
+                "y": 235.09710443,
+                "z": 35.036683
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": -1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -97.623972,
+                "y": 235.42837274,
+                "z": 64.3520283
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": -1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -114.9124314,
+                "y": 234.1817297,
+                "z": 125.482651
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": -1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": -125.0817048,
+                "y": 233.3979925,
+                "z": 115.253327
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_1_HQ3/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ3",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 403,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_1",
+                "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_2",
+                "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_3",
+                "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_4"
+            ],
+            "HQArea": "Rush/Sectors/Sector4/PolygonVolume4",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 185.43846,
+                "y": 234.52255,
+                "z": -111.494323
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_2_HQ3",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.42614245,
+                "y": 0,
+                "z": 0.90465605
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.90465605,
+                "y": 0,
+                "z": 0.42614245
+            },
+            "position": {
+                "x": 221.057875,
+                "y": 234.99593867,
+                "z": -81.876273
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.4267739,
+                "y": 0,
+                "z": 0.9043583
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.9043583,
+                "y": 0,
+                "z": 0.4267739
+            },
+            "position": {
+                "x": 129.057738,
+                "y": 235.6028417,
+                "z": -153.077285
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.40137234,
+                "y": 0,
+                "z": 0.91591495
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.91591495,
+                "y": 0,
+                "z": 0.40137234
+            },
+            "position": {
+                "x": 223.07196,
+                "y": 239.5863775,
+                "z": -39.824283
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.30938214,
+                "y": 0,
+                "z": 0.9509378
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.9509378,
+                "y": 0,
+                "z": 0.30938214
+            },
+            "position": {
+                "x": 203.014647,
+                "y": 234.68641414,
+                "z": -82.633963
+            },
+            "id": "Rush/Sectors/Sector3/TEAM_2_HQ3/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM-A",
+            "ObjId": 205,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": -0.70710695,
+                "y": 0,
+                "z": 0.70710695
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.70710695,
+                "y": 0,
+                "z": -0.70710695
+            },
+            "position": {
+                "x": 72.27404,
+                "y": 234.31853999,
+                "z": 32.0815688
+            },
+            "id": "Rush/Sectors/Sector3/MCOM-A"
+        },
+        {
+            "name": "MCOM-B",
+            "ObjId": 206,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": -0.7071068,
+                "y": 0,
+                "z": 0.7071067
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.7071067,
+                "y": 0,
+                "z": -0.7071068
+            },
+            "position": {
+                "x": 87.211514,
+                "y": 233.033399,
+                "z": -18.618423
+            },
+            "id": "Rush/Sectors/Sector3/MCOM-B"
+        },
+        {
+            "name": "Sector4",
+            "ObjId": 104,
+            "MCOMs": [
+                "Rush/Sectors/Sector4/MCOM-A",
+                "Rush/Sectors/Sector4/MCOM-B"
+            ],
+            "SectorArea": "Rush/Sectors/Sector4/PolygonVolume4",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 186.58305,
+                "y": 234.52255,
+                "z": -145.048475
+            },
+            "id": "Rush/Sectors/Sector4",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume4",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Rush/Sectors/Sector4/PolygonVolume4",
+            "height": 100,
+            "points": [
+                {
+                    "x": 124.359387,
+                    "y": 224.52255,
+                    "z": -54.45931
+                },
+                {
+                    "x": 147.03288,
+                    "y": 224.52255,
+                    "z": -28.888975
+                },
+                {
+                    "x": 160.671627,
+                    "y": 224.52255,
+                    "z": -1.646805
+                },
+                {
+                    "x": 168.033139,
+                    "y": 224.52255,
+                    "z": 47.551985
+                },
+                {
+                    "x": 157.819012,
+                    "y": 224.52255,
+                    "z": 76.343125
+                },
+                {
+                    "x": 222.456387,
+                    "y": 224.52255,
+                    "z": 34.307355
+                },
+                {
+                    "x": 268.04657,
+                    "y": 224.52255,
+                    "z": -28.278375
+                },
+                {
+                    "x": 252.71644,
+                    "y": 224.52255,
+                    "z": -125.551283
+                },
+                {
+                    "x": 228.19076,
+                    "y": 224.52255,
+                    "z": -155.255323
+                },
+                {
+                    "x": 230.895535,
+                    "y": 224.52255,
+                    "z": -183.13545
+                },
+                {
+                    "x": 233.371685,
+                    "y": 224.52255,
+                    "z": -185.950269
+                },
+                {
+                    "x": 233.610867,
+                    "y": 224.52255,
+                    "z": -190.543562
+                },
+                {
+                    "x": 231.71777,
+                    "y": 224.52255,
+                    "z": -193.531248
+                },
+                {
+                    "x": 232.161648,
+                    "y": 224.52255,
+                    "z": -206.606855
+                },
+                {
+                    "x": 182.549374,
+                    "y": 224.52255,
+                    "z": -206.739135
+                },
+                {
+                    "x": 179.603039,
+                    "y": 224.52255,
+                    "z": -200.086285
+                },
+                {
+                    "x": 176.570767,
+                    "y": 224.52255,
+                    "z": -201.468975
+                },
+                {
+                    "x": 173.375012,
+                    "y": 224.52255,
+                    "z": -202.645338
+                },
+                {
+                    "x": 166.711697,
+                    "y": 224.52255,
+                    "z": -203.551665
+                },
+                {
+                    "x": 159.71896,
+                    "y": 224.52255,
+                    "z": -202.506422
+                },
+                {
+                    "x": 148.812313,
+                    "y": 224.52255,
+                    "z": -198.190565
+                },
+                {
+                    "x": 109.02106,
+                    "y": 224.52255,
+                    "z": -192.065335
+                },
+                {
+                    "x": 98.923306,
+                    "y": 224.52255,
+                    "z": -187.816055
+                },
+                {
+                    "x": 92.57223,
+                    "y": 224.52255,
+                    "z": -177.489851
+                },
+                {
+                    "x": 90.53988,
+                    "y": 224.52255,
+                    "z": -167.387495
+                },
+                {
+                    "x": 92.69436,
+                    "y": 224.52255,
+                    "z": -123.759222
+                },
+                {
+                    "x": 89.95755,
+                    "y": 224.52255,
+                    "z": -117.11083
+                },
+                {
+                    "x": 85.167645,
+                    "y": 224.52255,
+                    "z": -112.079925
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 604,
+            "Area": "Rush/Sectors/Sector4/PolygonVolume4",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 186.58305,
+                "y": 254.52255,
+                "z": -145.048475
+            },
+            "id": "Rush/Sectors/Sector4/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ4",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 304,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_1",
+                "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_2",
+                "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_3",
+                "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_4"
+            ],
+            "metadata/_edit_group_": true,
+            "HQArea": "Rush/Sectors/Sector3/PolygonVolume3",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 66.681225,
+                "y": 234.41981257,
+                "z": 19.205505
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_1_HQ4",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.3913255,
+                "y": 0,
+                "z": -0.9202523
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.9202523,
+                "y": 0,
+                "z": -0.3913255
+            },
+            "position": {
+                "x": 115.211805,
+                "y": 229.38355757,
+                "z": 29.95952
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.99593174,
+                "y": 0,
+                "z": 0.09011114
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.09011114,
+                "y": 0,
+                "z": -0.99593174
+            },
+            "position": {
+                "x": 105.333882,
+                "y": 229.35224657,
+                "z": 7.830266
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": -1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": 81.401638,
+                "y": 234.434659372,
+                "z": -5.339774
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.99677885,
+                "y": 0,
+                "z": 0.080198914
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.080198914,
+                "y": 0,
+                "z": -0.99677885
+            },
+            "position": {
+                "x": 59.6218874,
+                "y": 233.31139887,
+                "z": -14.29665
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_1_HQ4/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ4",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 404,
+            "InfantrySpawns": [
+                "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_1",
+                "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_2",
+                "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_3",
+                "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_4"
+            ],
+            "metadata/_edit_group_": true,
+            "HQArea": "Rush/Sectors/Sector5/PolygonVolume5",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 369.73663,
+                "y": 242.488233,
+                "z": -177.548078
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_2_HQ4",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.44078532,
+                "y": 0,
+                "z": 0.8976126
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.8976126,
+                "y": 0,
+                "z": 0.44078532
+            },
+            "position": {
+                "x": 360.6358,
+                "y": 243.9521002,
+                "z": -193.941602
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.53646034,
+                "y": 0,
+                "z": 0.84392554
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.84392554,
+                "y": 0,
+                "z": -0.53646034
+            },
+            "position": {
+                "x": 373.0411039,
+                "y": 242.33004513,
+                "z": -143.508665
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": 398.784237,
+                "y": 243.02834836,
+                "z": -156.075544
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "metadata/_edit_group_": true,
+            "type": "SpawnPoint",
+            "right": {
+                "x": -4.37114e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.37114e-08
+            },
+            "position": {
+                "x": 378.838467,
+                "y": 242.570325285,
+                "z": -175.8581519
+            },
+            "id": "Rush/Sectors/Sector4/TEAM_2_HQ4/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM-A",
+            "ObjId": 207,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": 1.0000002,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1.0000002
+            },
+            "position": {
+                "x": 202.72485,
+                "y": 240.0600866,
+                "z": -168.997236
+            },
+            "id": "Rush/Sectors/Sector4/MCOM-A"
+        },
+        {
+            "name": "MCOM-B",
+            "ObjId": 208,
+            "metadata/_edit_group_": true,
+            "type": "MCOM",
+            "right": {
+                "x": -4.371139e-08,
+                "y": 0,
+                "z": 1
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -1,
+                "y": 0,
+                "z": -4.371139e-08
+            },
+            "position": {
+                "x": 214.557781,
+                "y": 237.66377,
+                "z": -134.20033
+            },
+            "id": "Rush/Sectors/Sector4/MCOM-B"
+        },
+        {
+            "name": "Sector5",
+            "ObjId": 105,
+            "MCOMs": [],
+            "SectorArea": "Rush/Sectors/Sector5/PolygonVolume5",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 356.02311,
+                "y": 234.52255,
+                "z": -146.098765
+            },
+            "id": "Rush/Sectors/Sector5",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume5",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Rush/Sectors/Sector5/PolygonVolume5",
+            "height": 100,
+            "points": [
+                {
+                    "x": 312.034646,
+                    "y": 224.52255,
+                    "z": -57.781215
+                },
+                {
+                    "x": 372.61277,
+                    "y": 224.52255,
+                    "z": -88.474735
+                },
+                {
+                    "x": 429.30778,
+                    "y": 224.52255,
+                    "z": -114.564044
+                },
+                {
+                    "x": 448.44871,
+                    "y": 224.52255,
+                    "z": -137.073802
+                },
+                {
+                    "x": 454.42069,
+                    "y": 224.52255,
+                    "z": -160.349192
+                },
+                {
+                    "x": 445.84556,
+                    "y": 224.52255,
+                    "z": -183.471461
+                },
+                {
+                    "x": 416.283547,
+                    "y": 224.52255,
+                    "z": -205.833949
+                },
+                {
+                    "x": 383.713143,
+                    "y": 224.52255,
+                    "z": -213.161755
+                },
+                {
+                    "x": 232.15682,
+                    "y": 224.52255,
+                    "z": -206.606852
+                },
+                {
+                    "x": 231.71905,
+                    "y": 224.52255,
+                    "z": -193.532313
+                },
+                {
+                    "x": 233.612084,
+                    "y": 224.52255,
+                    "z": -190.5442
+                },
+                {
+                    "x": 233.37234,
+                    "y": 224.52255,
+                    "z": -185.949031
+                },
+                {
+                    "x": 230.89678,
+                    "y": 224.52255,
+                    "z": -183.135555
+                },
+                {
+                    "x": 228.19497,
+                    "y": 224.52255,
+                    "z": -155.260722
+                },
+                {
+                    "x": 252.717385,
+                    "y": 224.52255,
+                    "z": -125.551066
+                },
+                {
+                    "x": 268.04258,
+                    "y": 224.52255,
+                    "z": -28.284935
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 605,
+            "Area": "Rush/Sectors/Sector5/PolygonVolume5",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 356.02311,
+                "y": 254.52255,
+                "z": -146.098765
+            },
+            "id": "Rush/Sectors/Sector5/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "FixedCamera",
+            "ObjId": 950,
+            "type": "FixedCamera",
+            "right": {
+                "x": -0.9833882849014844,
+                "y": 2.3176625938916e-08,
+                "z": 0.18151467179894373
+            },
+            "up": {
+                "x": -0.055856027,
+                "y": 0.95147634,
+                "z": -0.30261016
+            },
+            "front": {
+                "x": -0.17270692597055867,
+                "y": -0.30772197000000034,
+                "z": -0.9356705841314863
+            },
+            "position": {
+                "x": 90.99578,
+                "y": 260.21762,
+                "z": 120.83645
+            },
+            "id": "Rush/EndGameCamera/FixedCamera"
+        }
+    ],
+    "Static": [
+        {
+            "name": "MP_Eastwood_Terrain",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Eastwood_Terrain",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Eastwood_Terrain"
+        },
+        {
+            "name": "MP_Eastwood_Assets",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Eastwood_Assets",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Eastwood_Assets"
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/CombatVehicleContainer_01_KeyCardReader.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/props/CombatVehicleContainer_01_KeyCardReader.gd" type="Script" id="2"]
+
+
+[node name="CombatVehicleContainer_01_KeyCardReader" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

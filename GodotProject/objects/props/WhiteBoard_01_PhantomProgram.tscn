@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/WhiteBoard_01_PhantomProgram.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/props/WhiteBoard_01_PhantomProgram.gd" type="Script" id="2"]
+
+
+[node name="WhiteBoard_01_PhantomProgram" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

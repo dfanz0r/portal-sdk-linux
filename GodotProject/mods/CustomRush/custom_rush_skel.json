@@ -1,0 +1,43 @@
+{
+  "mutators":
+  {
+    "MaxPlayerCount_PerTeam": 16,
+    "AiSpawnType": 2,
+    "FactionID_PerTeam": [
+      [
+        0,
+        607944106
+      ],
+      [
+        1,
+        -1865993703
+      ]
+    ],
+    "ScoreboardType": 3,
+    "AI_ManDownExperienceType_PerTeam": 1
+  },
+  "assetRestrictions": {},
+  "name": "Custom Rush Template",
+  "description": "Custom Rush Template",
+  "mapRotation": [],
+  "teamComposition": [
+    [
+      1,
+      {
+        "humanCapacity": 16,
+        "aiCapacity": 0,
+        "aiType": 0
+      }
+    ],
+    [
+      2,
+      {
+        "humanCapacity": 16,
+        "aiCapacity": 0,
+        "aiType": 0
+      }
+    ]
+  ],
+  "gameMode": "ModBuilderCustom",
+  "attachments": []
+}

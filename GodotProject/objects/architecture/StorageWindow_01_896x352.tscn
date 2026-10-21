@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/StorageWindow_01_896x352.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/StorageWindow_01_896x352.gd" type="Script" id="2"]
+
+
+[node name="StorageWindow_01_896x352" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

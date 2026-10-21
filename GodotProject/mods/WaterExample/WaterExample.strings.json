@@ -1,0 +1,14 @@
+{
+    "BEAUFORTSCALERAISE": "Raise Beaufort Scale",
+    "BEAUFORTSCALELOWER": "Lower Beaufort Scale",
+    "RAISEAMPLITUDE": "Raise Amplitude",
+    "LOWERAMPLITUDE": "Lower Amplitude",
+    "POWERUP": "Breathing Power Up - 60 seconds",
+    "BREATHINGPOWERUP": "Breathing Power Up: {}",
+    "SECONDSREMAINING": " seconds remaining",
+    "TUTORIAL": "Use the Portal Gadget to change water levels, left click to raise, right click to lower.",
+    "BEAUFORTSCALETUTORIAL": "BEAUFORT SCALE: This will increase wind strength and naturally wave height.",
+    "WAVEAMPLITUDETUTORIAL": "WAVE AMPLITUDE: This gets multiplied with Beaufort Scale to determine wave amplitude.",
+    "POWERUPTUTORIAL": "Use this power up to survive underwater longer.",
+    "NEWVALUE": "New Value: {}."
+}

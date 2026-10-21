@@ -1,0 +1,60 @@
+{
+    "manifest_version": "1",
+    "name": "Custom Breakthrough",
+    "mod_version": "5.0",
+    "description": "BREAKTHROUGH: Attackers vs. Defenders. Attackers win by capturing objectives. Sector by sector. Defenders win by eliminating all enemy reinforcements. Recommended for 64 players.\nListed below are levels that have been pre-configured to immediately work with this Breakthrough Template once imported into the Battlefield 6 Web Builder.\nTo use your custom levels, you will need to export them and upload them to the web-builder separately.",
+    "workspace": "custom_breakthrough_template_V5.0.json",
+    "base_skel": "custom_breakthrough_skel.json",
+    "icon": "breakthrough.svg",
+    "game_mode": "ModBuilderCustom0",
+    "maps": [
+      { 
+        "map_name": "MP_Aftermath_Portal",
+        "file_stem": "MP_Aftermath_Operation_Metro_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Contaminated",
+        "file_stem": "MP_Contaminated_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Dumbo",
+        "file_stem": "MP_Dumbo_Breakthrough"
+      },
+      { 
+        "map_name": "MP_GolmudRailway",
+        "file_stem": "MP_GolmudRailway_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Granite_ClubHouse_Portal",
+        "file_stem": "MP_Granite_ClubHouse_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Granite_MainStreet_Portal",
+        "file_stem": "MP_Granite_MainStreet_Portal_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Granite_Marina_Portal",
+        "file_stem": "MP_Granite_Marina_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Granite_TechCampus_Portal",
+        "file_stem": "MP_Granite_TechCampus_Portal_CustomBreakthrough"
+      },
+      { 
+        "map_name": "MP_Isolated",
+        "file_stem": "MP_Isolated_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Plaza",
+        "file_stem": "MP_Plaza_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Subsurface",
+        "file_stem": "MP_Subsurface_Breakthrough"
+      },
+      { 
+        "map_name": "MP_Tungsten",
+        "file_stem": "MP_Tungsten_Breakthrough"
+      }
+    ]
+}

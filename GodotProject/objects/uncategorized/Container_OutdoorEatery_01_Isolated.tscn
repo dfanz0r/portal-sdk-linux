@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/Container_OutdoorEatery_01_Isolated.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/Container_OutdoorEatery_01_Isolated.gd" type="Script" id="2"]
+
+
+[node name="Container_OutdoorEatery_01_Isolated" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

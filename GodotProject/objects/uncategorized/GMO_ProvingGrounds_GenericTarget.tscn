@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/GMO_ProvingGrounds_GenericTarget.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/GMO_ProvingGrounds_GenericTarget.gd" type="Script" id="2"]
+
+
+[node name="GMO_ProvingGrounds_GenericTarget" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

@@ -1,0 +1,2049 @@
+[gd_scene format=3 uid="uid://cilufmvsqfby1"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_ipimh"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_8cy2i"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/AI/AI_Spawner.tscn" id="3_la1dk"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_x3p5g"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/CombatArea.tscn" id="4_hhu3q"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_Underground_Portal_Terrain.tscn" id="5_i1psc"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_lj1hn"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_MilitaryRnD_Portal_Terrain.tscn" id="6_u0nwv"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_MilitaryRnD_Portal_Assets.tscn" id="7_mfw32"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Conquest/CapturePoint.tscn" id="8_317nj"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/VehicleSpawner.tscn" id="9_kk5v0"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_MilitaryStorage_Portal_Terrain.tscn" id="10_x2xib"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/Sector.tscn" id="12_la1dk"]
+[ext_resource type="PackedScene" path="res://objects/props/MannequinRotation_01.tscn" id="15_metp3"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/FixedCamera.tscn" id="16_i1psc"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/InteractPoint.tscn" id="16_ii6wa"]
+[ext_resource type="PackedScene" path="res://objects/nature/AcaciaUrban_01_S.tscn" id="17_qoxfn"]
+[ext_resource type="PackedScene" path="res://static/MP_Granite_ClubHouse_Portal_Terrain.tscn" id="19_qoxfn"]
+[ext_resource type="PackedScene" path="res://objects/uncategorized/GM1083CargoTruck_01_Canopy.tscn" id="20_g76jq"]
+[ext_resource type="PackedScene" path="res://objects/props/SemiTruck_01.tscn" id="21_dkntl"]
+[ext_resource type="PackedScene" path="res://objects/props/SemiTruckTrailer_01.tscn" id="22_3hddb"]
+[ext_resource type="PackedScene" path="res://objects/uncategorized/GCarSedan_01.tscn" id="23_6f52g"]
+[ext_resource type="PackedScene" path="res://objects/props/ContainerStandard_01_640.tscn" id="24_6f52g"]
+[ext_resource type="PackedScene" path="res://objects/architecture/Barrack_02_B.tscn" id="25_3hddb"]
+[ext_resource type="PackedScene" path="res://objects/uncategorized/SiloOilLarge_01_White.tscn" id="26_rqkkw"]
+[ext_resource type="PackedScene" path="res://objects/props/BarrierHesco_01_Row03.tscn" id="27_gkcs6"]
+[ext_resource type="PackedScene" path="res://objects/props/TankPropane_01.tscn" id="27_k2v1w"]
+[ext_resource type="PackedScene" path="res://objects/uncategorized/BarrackCylindrical_Airstrip_01_Props_B.tscn" id="28_cgqbc"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/vehicles/VEH_Stationary_AutomaticAA.tscn" id="31_tbdu2"]
+
+[node name="MP_Granite_MilitaryRnD_Portal" type="Node3D" unique_id=1638304327]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1646435798]
+transform = Transform3D(1, 0, 0, 0, 0.101056, 0.994881, 0, -0.994881, 0.101056, 400.06, 423.07, -543.938)
+
+[node name="DeployCam" parent="Camera3D" unique_id=1835648173 instance=ExtResource("5_lj1hn")]
+transform = Transform3D(-0.400853, 0.643655, -0.651939, -0.908865, -0.189872, 0.371368, 0.115248, 0.741388, 0.661106, 0, 0, 0)
+
+[node name="Static" type="Node3D" parent="." unique_id=666981503]
+
+[node name="MP_Granite_MilitaryRnD_Portal_Terrain" parent="Static" unique_id=240394180 instance=ExtResource("6_u0nwv")]
+metadata/_edit_lock_ = true
+
+[node name="MP_Granite_MilitaryRnD_Portal_Assets" parent="Static" unique_id=1602567357 instance=ExtResource("7_mfw32")]
+metadata/_edit_lock_ = true
+
+[node name="Static2" type="Node3D" parent="Static" unique_id=532479789]
+
+[node name="MP_Granite_MilitaryStorage_Portal_Terrain" parent="Static/Static2" unique_id=1868800071 instance=ExtResource("10_x2xib")]
+metadata/_edit_lock_ = true
+
+[node name="Static3" type="Node3D" parent="Static" unique_id=777561944]
+
+[node name="MP_Granite_Underground_Portal_Terrain" parent="Static/Static3" unique_id=2064222544 instance=ExtResource("5_i1psc")]
+metadata/_edit_lock_ = true
+
+[node name="Static4" type="Node3D" parent="Static" unique_id=1673302436]
+
+[node name="MP_Granite_ClubHouse_Portal_Terrain" parent="Static/Static4" unique_id=1209194102 instance=ExtResource("19_qoxfn")]
+metadata/_edit_lock_ = true
+
+[node name="Play Area" type="Node3D" parent="." unique_id=2083056347]
+
+[node name="CombatArea" parent="Play Area" unique_id=1881115437 node_paths=PackedStringArray("CombatVolume", "SurroundingVolume") instance=ExtResource("4_hhu3q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 58.2776, 447.787, 140.54)
+CombatVolume = NodePath("CombatVolume")
+SurroundingVolume = NodePath("AirCombatArea")
+
+[node name="CombatVolume" parent="Play Area/CombatArea" unique_id=1017253979 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 461.967, -319.764, -846.68)
+points = PackedVector2Array(-348.981, 68.1472, -374.145, 324.974, -365.522, 443.862, -300.523, 572.113, -220.313, 625.114, -120.675, 627.308, 30.5941, 616.328, 191.988, 548.481, 329.949, 349.016, 309.586, 175.846, 243.572, -1.09955, 235.591, -148.686, 131.649, -248.196, 22.4792, -319.429, -54.6187, -340.529, -142.681, -296.607, -249.262, -181.258)
+height = 400.0
+
+[node name="AirCombatArea" parent="Play Area/CombatArea" unique_id=459374914 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 404.52, -25.310791, -575.651)
+points = PackedVector2Array(-652.471, -278.16, -635.973, 112.755, -360.35, 524.286, 6.74063, 604.335, 493.68, 468.535, 595.196, 187.755, 607.806, -194.425, 498.371, -612.246, 53.1418, -814.976, -297.544, -772.679, -528.404, -547.639)
+
+[node name="Sector - This manages the CapturePoint Names" parent="Play Area" unique_id=2104562875 node_paths=PackedStringArray("SectorArea", "CapturePoints") instance=ExtResource("12_la1dk")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 483.655, 312.298, -841.17)
+SectorArea = NodePath("../CombatArea/CombatVolume")
+CapturePoints = [NodePath("../../Objectives/CapturePointA"), NodePath("../../Objectives/CapturePointB"), NodePath("../../Objectives/CapturePointC"), NodePath("../../Objectives/CapturePointD"), NodePath("../../Objectives/CapturePointE"), NodePath("../../Objectives/CapturePointF"), NodePath("../../Objectives/CapturePointG")]
+
+[node name="TEAM_1_HQ" parent="." unique_id=1670194362 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_ipimh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 891.338, 190.234, -763.948)
+AltTeam = 0
+ObjId = 1
+HQArea = NodePath("HQ_Team1")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+
+[node name="HQ_Team1" parent="TEAM_1_HQ" unique_id=1431614515 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -61.824, 0)
+points = PackedVector2Array(-43.6025, -165.769, -239.448, -190.382, -135.518, -90.8716, -127.554, 56.7195, -61.5145, 233.659, -0.316528, 179.789, 63.5814, 62.3868, 70.1794, -14.1492, 36.6283, -98.4697)
+height = 300.0
+color = Color(0, 0.531396, 0.98633, 0.42)
+
+[node name="SpawnPoint_1_1" parent="TEAM_1_HQ" unique_id=1311721187 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.471382, 0, -0.88193, 0, 1, 0, 0.88193, 0, 0.471382, 34.6517, 4.76442, -40.8784)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_2" parent="TEAM_1_HQ" unique_id=1544037123 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.865894, 0, -0.500227, 0, 1, 0, 0.500227, 0, 0.865894, -10.8058, -0.772858, 3.14301)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_3" parent="TEAM_1_HQ" unique_id=1648656989 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.968856, 0, -0.247625, 0, 1, 0, 0.247625, 0, 0.968856, -54.1439, 2.88416, -20.5332)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_4" parent="TEAM_1_HQ" unique_id=182672589 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.452668, 0, -0.891679, 0, 1, 0, 0.891679, 0, 0.452668, -33.6782, -2.82454, 33.0644)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_5" parent="TEAM_1_HQ" unique_id=927122958 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.452668, 0, -0.891679, 0, 1, 0, 0.891679, 0, 0.452668, -31.4989, -0.699234, 3.03339)
+metadata/_edit_group_ = true
+
+[node name="TEAM_2_HQ" parent="." unique_id=973090323 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_ipimh")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 503.314, 167.54, 22.7232)
+Team = 2
+AltTeam = 0
+ObjId = 2
+HQArea = NodePath("HQ_Team2")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+
+[node name="HQ_Team2" parent="TEAM_2_HQ" unique_id=772979914 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -39.7205, 0)
+points = PackedVector2Array(-203.357, -103.804, -283.599, -156.769, -235.168, 29.6843, -132.512, 96.8261, -51.7981, 101.924, 39.8727, 78.0589, 90.1006, 20.5066, 108.831, -138.385, 47.5261, -112.554, -103.759, -101.587)
+height = 300.0
+color = Color(1, 0.00149821, 0.0788322, 0.42)
+
+[node name="SpawnPoint_2_1" parent="TEAM_2_HQ" unique_id=1358751205 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.773929, 0, 0.633274, 0, 1, 0, -0.633274, 0, -0.773929, -29.397, 0.303253, 7.62247)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_2" parent="TEAM_2_HQ" unique_id=14545128 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.997604, 0, 0.0691822, 0, 1, 0, -0.0691822, 0, -0.997604, -41.0551, -9.85109, 73.8323)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_3" parent="TEAM_2_HQ" unique_id=1442228814 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.939949, 0, 0.341315, 0, 1, 0, -0.341315, 0, -0.939949, -7.94247, -3.7955, 42.384)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_4" parent="TEAM_2_HQ" unique_id=1367057779 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.70555, 0, -0.70866, 0, 1, 0, 0.70866, 0, -0.70555, 22.8084, -3.52469, 37.755)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_5" parent="TEAM_2_HQ" unique_id=851176928 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.486114, 0.000536391, 0.873895, -0.000412938, 1, -0.000843499, -0.873895, -0.000770899, -0.486114, -45.2864, 0.323898, -16.7293)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_6" parent="TEAM_2_HQ" unique_id=1193784829 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.0795815, 0.000536391, -0.996828, 0.000725766, 1, 0.000596034, 0.996828, -0.000770899, 0.0795812, 37.8698, 3.57166, -34.8835)
+metadata/_edit_group_ = true
+
+[node name="Objectives" type="Node3D" parent="." unique_id=982673306]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 768.457, 57.1226, -842.408)
+
+[node name="CapturePointA" parent="Objectives" unique_id=1320510849 node_paths=PackedStringArray("CaptureArea", "InfantrySpawnPoints_Team1", "InfantrySpawnPoints_Team2") instance=ExtResource("8_317nj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -150.857, 116.698, 78.7737)
+ObjId = 200
+OutlineAbove16Points = true
+Spawning_ObjectiveMaxDistance = 400
+TacticalAdviceAirVehicleFriendly = true
+CaptureArea = NodePath("CapturePointArea")
+InfantrySpawnPoints_Team1 = [NodePath("Spawns/Team1/SpawnPoint_1"), NodePath("Spawns/Team1/SpawnPoint_2"), NodePath("Spawns/Team1/SpawnPoint_3"), NodePath("Spawns/Team1/SpawnPoint_4"), NodePath("Spawns/Team1/SpawnPoint_5")]
+InfantrySpawnPoints_Team2 = [NodePath("Spawns/Team2/SpawnPoint_6"), NodePath("Spawns/Team2/SpawnPoint_7"), NodePath("Spawns/Team2/SpawnPoint_8"), NodePath("Spawns/Team2/SpawnPoint_9"), NodePath("Spawns/Team2/SpawnPoint_10")]
+
+[node name="CapturePointArea" parent="Objectives/CapturePointA" unique_id=1059612005 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39194, -5.34032, -0.976593)
+points = PackedVector2Array(-12.4789, -28.9862, -31.972, 7.65973, 12.7878, 31.599, 32.5555, -4.79883)
+height = 30.0
+
+[node name="Spawns" type="Node3D" parent="Objectives/CapturePointA" unique_id=486619015]
+
+[node name="Team1" type="Node3D" parent="Objectives/CapturePointA/Spawns" unique_id=265050706]
+
+[node name="SpawnPoint_1" parent="Objectives/CapturePointA/Spawns/Team1" unique_id=2133561491 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.483145, 0, -0.875541, 0, 1, 0, 0.875541, 0, 0.483145, 10.4739, 0.186691, -83.4916)
+
+[node name="SpawnPoint_2" parent="Objectives/CapturePointA/Spawns/Team1" unique_id=1341739156 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.94516, 0, -0.326608, 0, 1, 0, 0.326608, 0, -0.94516, 59.515, -0.297852, 114.602)
+
+[node name="SpawnPoint_3" parent="Objectives/CapturePointA/Spawns/Team1" unique_id=356381221 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.194663, 0, -0.980869, 0, 1, 0, 0.980869, 0, -0.194663, -14.6091, 0.451279, -104.435)
+
+[node name="SpawnPoint_4" parent="Objectives/CapturePointA/Spawns/Team1" unique_id=1898267508 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.246087, 0, 0.969248, 0, 1, 0, -0.969248, 0, -0.246087, -38.5169, 0.0726318, 41.5236)
+
+[node name="SpawnPoint_5" parent="Objectives/CapturePointA/Spawns/Team1" unique_id=1493969899 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.365966, 0, -0.930628, 0, 1, 0, 0.930628, 0, -0.365966, -7.79443, -0.0881653, -135.944)
+
+[node name="Team2" type="Node3D" parent="Objectives/CapturePointA/Spawns" unique_id=1074394714]
+
+[node name="SpawnPoint_6" parent="Objectives/CapturePointA/Spawns/Team2" unique_id=1764916668 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.861506, 0, 0.507749, 0, 1, 0, -0.507749, 0, 0.861506, -33.4825, 0.00975037, 63.179)
+
+[node name="SpawnPoint_7" parent="Objectives/CapturePointA/Spawns/Team2" unique_id=270909377 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.56035, 0, 0.828256, 0, 1, 0, -0.828256, 0, -0.56035, 32.6985, -0.00579834, 101.358)
+
+[node name="SpawnPoint_8" parent="Objectives/CapturePointA/Spawns/Team2" unique_id=1459975748 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.875449, 0, 0.483312, 0, 1, 0, -0.483312, 0, 0.875449, 9.94366, 0.487473, -90.1983)
+
+[node name="SpawnPoint_9" parent="Objectives/CapturePointA/Spawns/Team2" unique_id=247941516 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.903978, 0, -0.427579, 0, 1, 0, 0.427579, 0, 0.903978, -2.01471, 0.899307, -124.828)
+
+[node name="SpawnPoint_10" parent="Objectives/CapturePointA/Spawns/Team2" unique_id=602587808 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.719618, 0, -0.69437, 0, 1, 0, 0.69437, 0, 0.719618, -12.4865, 0.338989, -113.397)
+
+[node name="CapturePointB" parent="Objectives" unique_id=1044480331 node_paths=PackedStringArray("CaptureArea", "InfantrySpawnPoints_Team1", "InfantrySpawnPoints_Team2") instance=ExtResource("8_317nj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -282.672, 120.231, 55.2913)
+ObjId = 201
+OutlineAbove16Points = true
+Spawning_ObjectiveMaxDistance = 400
+TacticalAdviceAirVehicleFriendly = true
+CaptureArea = NodePath("CapturePointArea")
+InfantrySpawnPoints_Team1 = [NodePath("Spawns/Team1/SpawnPoint_1"), NodePath("Spawns/Team1/SpawnPoint_2"), NodePath("Spawns/Team1/SpawnPoint_3"), NodePath("Spawns/Team1/SpawnPoint_4"), NodePath("Spawns/Team1/SpawnPoint_5")]
+InfantrySpawnPoints_Team2 = [NodePath("Spawns/Team2/SpawnPoint_6"), NodePath("Spawns/Team2/SpawnPoint_7"), NodePath("Spawns/Team2/SpawnPoint_8"), NodePath("Spawns/Team2/SpawnPoint_9"), NodePath("Spawns/Team2/SpawnPoint_10")]
+
+[node name="CapturePointArea" parent="Objectives/CapturePointB" unique_id=1676668635 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.32138, -5.10179, 0.123657)
+points = PackedVector2Array(8.466, 30.6713, 12.0449, 26.3438, 25.7589, 2.87354, 27.4442, -2.09869, -36.5882, -37.4114, -53.9634, -6.48218)
+height = 30.0
+
+[node name="Spawns" type="Node3D" parent="Objectives/CapturePointB" unique_id=212772672]
+
+[node name="Team1" type="Node3D" parent="Objectives/CapturePointB/Spawns" unique_id=555468653]
+
+[node name="SpawnPoint_1" parent="Objectives/CapturePointB/Spawns/Team1" unique_id=103286867 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.952449, 0, -0.304698, 0, 1, 0, 0.304698, 0, 0.952449, -110.245, -2.99741, -90.6955)
+
+[node name="SpawnPoint_2" parent="Objectives/CapturePointB/Spawns/Team1" unique_id=2130735113 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.903881, 0, 0.427784, 0, 1, 0, -0.427784, 0, 0.903881, -61.1787, -3.58436, -139.447)
+
+[node name="SpawnPoint_3" parent="Objectives/CapturePointB/Spawns/Team1" unique_id=863552261 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.360289, 0, -0.93284, 0, 1, 0, 0.93284, 0, 0.360289, 61.9642, -3.64543, -158.851)
+
+[node name="SpawnPoint_4" parent="Objectives/CapturePointB/Spawns/Team1" unique_id=1981745540 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.949569, 0, -0.313561, 0, 1, 0, 0.313561, 0, 0.949569, -74.5923, -3.61337, -87.5704)
+
+[node name="SpawnPoint_5" parent="Objectives/CapturePointB/Spawns/Team1" unique_id=2046870526 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.889696, 0, 0.456554, 0, 1, 0, -0.456554, 0, 0.889696, -127.388, -3.1207, -37.3463)
+
+[node name="Team2" type="Node3D" parent="Objectives/CapturePointB/Spawns" unique_id=1258098370]
+
+[node name="SpawnPoint_6" parent="Objectives/CapturePointB/Spawns/Team2" unique_id=494640865 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.861506, 0, 0.507749, 0, 1, 0, -0.507749, 0, 0.861506, -135.034, -3.3635, -33.9064)
+
+[node name="SpawnPoint_7" parent="Objectives/CapturePointB/Spawns/Team2" unique_id=806723133 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.629076, 0, 0.777344, 0, 1, 0, -0.777344, 0, 0.629076, -197.271, -3.37186, -8.29231)
+
+[node name="SpawnPoint_8" parent="Objectives/CapturePointB/Spawns/Team2" unique_id=30828331 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.998846, 0, 0.0480293, 0, 1, 0, -0.0480293, 0, 0.998846, -114.781, -3.37732, -83.1833)
+
+[node name="SpawnPoint_9" parent="Objectives/CapturePointB/Spawns/Team2" unique_id=575915076 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.924206, 0, 0.381893, 0, 1, 0, -0.381893, 0, 0.924206, -63.1886, -3.76629, -136.085)
+
+[node name="SpawnPoint_10" parent="Objectives/CapturePointB/Spawns/Team2" unique_id=1946475569 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.431803, 0, 0.901968, 0, 1, 0, -0.901968, 0, 0.431803, 62.5367, -3.6691, -150.78)
+
+[node name="CapturePointC" parent="Objectives" unique_id=1593623140 node_paths=PackedStringArray("CaptureArea", "InfantrySpawnPoints_Team1", "InfantrySpawnPoints_Team2") instance=ExtResource("8_317nj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -323.824, 116.593, 209.317)
+ObjId = 202
+OutlineAbove16Points = true
+Spawning_ObjectiveMaxDistance = 400
+TacticalAdviceAirVehicleFriendly = true
+CaptureArea = NodePath("CapturePointArea")
+InfantrySpawnPoints_Team1 = [NodePath("Spawns/Team1/SpawnPoint_1"), NodePath("Spawns/Team1/SpawnPoint_2"), NodePath("Spawns/Team1/SpawnPoint_3"), NodePath("Spawns/Team1/SpawnPoint_4"), NodePath("Spawns/Team1/SpawnPoint_5")]
+InfantrySpawnPoints_Team2 = [NodePath("Spawns/Team2/SpawnPoint_6"), NodePath("Spawns/Team2/SpawnPoint_7"), NodePath("Spawns/Team2/SpawnPoint_8"), NodePath("Spawns/Team2/SpawnPoint_9"), NodePath("Spawns/Team2/SpawnPoint_10")]
+
+[node name="CapturePointArea" parent="Objectives/CapturePointC" unique_id=257158663 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39194, -5.34032, -0.976593)
+points = PackedVector2Array(-28.0901, -3.36041, -15.325, 36.3506, 32.9871, 21.9103, 21.314, -18.2562)
+height = 30.0
+
+[node name="Spawns" type="Node3D" parent="Objectives/CapturePointC" unique_id=1223565374]
+
+[node name="Team1" type="Node3D" parent="Objectives/CapturePointC/Spawns" unique_id=615959972]
+
+[node name="SpawnPoint_1" parent="Objectives/CapturePointC/Spawns/Team1" unique_id=1894375135 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.999126, 0, -0.0418058, 0, 1, 0, 0.0418058, 0, 0.999126, 90.7799, 0.192215, -37.8924)
+
+[node name="SpawnPoint_2" parent="Objectives/CapturePointC/Spawns/Team1" unique_id=566603261 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.0478565, 0, 0.998854, 0, 1, 0, -0.998854, 0, -0.0478565, -107.703, 0.0767212, -26.4267)
+
+[node name="SpawnPoint_3" parent="Objectives/CapturePointC/Spawns/Team1" unique_id=993557858 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.768116, 0, 0.64031, 0, 1, 0, -0.64031, 0, 0.768116, -31.8633, 2.22963, -84.0814)
+
+[node name="SpawnPoint_4" parent="Objectives/CapturePointC/Spawns/Team1" unique_id=1759331608 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.76436, 0, 0.64479, 0, 1, 0, -0.64479, 0, -0.76436, 106.099, 0.208969, -4.90686)
+
+[node name="SpawnPoint_5" parent="Objectives/CapturePointC/Spawns/Team1" unique_id=743191814 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.539462, 0, 0.84201, 0, 1, 0, -0.84201, 0, 0.539462, -135.021, 0.0306854, -30.8183)
+
+[node name="Team2" type="Node3D" parent="Objectives/CapturePointC/Spawns" unique_id=666121361]
+
+[node name="SpawnPoint_6" parent="Objectives/CapturePointC/Spawns/Team2" unique_id=1864916817 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.99786, 0, 0.0654034, 0, 1, 0, -0.0654034, 0, -0.99786, -91.3613, 1.1599, 44.3373)
+
+[node name="SpawnPoint_7" parent="Objectives/CapturePointC/Spawns/Team2" unique_id=1535503267 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.629076, 0, 0.777344, 0, 1, 0, -0.777344, 0, 0.629076, -138.732, 0.191132, -26.532)
+
+[node name="SpawnPoint_8" parent="Objectives/CapturePointC/Spawns/Team2" unique_id=2033176906 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.362537, 0, 0.93197, 0, 1, 0, -0.93197, 0, 0.362537, -126.534, -0.452652, 95.9933)
+
+[node name="SpawnPoint_9" parent="Objectives/CapturePointC/Spawns/Team2" unique_id=503526630 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.780681, 0, 0.624929, 0, 1, 0, -0.624929, 0, 0.780681, -106.623, 0.0186768, -13.4277)
+
+[node name="SpawnPoint_10" parent="Objectives/CapturePointC/Spawns/Team2" unique_id=1980585793 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.57978, 0, 0.814773, 0, 1, 0, -0.814773, 0, 0.57978, -155.506, 0.202576, -53.7402)
+
+[node name="CapturePointD" parent="Objectives" unique_id=900647814 node_paths=PackedStringArray("CaptureArea", "InfantrySpawnPoints_Team1", "InfantrySpawnPoints_Team2") instance=ExtResource("8_317nj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -64.5809, 143.853, 487.919)
+ObjId = 203
+OutlineAbove16Points = true
+Spawning_ObjectiveMaxDistance = 400
+TacticalAdviceAirVehicleFriendly = true
+CaptureArea = NodePath("CapturePointArea")
+InfantrySpawnPoints_Team1 = [NodePath("Spawns/Team1/SpawnPoint_1"), NodePath("Spawns/Team1/SpawnPoint_2"), NodePath("Spawns/Team1/SpawnPoint_3"), NodePath("Spawns/Team1/SpawnPoint_4"), NodePath("Spawns/Team1/SpawnPoint_5")]
+InfantrySpawnPoints_Team2 = [NodePath("Spawns/Team2/SpawnPoint_6"), NodePath("Spawns/Team2/SpawnPoint_7"), NodePath("Spawns/Team2/SpawnPoint_8"), NodePath("Spawns/Team2/SpawnPoint_9"), NodePath("Spawns/Team2/SpawnPoint_10")]
+
+[node name="CapturePointArea" parent="Objectives/CapturePointD" unique_id=1007673661 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39194, -10.6001, -0.976593)
+points = PackedVector2Array(-60.563, -4.55066, -3.67535, 47.1243, 44.3153, -6.42944, -16.0825, -60.5994, -61.5811, -9.48471)
+height = 30.0
+
+[node name="Spawns" type="Node3D" parent="Objectives/CapturePointD" unique_id=1302198188]
+
+[node name="Team1" type="Node3D" parent="Objectives/CapturePointD/Spawns" unique_id=760002858]
+
+[node name="SpawnPoint_1" parent="Objectives/CapturePointD/Spawns/Team1" unique_id=1545485888 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.252999, 0, -0.967467, 0, 1, 0, 0.967467, 0, 0.252999, 72.2714, -12.4321, -78.9698)
+
+[node name="SpawnPoint_2" parent="Objectives/CapturePointD/Spawns/Team1" unique_id=2133185801 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.97171, 0, -0.236177, 0, 1, 0, 0.236177, 0, 0.97171, 52.4958, -9.57677, -108.771)
+
+[node name="SpawnPoint_3" parent="Objectives/CapturePointD/Spawns/Team1" unique_id=1114953176 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.932039, 0, -0.362357, 0, 1, 0, 0.362357, 0, 0.932039, -45.4015, -12.7156, -148.213)
+
+[node name="SpawnPoint_4" parent="Objectives/CapturePointD/Spawns/Team1" unique_id=1074942456 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.985868, 0, 0.167527, 0, 1, 0, -0.167527, 0, 0.985868, 20.7315, -16.0453, -139.971)
+
+[node name="SpawnPoint_5" parent="Objectives/CapturePointD/Spawns/Team1" unique_id=117929823 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.0542534, 0, -0.998527, 0, 1, 0, 0.998527, 0, -0.0542534, 77.4333, -13.2003, 0.413239)
+
+[node name="Team2" type="Node3D" parent="Objectives/CapturePointD/Spawns" unique_id=1751086063]
+
+[node name="SpawnPoint_6" parent="Objectives/CapturePointD/Spawns/Team2" unique_id=472739838 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.521918, 0, 0.852997, 0, 1, 0, -0.852997, 0, -0.521918, -108.692, -4.76578, 37.1286)
+
+[node name="SpawnPoint_7" parent="Objectives/CapturePointD/Spawns/Team2" unique_id=1665525787 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.558383, 0, 0.829584, 0, 1, 0, -0.829584, 0, -0.558383, -87.4404, 0.858185, 75.7579)
+
+[node name="SpawnPoint_8" parent="Objectives/CapturePointD/Spawns/Team2" unique_id=2039181844 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.919664, 0, 0.392707, 0, 1, 0, -0.392707, 0, -0.919664, -59.3076, -15.0116, 108.535)
+
+[node name="SpawnPoint_9" parent="Objectives/CapturePointD/Spawns/Team2" unique_id=465546360 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.640981, 0, 0.767556, 0, 1, 0, -0.767556, 0, -0.640981, -132.962, -12.5333, 25.8477)
+
+[node name="SpawnPoint_10" parent="Objectives/CapturePointD/Spawns/Team2" unique_id=1569962735 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.680312, 0, 0.732923, 0, 1, 0, -0.732923, 0, -0.680312, -105.294, -4.75996, 75.6893)
+
+[node name="CapturePointE" parent="Objectives" unique_id=431026001 node_paths=PackedStringArray("CaptureArea", "InfantrySpawnPoints_Team1", "InfantrySpawnPoints_Team2") instance=ExtResource("8_317nj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -451.123, 124.54, 451.328)
+ObjId = 204
+OutlineAbove16Points = true
+Spawning_ObjectiveMaxDistance = 400
+TacticalAdviceAirVehicleFriendly = true
+CaptureArea = NodePath("CapturePointArea")
+InfantrySpawnPoints_Team1 = [NodePath("Spawns/Team1/SpawnPoint_1"), NodePath("Spawns/Team1/SpawnPoint_2"), NodePath("Spawns/Team1/SpawnPoint_3"), NodePath("Spawns/Team1/SpawnPoint_4"), NodePath("Spawns/Team1/SpawnPoint_5")]
+InfantrySpawnPoints_Team2 = [NodePath("Spawns/Team2/SpawnPoint_6"), NodePath("Spawns/Team2/SpawnPoint_7"), NodePath("Spawns/Team2/SpawnPoint_8"), NodePath("Spawns/Team2/SpawnPoint_9"), NodePath("Spawns/Team2/SpawnPoint_10")]
+
+[node name="CapturePointArea" parent="Objectives/CapturePointE" unique_id=1814806872 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39194, -9.12947, -0.976593)
+points = PackedVector2Array(-12.5862, -9.37039, -15.9861, -12.9031, -23.4101, -5.65912, 2.03214, 19.7686, 16.1613, 5.12979, -5.30344, -16.4699)
+height = 30.0
+
+[node name="Spawns" type="Node3D" parent="Objectives/CapturePointE" unique_id=690785198]
+
+[node name="Team1" type="Node3D" parent="Objectives/CapturePointE/Spawns" unique_id=14115860]
+
+[node name="SpawnPoint_1" parent="Objectives/CapturePointE/Spawns/Team1" unique_id=1458235831 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.79023, 0, -0.61281, 0, 1, 0, 0.61281, 0, 0.79023, 44.4968, -0.661301, -74.6072)
+
+[node name="SpawnPoint_2" parent="Objectives/CapturePointE/Spawns/Team1" unique_id=1888258038 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.989193, 0, -0.146618, 0, 1, 0, 0.146618, 0, 0.989193, 37.2796, -0.302979, -91.4377)
+
+[node name="SpawnPoint_3" parent="Objectives/CapturePointE/Spawns/Team1" unique_id=1436521162 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.268399, 0, -0.963307, 0, 1, 0, 0.963307, 0, -0.268399, 94.4533, 0.0445404, -25.975)
+
+[node name="SpawnPoint_4" parent="Objectives/CapturePointE/Spawns/Team1" unique_id=945521065 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.973762, 0, -0.227569, 0, 1, 0, 0.227569, 0, 0.973762, -5.63834, 0.419403, -93.3513)
+
+[node name="SpawnPoint_5" parent="Objectives/CapturePointE/Spawns/Team1" unique_id=637287907 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.970055, 0, 0.242887, 0, 1, 0, -0.242887, 0, 0.970055, 65.2993, -1.28137, -68.6082)
+
+[node name="Team2" type="Node3D" parent="Objectives/CapturePointE/Spawns" unique_id=79737186]
+
+[node name="SpawnPoint_6" parent="Objectives/CapturePointE/Spawns/Team2" unique_id=1678226093 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.346069, 0, 0.93821, 0, 1, 0, -0.93821, 0, 0.346069, -17.5124, -3.79204, 51.9952)
+
+[node name="SpawnPoint_7" parent="Objectives/CapturePointE/Spawns/Team2" unique_id=1624048034 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.808863, 0, -0.587997, 0, 1, 0, 0.587997, 0, -0.808863, -34.4187, -3.59502, 61.3273)
+
+[node name="SpawnPoint_8" parent="Objectives/CapturePointE/Spawns/Team2" unique_id=559525380 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.799872, 0, 0.600169, 0, 1, 0, -0.600169, 0, -0.799872, -66.1995, -5.38446, 31.9099)
+
+[node name="SpawnPoint_9" parent="Objectives/CapturePointE/Spawns/Team2" unique_id=1932906722 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.832583, 0, -0.5539, 0, 1, 0, 0.5539, 0, -0.832583, -2.44699, -3.62686, 83.9854)
+
+[node name="SpawnPoint_10" parent="Objectives/CapturePointE/Spawns/Team2" unique_id=1299235333 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.915192, 0, -0.403017, 0, 1, 0, 0.403017, 0, -0.915192, -48.4574, -3.83009, 84.6042)
+
+[node name="CapturePointF" parent="Objectives" unique_id=393823028 node_paths=PackedStringArray("CaptureArea", "InfantrySpawnPoints_Team1", "InfantrySpawnPoints_Team2") instance=ExtResource("8_317nj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -347.023, 120.935, 580.852)
+ObjId = 205
+OutlineAbove16Points = true
+Spawning_ObjectiveMaxDistance = 400
+TacticalAdviceAirVehicleFriendly = true
+TacticalAdvicePriorityLevel_Team1 = 1
+TacticalAdvicePriorityLevel_Team2 = 1
+CaptureArea = NodePath("CapturePointArea")
+InfantrySpawnPoints_Team1 = [NodePath("Spawns/Team1/SpawnPoint_1"), NodePath("Spawns/Team1/SpawnPoint_2"), NodePath("Spawns/Team1/SpawnPoint_3"), NodePath("Spawns/Team1/SpawnPoint_4"), NodePath("Spawns/Team1/SpawnPoint_5")]
+InfantrySpawnPoints_Team2 = [NodePath("Spawns/Team2/SpawnPoint_6"), NodePath("Spawns/Team2/SpawnPoint_7"), NodePath("Spawns/Team2/SpawnPoint_8"), NodePath("Spawns/Team2/SpawnPoint_9"), NodePath("Spawns/Team2/SpawnPoint_10")]
+
+[node name="CapturePointArea" parent="Objectives/CapturePointF" unique_id=911961601 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.39194, -9.83586, -0.699249)
+points = PackedVector2Array(-40.1028, 15.5069, -18.3524, 37.97, 32.6343, -13.0613, 10.7267, -35.1847)
+height = 30.0
+
+[node name="Spawns" type="Node3D" parent="Objectives/CapturePointF" unique_id=468422514]
+
+[node name="Team1" type="Node3D" parent="Objectives/CapturePointF/Spawns" unique_id=1708161691]
+
+[node name="SpawnPoint_1" parent="Objectives/CapturePointF/Spawns/Team1" unique_id=1449158628 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.999702, 0, 0.0244147, 0, 1, 0, -0.0244147, 0, 0.999702, 81.3387, 3.77522, -83.2079)
+
+[node name="SpawnPoint_2" parent="Objectives/CapturePointF/Spawns/Team1" unique_id=1951128360 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.998716, 0, 0.0506457, 0, 1, 0, -0.0506457, 0, 0.998716, 26.9464, 3.61438, -121.442)
+
+[node name="SpawnPoint_3" parent="Objectives/CapturePointF/Spawns/Team1" unique_id=817175354 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.585523, 0, -0.810655, 0, 1, 0, 0.810655, 0, -0.585523, 89.1903, -2.81468, 4.79468)
+
+[node name="SpawnPoint_4" parent="Objectives/CapturePointF/Spawns/Team1" unique_id=291755330 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.907139, 0, -0.420831, 0, 1, 0, 0.420831, 0, -0.907139, 104.588, -2.7607, 24.7738)
+
+[node name="SpawnPoint_5" parent="Objectives/CapturePointF/Spawns/Team1" unique_id=133970548 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.392, 0, -0.919965, 0, 1, 0, 0.919965, 0, -0.392, 112.797, 4.00363, -65.497)
+
+[node name="Team2" type="Node3D" parent="Objectives/CapturePointF/Spawns" unique_id=1148936637]
+
+[node name="SpawnPoint_6" parent="Objectives/CapturePointF/Spawns/Team2" unique_id=776397527 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.666091, 0, 0.745872, 0, 1, 0, -0.745872, 0, 0.666091, -85.7321, -0.0211334, -21.3812)
+
+[node name="SpawnPoint_7" parent="Objectives/CapturePointF/Spawns/Team2" unique_id=784237657 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.179267, 0, 0.9838, 0, 1, 0, -0.9838, 0, -0.179267, -86.3389, -0.0994263, 21.8939)
+
+[node name="SpawnPoint_8" parent="Objectives/CapturePointF/Spawns/Team2" unique_id=696026692 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.988583, 0, -0.150673, 0, 1, 0, 0.150673, 0, -0.988583, -23.1657, -0.69751, 76.083)
+
+[node name="SpawnPoint_9" parent="Objectives/CapturePointF/Spawns/Team2" unique_id=802810095 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.32669, 0, -0.945131, 0, 1, 0, 0.945131, 0, -0.32669, 66.2081, -2.48434, 65.3563)
+
+[node name="SpawnPoint_10" parent="Objectives/CapturePointF/Spawns/Team2" unique_id=1060086671 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.998148, 0, 0.0608395, 0, 1, 0, -0.0608395, 0, -0.998148, 36.843, -2.79871, 65.5417)
+
+[node name="CapturePointG" parent="Objectives" unique_id=1217323637 node_paths=PackedStringArray("CaptureArea", "InfantrySpawnPoints_Team1", "InfantrySpawnPoints_Team2") instance=ExtResource("8_317nj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -453.683, 120.758, 679.85)
+ObjId = 206
+OutlineAbove16Points = true
+Spawning_ObjectiveMaxDistance = 400
+TacticalAdviceAirVehicleFriendly = true
+TacticalAdvicePriorityLevel_Team1 = 2
+TacticalAdvicePriorityLevel_Team2 = 2
+CaptureArea = NodePath("CapturePointArea")
+InfantrySpawnPoints_Team1 = [NodePath("Spawns/Team1/SpawnPoint_1"), NodePath("Spawns/Team1/SpawnPoint_2"), NodePath("Spawns/Team1/SpawnPoint_3"), NodePath("Spawns/Team1/SpawnPoint_4"), NodePath("Spawns/Team1/SpawnPoint_5")]
+InfantrySpawnPoints_Team2 = [NodePath("Spawns/Team2/SpawnPoint_6"), NodePath("Spawns/Team2/SpawnPoint_7"), NodePath("Spawns/Team2/SpawnPoint_8"), NodePath("Spawns/Team2/SpawnPoint_9"), NodePath("Spawns/Team2/SpawnPoint_10")]
+
+[node name="CapturePointArea" parent="Objectives/CapturePointG" unique_id=1313192047 instance=ExtResource("2_8cy2i")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.35432, -5.62148, -0.524826)
+points = PackedVector2Array(-0.334747, 20.5085, 17.8223, 2.3271, -10.0803, -27.2191, -27.8918, -9.32536)
+height = 30.0
+
+[node name="Spawns" type="Node3D" parent="Objectives/CapturePointG" unique_id=706445705]
+
+[node name="Team1" type="Node3D" parent="Objectives/CapturePointG/Spawns" unique_id=1480660301]
+
+[node name="SpawnPoint_1" parent="Objectives/CapturePointG/Spawns/Team1" unique_id=1656477183 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.997045, 0, 0.0768233, 0, 1, 0, -0.0768233, 0, 0.997045, -66.7225, -3.25908, -125.969)
+
+[node name="SpawnPoint_2" parent="Objectives/CapturePointG/Spawns/Team1" unique_id=1255494836 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.719101, -0.0161454, 0.694718, 0.0204193, 0.999789, 0.00209927, -0.694605, 0.0126761, 0.719279, -92.6628, -7.28175, -72.2239)
+
+[node name="SpawnPoint_3" parent="Objectives/CapturePointG/Spawns/Team1" unique_id=1610697065 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.205316, 0, 0.978695, 0, 1, 0, -0.978695, 0, 0.205316, -53.6277, -0.595367, -107.919)
+
+[node name="SpawnPoint_4" parent="Objectives/CapturePointG/Spawns/Team1" unique_id=1455543615 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.431174, 0, 0.902269, 0, 1, 0, -0.902269, 0, -0.431174, -82.6944, -1.05881, -29.2056)
+
+[node name="SpawnPoint_5" parent="Objectives/CapturePointG/Spawns/Team1" unique_id=1078856973 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.318298, 0, 0.947991, 0, 1, 0, -0.947991, 0, 0.318298, -88.4368, -9.07227, -130.646)
+
+[node name="Team2" type="Node3D" parent="Objectives/CapturePointG/Spawns" unique_id=817225748]
+
+[node name="SpawnPoint_6" parent="Objectives/CapturePointG/Spawns/Team2" unique_id=1750360542 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.244529, 0, 0.969642, 0, 1, 0, -0.969642, 0, 0.244529, -90.3465, -4.98051, -52.8421)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_7" parent="Objectives/CapturePointG/Spawns/Team2" unique_id=1671843759 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(-0.429591, 0.00687779, 0.902997, 0.0204193, 0.999789, 0.00209927, -0.902792, 0.0193404, -0.429641, -75.2093, -2.29973, -144.591)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_8" parent="Objectives/CapturePointG/Spawns/Team2" unique_id=1461023058 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.856266, 0, 0.516533, 0, 1, 0, -0.516533, 0, 0.856266, -62.0847, -1.09027, -66.8527)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_9" parent="Objectives/CapturePointG/Spawns/Team2" unique_id=941059420 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.290834, 0, 0.956773, 0, 1, 0, -0.956773, 0, 0.290834, -81.7038, -0.443665, -24.4552)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_10" parent="Objectives/CapturePointG/Spawns/Team2" unique_id=1315912833 instance=ExtResource("3_x3p5g")]
+transform = Transform3D(0.564736, 0, 0.825271, 0, 1, 0, -0.825271, 0, 0.564736, -64.4139, -4.94237, -85.9881)
+metadata/_edit_group_ = true
+
+[node name="Vehicles" type="Node3D" parent="." unique_id=1102459408]
+
+[node name="UH60" parent="Vehicles" unique_id=1049027245 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 913.804, 195.305, -790.213)
+VehicleType = 5
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Little Bird" parent="Vehicles" unique_id=292228208 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 852.955, 192.693, -782.708)
+VehicleType = 7
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="AH64" parent="Vehicles" unique_id=1450607173 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 921.533, 196.799, -819.167)
+VehicleType = 8
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Abrams" parent="Vehicles" unique_id=1395124996 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 856.788, 187.704, -714.863)
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Abrams2" parent="Vehicles" unique_id=176168841 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 844.514, 192.256, -748.945)
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Bradly" parent="Vehicles" unique_id=740710276 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 838.176, 192.256, -770.5)
+VehicleType = 17
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Flyer" parent="Vehicles" unique_id=1613345259 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 827.479, 192.256, -751.158)
+VehicleType = 13
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Flyer2" parent="Vehicles" unique_id=109139560 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.799339, 0, -0.600881, 0, 1, 0, 0.600881, 0, 0.799339, 841.336, 187.572, -716.654)
+VehicleType = 13
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Gepard" parent="Vehicles" unique_id=377256425 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.556223, 0, -0.831033, 0, 1, 0, 0.831033, 0, 0.556223, 829.897, 188.732, -726.165)
+VehicleType = 4
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Flyer3" parent="Vehicles" unique_id=386061996 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.923258, 0, 0.384183, 0, 1, 0, -0.384183, 0, -0.923258, 480, 171.681, -7.8956)
+VehicleType = 13
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Flyer4" parent="Vehicles" unique_id=1981507640 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.926627, 0, -0.375982, 0, 1, 0, 0.375982, 0, -0.926627, 510.841, 171.681, -7.50123)
+VehicleType = 13
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="UH61" parent="Vehicles" unique_id=828203393 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.992688, 0, 0.120709, 0, 1, 0, -0.120709, 0, -0.992688, 452.47, 158.973, 80.6592)
+VehicleType = 5
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Eurocopter" parent="Vehicles" unique_id=1202010991 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.992688, 0, 0.120709, 0, 1, 0, -0.120709, 0, -0.992688, 475.792, 158.748, 81.6773)
+VehicleType = 6
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Leopard" parent="Vehicles" unique_id=1595593233 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.993905, 0, -0.110237, 0, 1, 0, 0.110237, 0, -0.993905, 489.172, 169.07, 20.3878)
+VehicleType = 1
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Leopard2" parent="Vehicles" unique_id=1311973416 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.993905, 0, -0.110237, 0, 1, 0, 0.110237, 0, -0.993905, 493.497, 166.823, 45.7604)
+VehicleType = 1
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Cheetah" parent="Vehicles" unique_id=535891674 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.963486, 0, -0.267759, 0, 1, 0, 0.267759, 0, -0.963486, 513.487, 165.248, 54.7545)
+VehicleType = 2
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="Little Bird2" parent="Vehicles" unique_id=1172408095 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.963486, 0, -0.267759, 0, 1, 0, 0.267759, 0, -0.963486, 509.56, 162.966, 76.2471)
+VehicleType = 7
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 45
+
+[node name="DirtBike" parent="Vehicles" unique_id=1210634005 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.175848, 0, -0.984417, 0, 1, 0, 0.984417, 0, 0.175848, 430.179, 175.592, -804.51)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike2" parent="Vehicles" unique_id=813285257 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.875389, 0, -0.48342, 0, 1, 0, 0.48342, 0, -0.875389, 437.244, 175.592, -817.848)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike3" parent="Vehicles" unique_id=1368543667 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.897535, 0, 0.440942, 0, 1, 0, -0.440942, 0, 0.897535, 654.57, 175.592, -747.815)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike4" parent="Vehicles" unique_id=350263596 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.996744, 0, -0.0806339, 0, 1, 0, 0.0806339, 0, 0.996744, 646.896, 175.592, -739.964)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike5" parent="Vehicles" unique_id=587138311 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.587348, 0, -0.809335, 0, 1, 0, 0.809335, 0, 0.587348, 724.817, 207.722, -345.69)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike6" parent="Vehicles" unique_id=2071128194 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.506185, 0, -0.862426, 0, 1, 0, 0.862426, 0, -0.506185, 715.008, 207.722, -361.315)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike7" parent="Vehicles" unique_id=1432797020 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.875389, 0, -0.48342, 0, 1, 0, 0.48342, 0, -0.875389, 323.783, 179.005, -183.513)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike8" parent="Vehicles" unique_id=900299810 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.0773279, 0, 0.997006, 0, 1, 0, -0.997006, 0, 0.0773279, 335.273, 179.005, -171.095)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike9" parent="Vehicles" unique_id=1372539717 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(-0.403913, 0, 0.914798, 0, 1, 0, -0.914798, 0, -0.403913, 431.136, 179.005, -237.393)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="DirtBike10" parent="Vehicles" unique_id=1428170171 instance=ExtResource("9_kk5v0")]
+transform = Transform3D(0.850857, 0, 0.525398, 0, 1, 0, -0.525398, 0, 0.850857, 457.263, 179.005, -259.618)
+VehicleType = 22
+P_AutoSpawnEnabled = true
+P_DefaultRespawnTime = 20
+
+[node name="AI_Spawners" type="Node3D" parent="." unique_id=1878747436]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 498.35, 180.843, -562.028)
+
+[node name="AI_Spawner_Team1" parent="AI_Spawners" unique_id=2005224190 node_paths=PackedStringArray("AlternateSpawns") instance=ExtResource("3_la1dk")]
+transform = Transform3D(0.186764, 0, -0.982404, 0, 1, 0, 0.982404, 0, 0.186764, 364.068, 7.06765, -171.587)
+ObjId = 901
+AlternateSpawns = [NodePath("../../TEAM_1_HQ/SpawnPoint_1_1"), NodePath("../../TEAM_1_HQ/SpawnPoint_1_2"), NodePath("../../TEAM_1_HQ/SpawnPoint_1_3"), NodePath("../../TEAM_1_HQ/SpawnPoint_1_4"), NodePath("../../TEAM_1_HQ/SpawnPoint_1_5")]
+
+[node name="AI_Spawner_Team2" parent="AI_Spawners" unique_id=383007439 node_paths=PackedStringArray("AlternateSpawns") instance=ExtResource("3_la1dk")]
+transform = Transform3D(-0.991431, 0, 0.130629, 0, 1, 0, -0.130629, 0, -0.991431, 9.0592, -15.0811, 602.09)
+ObjId = 902
+AlternateSpawns = [NodePath("../../TEAM_2_HQ/SpawnPoint_2_1"), NodePath("../../TEAM_2_HQ/SpawnPoint_2_2"), NodePath("../../TEAM_2_HQ/SpawnPoint_2_3"), NodePath("../../TEAM_2_HQ/SpawnPoint_2_4"), NodePath("../../TEAM_2_HQ/SpawnPoint_2_5"), NodePath("../../TEAM_2_HQ/SpawnPoint_2_6")]
+
+[node name="TeamSwitcher" type="Node3D" parent="." unique_id=255396898]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 519, 122.409, -521.018)
+
+[node name="TeamSwitchTrigger1" type="Node3D" parent="TeamSwitcher" unique_id=1963772413]
+transform = Transform3D(0.125974, 0, 0.992034, 0, 1, 0, -0.992034, 0, 0.125974, 352.145, 65.1529, -215.753)
+
+[node name="MannequinRotation_01" parent="TeamSwitcher/TeamSwitchTrigger1" unique_id=173909403 instance=ExtResource("15_metp3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.234375, -0.156296, -0.40345)
+
+[node name="InteractPoint" parent="TeamSwitcher/TeamSwitchTrigger1" unique_id=1350519211 instance=ExtResource("16_ii6wa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107239, 1.03593, 0.00295258)
+ObjId = 998
+
+[node name="TeamSwitchTrigger2" type="Node3D" parent="TeamSwitcher" unique_id=2101287213]
+transform = Transform3D(0.645378, 0, -0.763864, 0, 1, 0, 0.763864, 0, 0.645378, -37.5175, 49.0786, 501.135)
+
+[node name="MannequinRotation_01" parent="TeamSwitcher/TeamSwitchTrigger2" unique_id=546628420 instance=ExtResource("15_metp3")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.234375, -0.156296, -0.40345)
+
+[node name="InteractPoint" parent="TeamSwitcher/TeamSwitchTrigger2" unique_id=1157419041 instance=ExtResource("16_ii6wa")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.107239, 1.03593, 0.00295258)
+ObjId = 999
+
+[node name="EndGameCamera" type="Camera3D" parent="." unique_id=1225270044]
+transform = Transform3D(-0.959496, 0.0548021, -0.27634, 1.33728e-08, 0.980898, 0.194525, 0.281722, 0.186646, -0.941167, 424.777, 246.44, -813.676)
+metadata/_edit_group_ = true
+
+[node name="FixedCamera" parent="EndGameCamera" unique_id=955647378 instance=ExtResource("16_i1psc")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+ObjId = 950
+
+[node name="Details" type="Node3D" parent="." unique_id=355123285]
+
+[node name="Objects" type="Node3D" parent="Details" unique_id=998544245]
+
+[node name="GM1083CargoTruck_01_Canopy" parent="Details/Objects" unique_id=1195616082 instance=ExtResource("20_g76jq")]
+transform = Transform3D(0.419684, -0.0455102, -0.906529, -0.00114272, 0.998715, -0.0506672, 0.90767, 0.0223001, 0.419093, 651.725, 175.898, -225.255)
+
+[node name="GM1083CargoTruck_01_Canopy2" parent="Details/Objects" unique_id=942162899 instance=ExtResource("20_g76jq")]
+transform = Transform3D(-0.0758415, -0.0114544, -0.997054, -0.0249672, 0.999642, -0.00958496, 0.996807, 0.0241667, -0.0761004, 595.977, 172.326, -201.643)
+
+[node name="SemiTruck_01" parent="Details/Objects" unique_id=1826938567 instance=ExtResource("21_dkntl")]
+transform = Transform3D(-0.993756, -0.0457047, -0.101783, -0.0466969, 0.998882, 0.00738621, 0.101331, 0.012093, -0.994779, 621.199, 173.271, -212.609)
+
+[node name="SemiTruckTrailer_01" parent="Details/Objects" unique_id=2134551134 instance=ExtResource("22_3hddb")]
+transform = Transform3D(-0.531147, -0.075554, 0.843904, 0, 0.996016, 0.0891724, -0.84728, 0.0473637, -0.529031, 617.173, 172.934, -205.883)
+
+[node name="GCarSedan_01" parent="Details/Objects" unique_id=1871071682 instance=ExtResource("23_6f52g")]
+transform = Transform3D(-0.66899, -0.0528204, 0.741392, 0.0069433, 0.996984, 0.0772953, -0.743239, 0.0568575, -0.666606, 646.325, 175.157, -214.968)
+
+[node name="GCarSedan_02" parent="Details/Objects" unique_id=1342262548 instance=ExtResource("23_6f52g")]
+transform = Transform3D(-0.587532, -0.0961698, -0.803466, -0.0769667, 0.995053, -0.0628198, 0.805532, 0.0249315, -0.592027, 628.819, 174.118, -215.752)
+
+[node name="ContainerStandard_01_640" parent="Details/Objects" unique_id=2117888577 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, 0.848528, 377.448, 175.088, -86.101)
+
+[node name="ContainerStandard_01_648" parent="Details/Objects" unique_id=2118447767 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, 0.848528, 374.001, 175.088, -97.7989)
+
+[node name="ContainerStandard_01_641" parent="Details/Objects" unique_id=1836012400 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, 0.848528, 369.25, 175.088, -78.9667)
+
+[node name="ContainerStandard_01_642" parent="Details/Objects" unique_id=55943016 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, 0.848528, 371.418, 175.088, -76.7992)
+
+[node name="ContainerStandard_01_643" parent="Details/Objects" unique_id=1047240149 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, 0.848528, 364.635, 175.088, -83.2373)
+
+[node name="ContainerStandard_01_644" parent="Details/Objects" unique_id=573301656 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, 0.848528, 362.464, 175.088, -85.4085)
+
+[node name="ContainerStandard_01_645" parent="Details/Objects" unique_id=388340228 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.791719, 0, -0.901766, 0, 1.2, 0, 0.901766, 0, 0.791719, 357.256, 175.088, -89.2047)
+
+[node name="ContainerStandard_01_646" parent="Details/Objects" unique_id=1180185726 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.791719, 0, -0.901766, 0, 1.2, 0, 0.901766, 0, 0.791719, 355.274, 175.088, -91.4623)
+
+[node name="ContainerStandard_01_647" parent="Details/Objects" unique_id=1603741955 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.961316, 0, -0.718241, 0, 1.2, 0, 0.718241, 0, 0.961316, 365.901, 175.088, -106.128)
+
+[node name="ContainerStandard_01_649" parent="Details/Objects" unique_id=1959662319 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 340.522, 175.088, -118.078)
+
+[node name="ContainerStandard_01_650" parent="Details/Objects" unique_id=25426304 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 342.714, 175.088, -120.271)
+
+[node name="ContainerStandard_01_651" parent="Details/Objects" unique_id=470939741 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 344.886, 175.088, -122.443)
+
+[node name="ContainerStandard_01_652" parent="Details/Objects" unique_id=652880997 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 346.026, 175.088, -112.641)
+
+[node name="ContainerStandard_01_653" parent="Details/Objects" unique_id=92989539 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 348.219, 175.088, -114.834)
+
+[node name="ContainerStandard_01_654" parent="Details/Objects" unique_id=252692451 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 350.391, 175.088, -117.006)
+
+[node name="ContainerStandard_01_657" parent="Details/Objects" unique_id=474545930 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 340.522, 178.432, -118.078)
+
+[node name="ContainerStandard_01_658" parent="Details/Objects" unique_id=480790536 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 342.714, 178.432, -120.271)
+
+[node name="ContainerStandard_01_659" parent="Details/Objects" unique_id=1180837723 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 344.886, 178.432, -122.443)
+
+[node name="ContainerStandard_01_660" parent="Details/Objects" unique_id=881050504 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 346.026, 178.432, -112.641)
+
+[node name="ContainerStandard_01_661" parent="Details/Objects" unique_id=1090403989 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 348.219, 178.432, -114.834)
+
+[node name="ContainerStandard_01_662" parent="Details/Objects" unique_id=590268945 instance=ExtResource("24_6f52g")]
+transform = Transform3D(-0.848528, 0, -0.848528, 0, 1.2, 0, 0.848528, 0, -0.848528, 350.391, 178.432, -117.006)
+
+[node name="ContainerStandard_01_655" parent="Details/Objects" unique_id=59604423 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 378.683, 175.088, -65.9788)
+
+[node name="ContainerStandard_01_656" parent="Details/Objects" unique_id=862415251 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 378.225, 175.088, -69.046)
+
+[node name="ContainerStandard_01_663" parent="Details/Objects" unique_id=1927071816 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 377.772, 175.088, -72.0841)
+
+[node name="ContainerStandard_01_664" parent="Details/Objects" unique_id=246718762 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 386.329, 175.088, -67.1677)
+
+[node name="ContainerStandard_01_665" parent="Details/Objects" unique_id=705254516 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 385.871, 175.088, -70.2349)
+
+[node name="ContainerStandard_01_666" parent="Details/Objects" unique_id=1780674819 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 385.418, 175.088, -73.273)
+
+[node name="ContainerStandard_01_667" parent="Details/Objects" unique_id=1995189293 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 378.683, 178.432, -65.9788)
+
+[node name="ContainerStandard_01_668" parent="Details/Objects" unique_id=912308955 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 378.225, 178.432, -69.046)
+
+[node name="ContainerStandard_01_669" parent="Details/Objects" unique_id=1664739170 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 377.772, 178.432, -72.0841)
+
+[node name="ContainerStandard_01_670" parent="Details/Objects" unique_id=1948196003 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 386.329, 178.432, -67.1677)
+
+[node name="ContainerStandard_01_671" parent="Details/Objects" unique_id=1797668165 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 385.871, 178.432, -70.2349)
+
+[node name="ContainerStandard_01_672" parent="Details/Objects" unique_id=1273022028 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.177102, 0, -1.18686, 0, 1.2, 0, 1.18686, 0, 0.177102, 385.418, 178.432, -73.273)
+
+[node name="Barrack_02_B" parent="Details/Objects" unique_id=431969978 instance=ExtResource("25_3hddb")]
+transform = Transform3D(0.716034, 0, -0.698065, 0, 1, 0, 0.698065, 0, 0.716034, 341.005, 175.15, -96.391)
+
+[node name="SiloOilLarge_01_White" parent="Details/Objects" unique_id=1240663149 instance=ExtResource("26_rqkkw")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 535.525, 170.48, 2.50377)
+
+[node name="SiloOilLarge_01_White2" parent="Details/Objects" unique_id=705845497 instance=ExtResource("26_rqkkw")]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 535.525, 170.48, -25.9136)
+
+[node name="TankPropane_01" parent="Details/Objects" unique_id=1981854274 instance=ExtResource("27_k2v1w")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 521.902, 170.478, -37.9578)
+
+[node name="ContainerStandard_01_673" parent="Details/Objects" unique_id=423931438 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.377904, 0, -1.13894, 0, 1.2, 0, 1.13894, 0, 0.377904, 453.444, 167.609, 4.7415)
+
+[node name="ContainerStandard_01_674" parent="Details/Objects" unique_id=2017346394 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.378103, 0, -1.13888, 0, 1.2, 0, 1.13888, 0, 0.378103, 455.914, 167.609, 11.6891)
+
+[node name="ContainerStandard_01_675" parent="Details/Objects" unique_id=1171833313 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 467.685, 167.609, 20.9451)
+
+[node name="ContainerStandard_01_676" parent="Details/Objects" unique_id=2065759708 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 467.808, 167.609, 24.0804)
+
+[node name="ContainerStandard_01_677" parent="Details/Objects" unique_id=1956306765 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 459.999, 167.609, 21.2364)
+
+[node name="ContainerStandard_01_678" parent="Details/Objects" unique_id=1568023902 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 460.121, 167.609, 24.3717)
+
+[node name="ContainerStandard_01_679" parent="Details/Objects" unique_id=6301182 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 467.685, 170.894, 20.9451)
+
+[node name="ContainerStandard_01_680" parent="Details/Objects" unique_id=1745544185 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 467.808, 170.894, 24.0804)
+
+[node name="ContainerStandard_01_681" parent="Details/Objects" unique_id=349802051 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 459.999, 170.894, 21.2364)
+
+[node name="ContainerStandard_01_682" parent="Details/Objects" unique_id=1535213767 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 460.121, 170.894, 24.3717)
+
+[node name="ContainerStandard_01_683" parent="Details/Objects" unique_id=1747673869 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 467.879, 167.609, 27.121)
+
+[node name="ContainerStandard_01_684" parent="Details/Objects" unique_id=143778895 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 460.193, 167.609, 27.4123)
+
+[node name="ContainerStandard_01_685" parent="Details/Objects" unique_id=1104759167 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 467.879, 170.894, 27.121)
+
+[node name="ContainerStandard_01_686" parent="Details/Objects" unique_id=1170753872 instance=ExtResource("24_6f52g")]
+transform = Transform3D(0.0560676, 0, -1.19869, 0, 1.2, 0, 1.19869, 0, 0.0560676, 460.193, 170.894, 27.4123)
+
+[node name="BarrierHesco_01_Row03" parent="Details/Objects" unique_id=2026139633 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(0.0763883, 0, -0.997078, 0, 1, 0, 0.997078, 0, 0.0763883, 511.829, 171.902, -40.5759)
+
+[node name="BarrierHesco_01_Row04" parent="Details/Objects" unique_id=70768359 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(0.0763883, 0, -0.997078, 0, 1, 0, 0.997078, 0, 0.0763883, 511.829, 173.074, -40.5759)
+
+[node name="BarrierHesco_01_Row05" parent="Details/Objects" unique_id=1867470471 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(0.0763883, 0, -0.997078, 0, 1, 0, 0.997078, 0, 0.0763883, 481.723, 171.169, -25.5058)
+
+[node name="BarrierHesco_01_Row06" parent="Details/Objects" unique_id=1231335007 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(0.0763883, 0, -0.997078, 0, 1, 0, 0.997078, 0, 0.0763883, 481.723, 172.34, -25.5058)
+
+[node name="BarrierHesco_01_Row07" parent="Details/Objects" unique_id=121726087 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(0.652679, -0.0978021, -0.751295, -0.0682029, 0.980022, -0.186828, 0.754559, 0.173179, 0.632969, 464.831, 170.716, -17.1342)
+
+[node name="BarrierHesco_01_Row08" parent="Details/Objects" unique_id=813673580 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(0.652679, -0.0978021, -0.751295, -0.0682029, 0.980022, -0.186828, 0.754559, 0.173179, 0.632969, 464.716, 171.864, -16.9314)
+
+[node name="BarrierHesco_01_Row09" parent="Details/Objects" unique_id=1517038739 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(1, 0, 0, 0, 0.992776, -0.119981, 0, 0.119981, 0.992776, 810.491, 189.313, -749.65)
+
+[node name="BarrierHesco_01_Row10" parent="Details/Objects" unique_id=933672579 instance=ExtResource("27_gkcs6")]
+transform = Transform3D(1, 0, 0, 0, 0.992776, -0.119981, 0, 0.119981, 0.992776, 810.491, 190.48, -749.509)
+
+[node name="BarrackCylindrical_Airstrip_01_Props_B" parent="Details/Objects" unique_id=104618 instance=ExtResource("28_cgqbc")]
+transform = Transform3D(-1, 0, 0.000942381, 0, 1, 0, -0.000942381, 0, -1, 458.938, 175.11, -161.463)
+metadata/_edit_group_ = true
+
+[node name="Trees" type="Node3D" parent="Details" unique_id=1971112767]
+
+[node name="AcaciaUrban_01_S" parent="Details/Trees" unique_id=583930707 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 476.045, 198.94, -455.894)
+
+[node name="AcaciaUrban_01_S19" parent="Details/Trees" unique_id=1942060418 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.982099, -0.145488, -0.119646, 0.127341, 0.980841, -0.147427, 0.138803, 0.129552, 0.981809, 448.402, 187.387, -439.695)
+
+[node name="AcaciaUrban_01_S20" parent="Details/Trees" unique_id=145939705 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.836868, -0.145488, -0.527717, 0.0521589, 0.980841, -0.187697, 0.544914, 0.129552, 0.828423, 415.722, 184.966, -464.936)
+
+[node name="AcaciaUrban_01_S12" parent="Details/Trees" unique_id=1267126674 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 461.407, 177.734, -519.476)
+
+[node name="AcaciaUrban_01_S13" parent="Details/Trees" unique_id=1840003062 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 488.256, 182.382, -507.954)
+
+[node name="AcaciaUrban_01_S41" parent="Details/Trees" unique_id=1199932149 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 491.677, 178.51, -526.27)
+
+[node name="AcaciaUrban_01_S42" parent="Details/Trees" unique_id=339955266 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 487.167, 176.284, -533.074)
+
+[node name="AcaciaUrban_01_S14" parent="Details/Trees" unique_id=2086141717 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 547.553, 183.257, -526.215)
+
+[node name="AcaciaUrban_01_S15" parent="Details/Trees" unique_id=507356229 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 515.247, 180.346, -529.396)
+
+[node name="AcaciaUrban_01_S16" parent="Details/Trees" unique_id=1894394057 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 510.988, 182.79, -512.26)
+
+[node name="AcaciaUrban_01_S83" parent="Details/Trees" unique_id=1388789389 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 504.289, 178.867, -528.743)
+
+[node name="AcaciaUrban_01_S52" parent="Details/Trees" unique_id=1737748813 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 456.78, 174.928, -534.708)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S53" parent="Details/Trees" unique_id=306983940 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 352.992, 180.23, -498.957)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S54" parent="Details/Trees" unique_id=268255308 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 355.89, 173.202, -517.807)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S55" parent="Details/Trees" unique_id=989494489 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(3, 0, 0, 0, 3, 0, 0, 0, 3, 393.987, 173.333, -527.241)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S56" parent="Details/Trees" unique_id=524290435 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.78177, 0, 2.41356, 0, 3, 0, -2.41356, 0, 1.78177, 432.287, 172.28, -540.371)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S57" parent="Details/Trees" unique_id=1346273917 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.78177, 0, 2.41356, 0, 3, 0, -2.41356, 0, 1.78177, 484.182, 178.458, -522.094)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S58" parent="Details/Trees" unique_id=1708879562 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.18785, 0, 1.60904, 0, 2, 0, -1.60904, 0, 1.18785, 515.612, 178.256, -539.92)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S59" parent="Details/Trees" unique_id=869757165 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.66375, 0, 1.10992, 0, 2, 0, -1.10992, 0, -1.66375, 548.421, 179.703, -534.693)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S84" parent="Details/Trees" unique_id=1270151655 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.445071, 0, -1.94985, 0, 2, 0, 1.94985, 0, -0.445071, 535.944, 181.587, -520.894)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S17" parent="Details/Trees" unique_id=152102331 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 510.759, 196.134, -399.582)
+
+[node name="AcaciaUrban_01_S90" parent="Details/Trees" unique_id=1986836598 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.60593, 0, 1.91598, 0, 2.5, 0, -1.91598, 0, -1.60593, 511.779, 188.931, -380.398)
+
+[node name="AcaciaUrban_01_S121" parent="Details/Trees" unique_id=247165154 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.06925, 0, -1.40293, 0, 2.5, 0, 1.40293, 0, 2.06925, 515.514, 183.904, -360.214)
+
+[node name="AcaciaUrban_01_S198" parent="Details/Trees" unique_id=865308969 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.94045, 0, 1.57628, 0, 2.5, 0, -1.57628, 0, 1.94045, 529.738, 182.904, -345.087)
+
+[node name="AcaciaUrban_01_S199" parent="Details/Trees" unique_id=893313845 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.94045, 0, 1.57628, 0, 2.5, 0, -1.57628, 0, 1.94045, 549.853, 185.168, -330.584)
+
+[node name="AcaciaUrban_01_S200" parent="Details/Trees" unique_id=819538556 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.94045, 0, 1.57628, 0, 2.5, 0, -1.57628, 0, 1.94045, 552.644, 183.609, -297.536)
+
+[node name="AcaciaUrban_01_S236" parent="Details/Trees" unique_id=832206973 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.94045, 0, 1.57628, 0, 2.5, 0, -1.57628, 0, 1.94045, 381.348, 178.987, -159.12)
+
+[node name="AcaciaUrban_01_S237" parent="Details/Trees" unique_id=1191673228 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 383.406, 179.373, -149.016)
+
+[node name="AcaciaUrban_01_S238" parent="Details/Trees" unique_id=2059593002 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.49286, -0.0115684, -0.14568, 0.0102974, 1.48325, -0.223308, 0.145775, -0.223246, -1.47611, 390.715, 178.584, -153.722)
+
+[node name="AcaciaUrban_01_S239" parent="Details/Trees" unique_id=1675421823 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.26319, -0.222267, -1.53459, 0.0137298, 1.97767, -0.297744, 1.55054, -0.198588, -1.24755, 393.352, 178.584, -142.641)
+
+[node name="AcaciaUrban_01_S240" parent="Details/Trees" unique_id=1964484506 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 396.036, 177.735, -132.946)
+
+[node name="AcaciaUrban_01_S244" parent="Details/Trees" unique_id=671405479 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 425.174, 177.239, -115.837)
+
+[node name="AcaciaUrban_01_S320" parent="Details/Trees" unique_id=669246170 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 428.729, 176.081, -106.675)
+
+[node name="AcaciaUrban_01_S321" parent="Details/Trees" unique_id=1591490959 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 444.548, 176.659, -99.6461)
+
+[node name="AcaciaUrban_01_S322" parent="Details/Trees" unique_id=985050789 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 454.839, 177.822, -106.868)
+
+[node name="AcaciaUrban_01_S323" parent="Details/Trees" unique_id=241312351 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.04764, 0, -1.07352, 0, 1.5, 0, 1.07352, 0, 1.04764, 445.382, 177.433, -112.65)
+
+[node name="AcaciaUrban_01_S318" parent="Details/Trees" unique_id=1048859300 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.430388, 0, -1.43693, 0, 1.5, 0, 1.43693, 0, 0.430388, 433.196, 176.987, -114.032)
+
+[node name="AcaciaUrban_01_S241" parent="Details/Trees" unique_id=189902728 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.49286, -0.0115684, -0.14568, 0.0102974, 1.48325, -0.223308, 0.145775, -0.223246, -1.47611, 403.345, 177.797, -137.651)
+
+[node name="AcaciaUrban_01_S242" parent="Details/Trees" unique_id=1590557137 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.26319, -0.222267, -1.53459, 0.0137298, 1.97767, -0.297744, 1.55054, -0.198588, -1.24755, 408.6, 177.279, -126.571)
+
+[node name="AcaciaUrban_01_S310" parent="Details/Trees" unique_id=185385592 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.550505, 0, 2.43864, 0, 2.5, 0, -2.43864, 0, -0.550505, 360.252, 176.431, -141.614)
+
+[node name="AcaciaUrban_01_S325" parent="Details/Trees" unique_id=81707586 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.550505, 0, 2.43864, 0, 2.5, 0, -2.43864, 0, -0.550505, 313.563, 174.71, -99.2779)
+
+[node name="AcaciaUrban_01_S326" parent="Details/Trees" unique_id=43265306 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.48206, 0, -0.298961, 0, 2.5, 0, 0.298961, 0, 2.48206, 349.847, 174.71, -69.3992)
+
+[node name="AcaciaUrban_01_S327" parent="Details/Trees" unique_id=2113881985 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.682124, 0, -2.40514, 0, 2.5, 0, 2.40514, 0, 0.682124, 363.684, 174.71, -53.1882)
+
+[node name="AcaciaUrban_01_S328" parent="Details/Trees" unique_id=435182832 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.56304, 0, -1.24776, 0, 2, 0, 1.24776, 0, -1.56304, 368.878, 174.71, -51.6905)
+
+[node name="AcaciaUrban_01_S329" parent="Details/Trees" unique_id=250793717 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63324, 0, -1.15435, 0, 2, 0, 1.15435, 0, 1.63324, 320.924, 175.122, -98.0086)
+
+[node name="AcaciaUrban_01_S311" parent="Details/Trees" unique_id=256011132 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 387.311, 176.778, -107.508)
+
+[node name="AcaciaUrban_01_S312" parent="Details/Trees" unique_id=1738704485 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.49286, -0.0115684, -0.14568, 0.0102974, 1.48325, -0.223308, 0.145775, -0.223246, -1.47611, 369.419, 177.875, -125.954)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S313" parent="Details/Trees" unique_id=287152875 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.26319, -0.222267, -1.53459, 0.0137298, 1.97767, -0.297744, 1.55054, -0.198588, -1.24755, 407.85, 176.178, -87.3545)
+
+[node name="AcaciaUrban_01_S314" parent="Details/Trees" unique_id=1120286045 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 410.534, 175.966, -77.6595)
+
+[node name="AcaciaUrban_01_S315" parent="Details/Trees" unique_id=425936540 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.16427, 0, 0.94577, 0, 1.5, 0, -0.94577, 0, 1.16427, 419.868, 176.363, -63.9543)
+
+[node name="AcaciaUrban_01_S316" parent="Details/Trees" unique_id=636565472 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.49286, -0.0115684, -0.14568, 0.0102974, 1.48325, -0.223308, 0.145775, -0.223246, -1.47611, 418.802, 175.245, -80.7208)
+
+[node name="AcaciaUrban_01_S317" parent="Details/Trees" unique_id=440019663 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.26319, -0.222267, -1.53459, 0.0137298, 1.97767, -0.297744, 1.55054, -0.198588, -1.24755, 423.098, 175.276, -71.2845)
+
+[node name="AcaciaUrban_01_S243" parent="Details/Trees" unique_id=276972134 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.33357, 0.323864, 2.08967, 0.0171623, 2.47208, -0.37218, -2.11455, -0.184185, -1.3209, 413.821, 175.93, -119.386)
+
+[node name="AcaciaUrban_01_S319" parent="Details/Trees" unique_id=388335160 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.33357, 0.323864, 2.08967, 0.0171623, 2.47208, -0.37218, -2.11455, -0.184185, -1.3209, 438.691, 175.93, -108.956)
+
+[node name="AcaciaUrban_01_S201" parent="Details/Trees" unique_id=1969597579 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.997429, 0, -1.73353, 0, 2, 0, 1.73353, 0, 0.997429, 552.977, 183.405, -305.451)
+
+[node name="AcaciaUrban_01_S18" parent="Details/Trees" unique_id=1368532410 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.37085, 0, 1.45629, 0, 2, 0, -1.45629, 0, 1.37085, 508.289, 196.532, -412.025)
+
+[node name="AcaciaUrban_01_S2" parent="Details/Trees" unique_id=635241164 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 502.507, 200.439, -453.369)
+
+[node name="AcaciaUrban_01_S123" parent="Details/Trees" unique_id=271152001 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 518.517, 198.076, -463.271)
+
+[node name="AcaciaUrban_01_S124" parent="Details/Trees" unique_id=1907528720 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.591127, 0, 0.806579, 0, 1, 0, -0.806579, 0, -0.591127, 509.868, 198.765, -446.53)
+
+[node name="AcaciaUrban_01_S120" parent="Details/Trees" unique_id=1035464926 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 495.012, 194.782, -425.136)
+
+[node name="AcaciaUrban_01_S3" parent="Details/Trees" unique_id=1172198320 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 489.533, 192.448, -476.741)
+
+[node name="AcaciaUrban_01_S49" parent="Details/Trees" unique_id=1195237618 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 482.153, 196.816, -445.892)
+
+[node name="AcaciaUrban_01_S50" parent="Details/Trees" unique_id=1681379504 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 480.583, 196.958, -467.3)
+
+[node name="AcaciaUrban_01_S51" parent="Details/Trees" unique_id=292113519 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.97427, 0, 0.392098, 0, 3, 0, -0.392098, 0, -2.97427, 482.694, 188.073, -491.029)
+
+[node name="AcaciaUrban_01_S4" parent="Details/Trees" unique_id=87865465 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 469.51, 187.6, -427.21)
+
+[node name="AcaciaUrban_01_S5" parent="Details/Trees" unique_id=1405632249 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 527.652, 197.759, -472.515)
+
+[node name="AcaciaUrban_01_S6" parent="Details/Trees" unique_id=984957581 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.44736, 0, 1.38028, 0, 2, 0, -1.38028, 0, 1.44736, 506.353, 195.903, -472.916)
+
+[node name="AcaciaUrban_01_S7" parent="Details/Trees" unique_id=1300185156 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.44736, 0, 1.38028, 0, 2, 0, -1.38028, 0, 1.44736, 499.049, 197.923, -433.1)
+
+[node name="AcaciaUrban_01_S47" parent="Details/Trees" unique_id=70376639 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.44736, 0, 1.38028, 0, 2, 0, -1.38028, 0, 1.44736, 465.822, 196.429, -452.079)
+
+[node name="AcaciaUrban_01_S48" parent="Details/Trees" unique_id=1829116015 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.44736, 0, 1.38028, 0, 2, 0, -1.38028, 0, 1.44736, 453.713, 190.625, -445.823)
+
+[node name="AcaciaUrban_01_S8" parent="Details/Trees" unique_id=229393628 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.44736, 0, 1.38028, 0, 2, 0, -1.38028, 0, 1.44736, 428.343, 192.484, -479.33)
+
+[node name="AcaciaUrban_01_S21" parent="Details/Trees" unique_id=2057958368 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-3.85688, 0, 1.06041, 0, 4, 0, -1.06041, 0, -3.85688, 436.748, 188.994, -486.045)
+
+[node name="AcaciaUrban_01_S22" parent="Details/Trees" unique_id=1137828530 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.89471, 0, 2.76055, 0, 4, 0, -2.76055, 0, 2.89471, 408.913, 183.716, -488.315)
+
+[node name="AcaciaUrban_01_S23" parent="Details/Trees" unique_id=1059120878 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.56138, 0, 3.68267, 0, 4, 0, -3.68267, 0, -1.56138, 388.301, 181.31, -497.281)
+
+[node name="AcaciaUrban_01_S24" parent="Details/Trees" unique_id=1879356356 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(3.73975, 0, -1.41925, 0, 4, 0, 1.41925, 0, 3.73975, 419.424, 183.298, -498.171)
+
+[node name="AcaciaUrban_01_S25" parent="Details/Trees" unique_id=1171453785 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(3.73975, 0, -1.41925, 0, 4, 0, 1.41925, 0, 3.73975, 402.079, 182.021, -505.811)
+
+[node name="AcaciaUrban_01_S26" parent="Details/Trees" unique_id=354736327 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.90716, 0, -2.74744, 0.26691, 3.98108, -0.282427, 2.73444, -0.388595, -2.89341, 450.797, 184.343, -498.563)
+
+[node name="AcaciaUrban_01_S9" parent="Details/Trees" unique_id=758966801 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.17103, 0, 2.07041, 0, 3, 0, -2.07041, 0, 2.17103, 444.768, 191.77, -470.755)
+
+[node name="AcaciaUrban_01_S43" parent="Details/Trees" unique_id=677230821 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.17103, 0, 2.07041, 0, 3, 0, -2.07041, 0, 2.17103, 435.704, 183.109, -439.292)
+
+[node name="AcaciaUrban_01_S44" parent="Details/Trees" unique_id=92953996 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.384519, 0, -2.97526, 0, 3, 0, 2.97526, 0, 0.384519, 451.189, 182.721, -423.055)
+
+[node name="AcaciaUrban_01_S45" parent="Details/Trees" unique_id=880580154 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.499699, -0.53954, -2.90847, -0.662094, 2.85444, -0.643271, 2.88304, 0.749041, 0.356379, 481.813, 184.97, -411.322)
+
+[node name="AcaciaUrban_01_S46" parent="Details/Trees" unique_id=1319954731 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.303108, -0.53954, 2.93548, 0.811031, 2.85444, 0.440901, -2.87234, 0.749041, 0.434263, 490.356, 184.966, -391.048)
+
+[node name="AcaciaUrban_01_S10" parent="Details/Trees" unique_id=897419305 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.05409, 0, 1.69968, 0, 2, 0, -1.69968, 0, -1.05409, 400.455, 189.258, -491.128)
+
+[node name="AcaciaUrban_01_S27" parent="Details/Trees" unique_id=609435038 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.05409, 0, 1.69968, 0, 2, 0, -1.69968, 0, -1.05409, 433.546, 183.653, -502.75)
+
+[node name="AcaciaUrban_01_S28" parent="Details/Trees" unique_id=1009806913 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.58113, 0, 2.54951, 0, 3, 0, -2.54951, 0, -1.58113, 420.192, 179.163, -510.794)
+
+[node name="AcaciaUrban_01_S91" parent="Details/Trees" unique_id=1860227747 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.10818, 0, 3.39935, -1.36147, 3.66517, -0.844343, -3.1148, -1.60204, -1.93171, 441.965, 174.884, -516.708)
+
+[node name="AcaciaUrban_01_S29" parent="Details/Trees" unique_id=63402965 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.58113, 0, 2.54951, -0.802808, 2.84739, -0.497877, -2.41981, -0.944661, -1.5007, 461.016, 186.449, -491.056)
+
+[node name="AcaciaUrban_01_S82" parent="Details/Trees" unique_id=968721096 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.494068, 0, -1.93801, 0.236385, 1.98507, -0.0602631, 1.92354, -0.243947, -0.490379, 465.025, 180.661, -507.209)
+
+[node name="AcaciaUrban_01_S30" parent="Details/Trees" unique_id=283781441 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.95133, 0, -0.538206, 0, 3, 0, 0.538206, 0, -2.95133, 498.925, 186.794, -496.136)
+
+[node name="AcaciaUrban_01_S31" parent="Details/Trees" unique_id=459710426 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.8761, 0, -2.34099, 0, 3, 0, 2.34099, 0, -1.8761, 548.439, 187.723, -507.639)
+
+[node name="AcaciaUrban_01_S81" parent="Details/Trees" unique_id=351295692 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.78037, 0, -1.12673, 0, 3, 0, 1.12673, 0, 2.78037, 565.446, 187.708, -512.343)
+
+[node name="AcaciaUrban_01_S40" parent="Details/Trees" unique_id=1434491688 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.63412, 0, -1.43576, 0, 3, 0, 1.43576, 0, 2.63412, 583.424, 175.579, -550.164)
+
+[node name="AcaciaUrban_01_S80" parent="Details/Trees" unique_id=1534763958 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.63412, 0, -1.43576, 0, 3, 0, 1.43576, 0, 2.63412, 608.66, 191.462, -510.6)
+
+[node name="AcaciaUrban_01_S32" parent="Details/Trees" unique_id=1099150644 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.25073, 0, -1.56066, 0, 2, 0, 1.56066, 0, -1.25073, 491.752, 172.88, -558.47)
+
+[node name="AcaciaUrban_01_S33" parent="Details/Trees" unique_id=1088203584 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.25073, 0, -1.56066, 0, 2, 0, 1.56066, 0, -1.25073, 514.826, 173.187, -556.275)
+
+[node name="AcaciaUrban_01_S34" parent="Details/Trees" unique_id=95126512 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.25073, 0, -1.56066, 0, 2, 0, 1.56066, 0, -1.25073, 538.222, 172.641, -570.64)
+
+[node name="AcaciaUrban_01_S65" parent="Details/Trees" unique_id=139103956 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.27063, 0.0982954, -1.54137, -0.228505, 1.96202, 0.313489, 1.52751, 0.375271, -1.23527, 492.478, 172.303, -592.631)
+
+[node name="AcaciaUrban_01_S66" parent="Details/Trees" unique_id=1846483468 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.83921, 0.0672773, -3.08726, -0.278938, 3.18781, -0.0063552, 3.07537, 0.270778, 0.841879, 504.383, 170.775, -596.365)
+
+[node name="AcaciaUrban_01_S67" parent="Details/Trees" unique_id=1069730045 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.70257, 0.00142239, 1.0494, 0.114227, 1.98786, -0.188019, -1.04317, 0.219993, 1.69216, 516.314, 172.343, -599.084)
+
+[node name="AcaciaUrban_01_S68" parent="Details/Trees" unique_id=248437915 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.22552, 0.150715, -1.69864, -0.165285, 2.07144, 0.303039, 1.69729, 0.310542, -1.19699, 527.411, 172.443, -602.516)
+
+[node name="AcaciaUrban_01_S69" parent="Details/Trees" unique_id=690931478 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.50898, 0.114864, 1.45595, 0.071114, 2.09679, -0.0917177, -1.45874, -0.0166009, -1.51056, 539.317, 171.924, -606.707)
+
+[node name="AcaciaUrban_01_S93" parent="Details/Trees" unique_id=1953613726 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.27063, 0.0982954, -1.54137, -0.228505, 1.96202, 0.313489, 1.52751, 0.375271, -1.23527, 363.445, 174.104, -559.511)
+
+[node name="AcaciaUrban_01_S116" parent="Details/Trees" unique_id=457459336 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.27063, 0.0982954, -1.54137, -0.228505, 1.96202, 0.313489, 1.52751, 0.375271, -1.23527, 349.907, 173.093, -579.545)
+
+[node name="AcaciaUrban_01_S117" parent="Details/Trees" unique_id=618122586 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.09831, -0.284683, 0.981162, -0.171379, 1.47151, 0.235117, -1.00715, 0.0600535, -1.10997, 340.684, 173.579, -588.341)
+
+[node name="AcaciaUrban_01_S202" parent="Details/Trees" unique_id=410962558 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.09831, -0.284683, 0.981162, -0.171379, 1.47151, 0.235117, -1.00715, 0.0600535, -1.10997, 347.388, 174.363, -604.738)
+
+[node name="AcaciaUrban_01_S299" parent="Details/Trees" unique_id=536637431 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.8, 0, 0, 0, 1.8, 0, 0, 0, 1.8, 336.64, 172.945, -595.472)
+
+[node name="AcaciaUrban_01_S203" parent="Details/Trees" unique_id=637613241 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.47287, -0.131305, -0.2518, -0.171379, 1.47151, 0.235117, 0.226436, 0.259634, -1.4599, 348.191, 173.535, -613.154)
+
+[node name="AcaciaUrban_01_S204" parent="Details/Trees" unique_id=1949354602 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.47287, -0.131305, -0.2518, -0.171379, 1.47151, 0.235117, 0.226436, 0.259634, -1.4599, 354.924, 173.147, -629.952)
+
+[node name="AcaciaUrban_01_S118" parent="Details/Trees" unique_id=1652801922 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.09831, -0.284683, 0.981162, -0.171379, 1.47151, 0.235117, -1.00715, 0.0600535, -1.10997, 346.792, 172.98, -564.664)
+
+[node name="AcaciaUrban_01_S122" parent="Details/Trees" unique_id=1984558980 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.09831, -0.284683, 0.981162, -0.171379, 1.47151, 0.235117, -1.00715, 0.0600535, -1.10997, 325.383, 175.447, -551.08)
+
+[node name="AcaciaUrban_01_S119" parent="Details/Trees" unique_id=676464344 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.372328, -0.186877, 1.44099, -0.171379, 1.47151, 0.235117, -1.44291, -0.222997, 0.343905, 336.27, 172.98, -572.618)
+
+[node name="AcaciaUrban_01_S94" parent="Details/Trees" unique_id=1145004888 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.83921, 0.0672773, -3.08726, -0.278938, 3.18781, -0.0063552, 3.07537, 0.270778, 0.841879, 375.35, 172.577, -563.244)
+
+[node name="AcaciaUrban_01_S95" parent="Details/Trees" unique_id=1567242437 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.70257, 0.00142239, 1.0494, 0.114227, 1.98786, -0.188019, -1.04317, 0.219993, 1.69216, 387.281, 174.145, -565.964)
+
+[node name="AcaciaUrban_01_S96" parent="Details/Trees" unique_id=195904733 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.22552, 0.150715, -1.69864, -0.165285, 2.07144, 0.303039, 1.69729, 0.310542, -1.19699, 398.378, 174.245, -569.396)
+
+[node name="AcaciaUrban_01_S97" parent="Details/Trees" unique_id=623300462 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.50898, 0.114864, 1.45595, 0.071114, 2.09679, -0.0917177, -1.45874, -0.0166009, -1.51056, 410.284, 173.726, -573.586)
+
+[node name="AcaciaUrban_01_S98" parent="Details/Trees" unique_id=1318770960 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.87747, -0.316496, 0.612331, -0.228505, 1.96202, 0.313489, -0.650311, 0.224323, -1.87797, 378.992, 174.446, -624.87)
+
+[node name="AcaciaUrban_01_S99" parent="Details/Trees" unique_id=1449810548 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.58183, -0.229655, -1.87654, -0.278938, 3.18781, -0.00635521, 1.86985, 0.158447, -2.59202, 369.401, 172.933, -631.049)
+
+[node name="AcaciaUrban_01_S146" parent="Details/Trees" unique_id=1525592135 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.58183, -0.229655, -1.87654, -0.278938, 3.18781, -0.00635521, 1.86985, 0.158447, -2.59202, 393.657, 171.696, -658.813)
+
+[node name="AcaciaUrban_01_S100" parent="Details/Trees" unique_id=1665237330 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.57657, -0.205357, -1.21336, 0.114227, 1.98786, -0.188019, 1.22531, 0.0789134, 1.57873, 393.436, 174.486, -604.841)
+
+[node name="AcaciaUrban_01_S101" parent="Details/Trees" unique_id=1938103916 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.02043, -0.23744, 0.521041, -0.165285, 2.07144, 0.303039, -0.548217, 0.250547, -2.01164, 400.561, 174.235, -595.668)
+
+[node name="AcaciaUrban_01_S103" parent="Details/Trees" unique_id=1326167511 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.02043, -0.23744, 0.521041, -0.165285, 2.07144, 0.303039, -0.548217, 0.250547, -2.01164, 394.531, 172.618, -636.633)
+
+[node name="AcaciaUrban_01_S144" parent="Details/Trees" unique_id=1975957339 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.1759, 0.343359, -1.70569, -0.165285, 2.07144, 0.303039, 1.73203, -0.0354377, 1.18693, 400.038, 172.454, -649.25)
+
+[node name="AcaciaUrban_01_S145" parent="Details/Trees" unique_id=969836456 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.1759, 0.343359, -1.70569, -0.165285, 2.07144, 0.303039, 1.73203, -0.0354377, 1.18693, 403.676, 172.381, -666.132)
+
+[node name="AcaciaUrban_01_S147" parent="Details/Trees" unique_id=1005684564 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.1759, 0.343359, -1.70569, -0.165285, 2.07144, 0.303039, 1.73203, -0.0354377, 1.18693, 378.261, 171.283, -665.995)
+
+[node name="AcaciaUrban_01_S149" parent="Details/Trees" unique_id=432272109 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.91263, -0.273012, 0.822992, -0.165285, 2.07144, 0.303039, -0.851195, 0.211225, -1.9081, 373.772, 173.648, -652.71)
+
+[node name="AcaciaUrban_01_S148" parent="Details/Trees" unique_id=341807346 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.50629, 0.0414927, 0.537939, -0.125931, 1.57824, 0.230887, -0.524635, -0.259703, 1.48906, 383.41, 174.366, -648.619)
+
+[node name="AcaciaUrban_01_S104" parent="Details/Trees" unique_id=667256369 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.02043, -0.23744, 0.521041, -0.165285, 2.07144, 0.303039, -0.548217, 0.250547, -2.01164, 402.564, 173.712, -605.636)
+
+[node name="AcaciaUrban_01_S105" parent="Details/Trees" unique_id=1357973478 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.7913, 0.017389, -1.09588, -0.165285, 2.07144, 0.303039, 1.08348, 0.344745, -1.76556, 399.636, 174.41, -582.011)
+
+[node name="AcaciaUrban_01_S106" parent="Details/Trees" unique_id=1380297102 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.38724, -0.11929, 1.57205, -0.165285, 2.07144, 0.303039, -1.56788, -0.323916, 1.35898, 491.135, 174.435, -542.463)
+
+[node name="AcaciaUrban_01_S107" parent="Details/Trees" unique_id=1005765994 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.38724, -0.11929, 1.57205, -0.165285, 2.07144, 0.303039, -1.56788, -0.323916, 1.35898, 504.057, 173.19, -546.893)
+
+[node name="AcaciaUrban_01_S108" parent="Details/Trees" unique_id=1109702358 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.78327, 0.298547, -1.06809, -0.165285, 2.07144, 0.303039, 1.09664, -0.173267, 1.78251, 563.825, 183.179, -523.691)
+
+[node name="AcaciaUrban_01_S109" parent="Details/Trees" unique_id=2006601410 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.78327, 0.298547, -1.06809, -0.165285, 2.07144, 0.303039, 1.09664, -0.173267, 1.78251, 615.545, 180.049, -544.584)
+
+[node name="AcaciaUrban_01_S110" parent="Details/Trees" unique_id=1810933527 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.78327, 0.298547, -1.06809, -0.165285, 2.07144, 0.303039, 1.09664, -0.173267, 1.78251, 615.859, 178.482, -565.165)
+
+[node name="AcaciaUrban_01_S111" parent="Details/Trees" unique_id=464990146 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.74917, -0.0303762, 1.16168, -0.165285, 2.07144, 0.303039, -1.15026, -0.343844, 1.72298, 334.301, 175.421, -506.214)
+
+[node name="AcaciaUrban_01_S135" parent="Details/Trees" unique_id=454593420 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.74917, -0.0303762, 1.16168, -0.165285, 2.07144, 0.303039, -1.15026, -0.343844, 1.72298, 374.344, 176.289, -515.727)
+
+[node name="AcaciaUrban_01_S136" parent="Details/Trees" unique_id=746808892 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.74917, -0.0303762, 1.16168, -0.165285, 2.07144, 0.303039, -1.15026, -0.343844, 1.72298, 415.633, 173.359, -529.182)
+
+[node name="AcaciaUrban_01_S137" parent="Details/Trees" unique_id=482131853 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.74917, -0.0303762, 1.16168, -0.165285, 2.07144, 0.303039, -1.15026, -0.343844, 1.72298, 660.205, 191.067, -490.414)
+
+[node name="AcaciaUrban_01_S138" parent="Details/Trees" unique_id=141546480 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.999051, 0.189088, -1.83743, -0.165285, 2.07144, 0.303039, 1.83972, 0.288786, -0.970579, 666.625, 193.052, -470.84)
+
+[node name="AcaciaUrban_01_S308" parent="Details/Trees" unique_id=1460007767 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.979411, 0, -1.85762, 0, 2.1, 0, 1.85762, 0, -0.979412, 656.08, 194.056, -476.52)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S152" parent="Details/Trees" unique_id=1860480988 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.999051, 0.189088, -1.83743, -0.165285, 2.07144, 0.303039, 1.83972, 0.288786, -0.970579, 718.964, 199.115, -419.008)
+
+[node name="AcaciaUrban_01_S153" parent="Details/Trees" unique_id=302176139 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.61736, -0.0666596, 1.3378, -0.165285, 2.07144, 0.303039, -1.32922, -0.338686, 1.59011, 720.784, 196.495, -435.443)
+
+[node name="AcaciaUrban_01_S160" parent="Details/Trees" unique_id=561697450 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.35259, 0.126351, -1.60141, -0.165285, 2.07144, 0.303039, 1.59786, 0.321227, -1.32425, 770.915, 188.007, -456.601)
+
+[node name="AcaciaUrban_01_S161" parent="Details/Trees" unique_id=1784321650 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.07587, 0.201514, -0.245226, -0.165285, 2.07144, 0.303039, 0.27097, -0.280256, 2.0635, 744.532, 194.215, -458.709)
+
+[node name="AcaciaUrban_01_S162" parent="Details/Trees" unique_id=1622961783 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.07587, 0.201514, -0.245226, -0.165285, 2.07144, 0.303039, 0.27097, -0.280256, 2.0635, 742.331, 201.186, -404.593)
+
+[node name="AcaciaUrban_01_S163" parent="Details/Trees" unique_id=1833696094 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.01464, -0.0321078, 0.591777, 0.0385747, 2.08536, 0.244468, -0.59139, 0.245401, -2.00001, 755.884, 197.015, -393.67)
+
+[node name="AcaciaUrban_01_S229" parent="Details/Trees" unique_id=362522046 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.01464, -0.0321078, 0.591777, 0.0385747, 2.08536, 0.244468, -0.59139, 0.245401, -2.00001, 767.419, 190.546, -352.044)
+
+[node name="AcaciaUrban_01_S230" parent="Details/Trees" unique_id=1016496663 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.01464, -0.0321078, 0.591777, 0.0385747, 2.08536, 0.244468, -0.59139, 0.245401, -2.00001, 776.631, 186.718, -318.153)
+
+[node name="AcaciaUrban_01_S231" parent="Details/Trees" unique_id=1549742892 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.01464, -0.0321078, 0.591777, 0.0385747, 2.08536, 0.244468, -0.59139, 0.245401, -2.00001, 746.847, 190.47, -308.829)
+
+[node name="AcaciaUrban_01_S232" parent="Details/Trees" unique_id=1864019259 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.80458, 0.350221, 1.01531, -0.236966, 2.06612, -0.291515, -1.04754, 0.135938, 1.81498, 757.973, 191.362, -315.411)
+
+[node name="AcaciaUrban_01_S233" parent="Details/Trees" unique_id=1815448666 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.7602, -0.35549, -1.08872, -0.326659, 2.06919, -0.147501, 1.09771, 0.0457179, -1.78967, 758.707, 181.757, -297.156)
+
+[node name="AcaciaUrban_01_S235" parent="Details/Trees" unique_id=716705687 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.06917, 0.335637, 0.125971, -0.326659, 2.06919, -0.147501, -0.147698, 0.125741, 2.09102, 720.049, 186.027, -285.432)
+
+[node name="AcaciaUrban_01_S245" parent="Details/Trees" unique_id=1009974520 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.06917, 0.335637, 0.125971, -0.326659, 2.06919, -0.147501, -0.147698, 0.125741, 2.09102, 694.591, 187.955, -276.858)
+
+[node name="AcaciaUrban_01_S246" parent="Details/Trees" unique_id=1428268937 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.06917, 0.335637, 0.125971, -0.326659, 2.06919, -0.147501, -0.147698, 0.125741, 2.09102, 692.639, 179.053, -255.232)
+
+[node name="AcaciaUrban_01_S247" parent="Details/Trees" unique_id=1436162414 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.75665, -0.530683, -3.55423, -0.622209, 3.94131, -0.280956, 3.53935, 0.429482, -1.81343, 673.517, 180.634, -252.344)
+
+[node name="AcaciaUrban_01_S248" parent="Details/Trees" unique_id=150532921 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.92743, -0.271511, 0.45969, -0.311104, 1.97066, -0.140478, -0.433875, -0.206886, -1.94138, 656.894, 177.606, -237.208)
+
+[node name="AcaciaUrban_01_S249" parent="Details/Trees" unique_id=2118477909 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.92743, -0.271511, 0.45969, -0.311104, 1.97066, -0.140478, -0.433875, -0.206886, -1.94138, 617.693, 185.507, -239.669)
+
+[node name="AcaciaUrban_01_S250" parent="Details/Trees" unique_id=1340981205 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.23574, 0.0831423, -1.57036, -0.311104, 1.97066, -0.140478, 1.54148, 0.33107, 1.23055, 617.693, 175.978, -223.85)
+
+[node name="AcaciaUrban_01_S251" parent="Details/Trees" unique_id=1904885426 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.23574, 0.0831423, -1.57036, -0.311104, 1.97066, -0.140478, 1.54148, 0.33107, 1.23055, 588.755, 181.309, -232.188)
+
+[node name="AcaciaUrban_01_S277" parent="Details/Trees" unique_id=878591823 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63489, 0.434708, 2.47753, -0.466657, 2.95598, -0.210717, -2.47172, -0.270553, 1.67852, 571.356, 179.085, -223.808)
+
+[node name="AcaciaUrban_01_S278" parent="Details/Trees" unique_id=828327629 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63489, 0.434708, 2.47753, -0.466657, 2.95598, -0.210717, -2.47172, -0.270553, 1.67852, 568.804, 174.424, -206.596)
+
+[node name="AcaciaUrban_01_S289" parent="Details/Trees" unique_id=307851954 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.45087, -0.509668, -2.57589, -0.488761, 2.94393, -0.307196, 2.57995, 0.271099, -1.50678, 557.8, 175.83, -214.471)
+
+[node name="AcaciaUrban_01_S267" parent="Details/Trees" unique_id=1313403465 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.23574, 0.0831423, -1.57036, -0.311104, 1.97066, -0.140478, 1.54148, 0.33107, 1.23055, 552.097, 175.665, -202.192)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S270" parent="Details/Trees" unique_id=376059693 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.94347, -0.279697, 0.380383, -0.311104, 1.97066, -0.140478, -0.355157, -0.195677, -1.95846, 508.608, 174.485, -142.524)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S273" parent="Details/Trees" unique_id=325639535 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.94488, 0.0399305, 0.571033, 0, 2.99269, -0.209269, -0.572427, -0.205425, -2.93771, 488.468, 175.553, -114.451)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S274" parent="Details/Trees" unique_id=643359837 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.1794, 0.14381, 2.05658, 0, 2.99269, -0.209269, -2.0616, 0.152027, 2.17409, 471.562, 177.669, -117.925)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S305" parent="Details/Trees" unique_id=1981869775 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.98274, -0.0224121, -0.320509, 7.68006e-09, 2.99269, -0.209269, 0.321294, 0.208065, 2.97548, 480.325, 175.987, -99.0102)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S330" parent="Details/Trees" unique_id=999305167 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.98274, -0.0224121, -0.320509, 7.68006e-09, 2.99269, -0.209269, 0.321294, 0.208065, 2.97548, 470.277, 171.619, -50.4513)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S331" parent="Details/Trees" unique_id=1423138276 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.787561, -0.128241, -1.83393, 9.81966e-09, 1.99513, -0.139513, 1.83841, 0.0549374, 0.785642, 473.015, 172.341, -40.8659)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S332" parent="Details/Trees" unique_id=438188055 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.26154, -0.108258, -1.54816, 5.12005e-09, 1.99513, -0.139513, 1.55194, -0.0880007, -1.25847, 470.576, 171.99, -28.18)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S333" parent="Details/Trees" unique_id=466917781 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.61037, -0.0827348, -1.18316, 9.81966e-09, 1.99513, -0.139513, 1.18605, 0.112333, 1.60644, 459.445, 171.812, -54.9548)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S338" parent="Details/Trees" unique_id=91984455 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.98274, -0.0224121, -0.320509, 7.68006e-09, 2.99269, -0.209269, 0.321294, 0.208065, 2.97548, 426.741, 172.405, -39.906)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S339" parent="Details/Trees" unique_id=2144426960 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.85176, 0.0527112, 0.753806, 9.81966e-09, 1.99513, -0.139513, -0.755647, 0.129172, 1.84724, 428.486, 171.498, -31.9422)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S340" parent="Details/Trees" unique_id=1105127299 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.979832, 0.121623, 1.73929, 9.81966e-09, 1.99513, -0.139513, -1.74354, 0.0683496, 0.977446, 417.865, 174.142, -50.3581)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S341" parent="Details/Trees" unique_id=153449449 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.61037, -0.0827348, -1.18316, 9.81966e-09, 1.99513, -0.139513, 1.18605, 0.112333, 1.60644, 442.073, 172.967, -58.8132)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S334" parent="Details/Trees" unique_id=118435407 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.97027, 0.0239649, 0.342714, 9.81966e-09, 1.99513, -0.139513, -0.343551, -0.137439, -1.96547, 516.871, 171.789, -51.5279)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S335" parent="Details/Trees" unique_id=1709589390 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.97027, 0.0239649, 0.342714, 9.81966e-09, 1.99513, -0.139513, -0.343551, -0.137439, -1.96547, 517.522, 173.58, -58.5249)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S336" parent="Details/Trees" unique_id=236349176 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.249145, -0.138426, -1.97959, 9.81966e-09, 1.99513, -0.139513, 1.98442, -0.0173795, -0.248538, 523.736, 174.013, -66.0587)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S337" parent="Details/Trees" unique_id=1415132328 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.249145, -0.138426, -1.97959, 9.81966e-09, 1.99513, -0.139513, 1.98442, -0.0173795, -0.248538, 531.79, 175.619, -58.6669)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S271" parent="Details/Trees" unique_id=1779647598 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.94347, -0.279697, 0.380383, -0.311104, 1.97066, -0.140478, -0.355157, -0.195677, -1.95846, 500.474, 175.508, -152.834)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S272" parent="Details/Trees" unique_id=1266001267 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.20896, 0.302367, 1.56428, -0.311104, 1.97066, -0.140478, -1.56257, -0.158412, 1.23826, 489.758, 175.841, -134.301)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S280" parent="Details/Trees" unique_id=566183311 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.30908, 0.0991074, -1.5088, -0.311104, 1.97066, -0.140478, 1.47971, 0.326646, 1.30529, 476.926, 175.841, -131.79)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S281" parent="Details/Trees" unique_id=246895396 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.634815, -0.380434, -3.93094, -0.622209, 3.94131, -0.280956, 3.89998, 0.566877, -0.684678, 492.979, 171.823, -143.031)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S275" parent="Details/Trees" unique_id=128656028 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.20896, 0.302367, 1.56428, -0.311104, 1.97066, -0.140478, -1.56257, -0.158412, 1.23826, 466.938, 176.835, -97.9516)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S276" parent="Details/Trees" unique_id=1826724776 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.11877, -0.292936, -1.63173, -0.311104, 1.97066, -0.140478, 1.62836, 0.175237, -1.14792, 452.241, 177.527, -95.1163)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S268" parent="Details/Trees" unique_id=1444423213 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.75777, -0.355073, 1.12634, -0.466657, 2.95598, -0.210717, -1.08488, -0.368908, -2.77254, 544.251, 173.858, -188.912)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S269" parent="Details/Trees" unique_id=1270675016 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.96221, 0.471518, 0.0543976, -0.466656, 2.95598, -0.210717, -0.0867187, 0.199601, 2.9921, 514.691, 176.035, -161.559)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S252" parent="Details/Trees" unique_id=1500787573 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.23574, 0.0831423, -1.57036, -0.311104, 1.97066, -0.140478, 1.54148, 0.33107, 1.23055, 599.416, 174.853, -218.212)
+
+[node name="AcaciaUrban_01_S279" parent="Details/Trees" unique_id=1044861204 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.8454, -0.340639, -0.691718, -0.311104, 1.97066, -0.140478, 0.705495, -0.0220205, -1.87131, 581.021, 176.454, -218.78)
+
+[node name="AcaciaUrban_01_S253" parent="Details/Trees" unique_id=1287120930 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.23574, 0.0831423, -1.57036, -0.311104, 1.97066, -0.140478, 1.54148, 0.33107, 1.23055, 682.792, 200.019, -319.076)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S254" parent="Details/Trees" unique_id=1750765956 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.52308, 0, -1.29624, 0, 2, 0, 1.29624, 0, -1.52308, 658.696, 200.725, -340.206)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S255" parent="Details/Trees" unique_id=22172833 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.66535, 0, 1.86456, 0, 2.5, 0, -1.86456, 0, 1.66535, 668.924, 201.323, -328.625)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S256" parent="Details/Trees" unique_id=92248510 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.999213, 0, 1.11874, 0, 1.5, 0, -1.11874, 0, 0.999213, 670.664, 200.024, -309.492)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S257" parent="Details/Trees" unique_id=1079089574 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.48842, 0, -0.186052, 0, 1.5, 0, 0.186052, 0, -1.48842, 651.893, 204.065, -311.706)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S258" parent="Details/Trees" unique_id=1651983911 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.48842, 0, -0.186052, 0, 1.5, 0, 0.186052, 0, -1.48842, 634.973, 187.851, -249.483)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S259" parent="Details/Trees" unique_id=1940591567 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.141736, 0, 1.49329, 0, 1.5, 0, -1.49329, 0, -0.141736, 673.175, 197.72, -279.777)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S260" parent="Details/Trees" unique_id=553613113 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.141736, 0, 1.49329, 0, 1.5, 0, -1.49329, 0, -0.141736, 646.589, 191.685, -260.808)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S234" parent="Details/Trees" unique_id=494591634 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.76699, 0.29182, 0.180503, -0.279994, 1.77359, -0.12643, -0.198352, 0.096034, 1.78646, 741.64, 184.716, -294.808)
+
+[node name="AcaciaUrban_01_S309" parent="Details/Trees" unique_id=288155964 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.23695, 0.286231, 1.27594, -0.279994, 1.77359, -0.12643, -1.27732, -0.111593, 1.26333, 710.226, 182.518, -271.486)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S164" parent="Details/Trees" unique_id=658024687 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.32535, 0.165457, -1.62052, -0.480959, 2.03575, -0.185502, 1.55632, 0.488218, 1.32269, 762.762, 198.255, -400.943)
+
+[node name="AcaciaUrban_01_S165" parent="Details/Trees" unique_id=1646164683 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.32535, 0.165457, -1.62052, -0.239931, 2.08618, 0.0167736, 1.61117, 0.174563, 1.33553, 756.054, 201.031, -410.99)
+
+[node name="AcaciaUrban_01_S166" parent="Details/Trees" unique_id=1043544604 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.32535, 0.165457, -1.62052, -0.239931, 2.08618, 0.0167736, 1.61117, 0.174563, 1.33553, 761.224, 197.041, -422.067)
+
+[node name="AcaciaUrban_01_S170" parent="Details/Trees" unique_id=965393957 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.05879, 0.239496, -0.337683, -0.239931, 2.08618, 0.0167736, 0.337374, 0.0221371, 2.0726, 795.312, 182.155, -419.655)
+
+[node name="AcaciaUrban_01_S171" parent="Details/Trees" unique_id=826846156 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.8062, 0.199268, 1.05258, -0.239931, 2.08618, 0.0167736, -1.04406, -0.134687, 1.81708, 782.115, 191.644, -392.2)
+
+[node name="AcaciaUrban_01_S167" parent="Details/Trees" unique_id=1774002071 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.5778, 0.196973, -1.92919, -0.285632, 2.48355, 0.0199683, 1.91806, 0.207813, 1.58992, 735.929, 198.752, -428.959)
+
+[node name="AcaciaUrban_01_S168" parent="Details/Trees" unique_id=456968491 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.09932, -0.144448, 2.24067, -0.285632, 2.48355, 0.0199683, -2.22708, -0.247223, -1.10859, 716.404, 189.993, -463.628)
+
+[node name="AcaciaUrban_01_S169" parent="Details/Trees" unique_id=1231521606 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.45207, 0.183298, -2.0268, -0.285632, 2.48355, 0.0199683, 2.01492, 0.219969, 1.46345, 726.204, 195.642, -447.923)
+
+[node name="AcaciaUrban_01_S139" parent="Details/Trees" unique_id=1358645302 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.999051, 0.189088, -1.83743, -0.165285, 2.07144, 0.303039, 1.83972, 0.288786, -0.970579, 655.137, 198.021, -450.311)
+
+[node name="AcaciaUrban_01_S140" parent="Details/Trees" unique_id=2130580170 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.71207, -0.0411914, 1.21537, -0.165285, 2.07144, 0.303039, -1.20478, -0.342717, 1.68554, 647.731, 195.815, -464.373)
+
+[node name="AcaciaUrban_01_S294" parent="Details/Trees" unique_id=598951505 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.70323, 0, 1.22841, 0, 2.1, 0, -1.22841, 0, 1.70323, 617.738, 198.183, -467.768)
+
+[node name="AcaciaUrban_01_S295" parent="Details/Trees" unique_id=1422170724 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.26478, 0, -2.15646, 0, 2.5, 0, 2.15646, 0, -1.26478, 627.409, 196.481, -466.138)
+
+[node name="AcaciaUrban_01_S296" parent="Details/Trees" unique_id=1739317191 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.26478, 0, -2.15646, 0, 2.5, 0, 2.15646, 0, -1.26478, 638.912, 198.512, -444.566)
+
+[node name="AcaciaUrban_01_S297" parent="Details/Trees" unique_id=1966931274 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.53571, 0, 1.97271, 0, 2.5, 0, -1.97271, 0, -1.53571, 652.211, 197.977, -434.752)
+
+[node name="AcaciaUrban_01_S114" parent="Details/Trees" unique_id=330238471 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.781113, 0.221009, -1.93675, -0.165285, 2.07144, 0.303039, 1.9423, 0.265154, -0.753094, 341.099, 177.593, -501.674)
+
+[node name="AcaciaUrban_01_S112" parent="Details/Trees" unique_id=1897158792 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.78327, 0.298547, -1.06809, -0.165285, 2.07144, 0.303039, 1.09664, -0.173267, 1.78251, 316.007, 173.448, -504.155)
+
+[node name="AcaciaUrban_01_S125" parent="Details/Trees" unique_id=502238982 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.06866, 0.208282, -0.295425, -0.165285, 2.07144, 0.303039, 0.321463, -0.275264, 2.05691, 289.748, 173.637, -488.01)
+
+[node name="AcaciaUrban_01_S134" parent="Details/Trees" unique_id=1141083478 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.46269, 0.247955, -0.351697, -0.196767, 2.466, 0.360761, 0.382694, -0.327695, 2.44871, 314.438, 178.03, -493.748)
+
+[node name="AcaciaUrban_01_S113" parent="Details/Trees" unique_id=2027624597 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(3.95713, 0.380568, -0.443079, -0.347355, 3.97281, 0.310088, 0.46957, -0.268288, 3.96327, 326.416, 179.336, -488.466)
+
+[node name="AcaciaUrban_01_S206" parent="Details/Trees" unique_id=1117197161 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(3.95713, 0.380568, -0.443079, -0.347355, 3.97281, 0.310088, 0.46957, -0.268288, 3.96327, 158.307, 177.699, -455.893)
+
+[node name="AcaciaUrban_01_S207" parent="Details/Trees" unique_id=1537053503 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-3.54051, -0.164842, -1.85408, -0.347355, 3.97281, 0.310088, 1.8287, 0.435474, -3.53075, 221.223, 177.77, -566.366)
+
+[node name="AcaciaUrban_01_S208" parent="Details/Trees" unique_id=1309783190 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.281046, -0.286065, 3.97985, -0.347355, 3.97281, 0.310088, -3.97497, -0.367393, 0.254294, 219.196, 198.704, -732.175)
+
+[node name="AcaciaUrban_01_S209" parent="Details/Trees" unique_id=2065481345 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.59271, 0.423733, -3.64468, -0.347355, 3.97281, 0.310088, 3.65275, 0.19303, 1.61868, 311.955, 181.005, -851.485)
+
+[node name="AcaciaUrban_01_S210" parent="Details/Trees" unique_id=2005148858 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.59271, 0.423733, -3.64468, -0.347355, 3.97281, 0.310088, 3.65275, 0.19303, 1.61868, 516.724, 176.624, -881.401)
+
+[node name="AcaciaUrban_01_S215" parent="Details/Trees" unique_id=1624060432 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.59271, 0.423733, -3.64468, -0.347355, 3.97281, 0.310088, 3.65275, 0.19303, 1.61868, 685.477, 178.038, -904.636)
+
+[node name="AcaciaUrban_01_S216" parent="Details/Trees" unique_id=509727359 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.429074, -0.193741, 2.96283, -0.260517, 2.9796, 0.232566, -2.95771, -0.290551, 0.409332, 752.145, 187.797, -848.181)
+
+[node name="AcaciaUrban_01_S218" parent="Details/Trees" unique_id=1304906438 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.286049, -0.129161, 1.97522, -0.173678, 1.9864, 0.155044, -1.9718, -0.193701, 0.272888, 678.884, 174.09, -879.407)
+
+[node name="AcaciaUrban_01_S219" parent="Details/Trees" unique_id=887259361 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.75517, 0.226188, -0.931781, -0.173678, 1.9864, 0.155044, 0.942981, -0.0551496, 1.76288, 688.346, 173.192, -849.643)
+
+[node name="AcaciaUrban_01_S220" parent="Details/Trees" unique_id=1485555092 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.75517, 0.226188, -0.931781, -0.173678, 1.9864, 0.155044, 0.942981, -0.0551496, 1.76288, 722.626, 188.976, -889.872)
+
+[node name="AcaciaUrban_01_S221" parent="Details/Trees" unique_id=1729995716 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.83684, -0.219924, 0.760039, -0.173678, 1.9864, 0.155044, -0.771921, 0.0763945, -1.84345, 748.905, 196.586, -918.148)
+
+[node name="AcaciaUrban_01_S222" parent="Details/Trees" unique_id=335879357 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.83684, -0.219924, 0.760039, -0.173678, 1.9864, 0.155044, -0.771921, 0.0763945, -1.84345, 733.382, 186.016, -788.296)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S223" parent="Details/Trees" unique_id=645147500 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.88356, 0.214433, -0.63735, -0.173678, 1.9864, 0.155044, 0.64964, -0.0906708, 1.88938, 714.239, 179.105, -731.867)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S224" parent="Details/Trees" unique_id=179225338 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.108732, -0.125864, 1.49075, -0.130258, 1.4898, 0.116283, -1.49037, -0.121026, -0.118923, 702.708, 176.838, -725.953)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S225" parent="Details/Trees" unique_id=1769354731 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.108732, -0.125864, 1.49075, -0.130258, 1.4898, 0.116283, -1.49037, -0.121026, -0.118923, 725.668, 179.495, -726.013)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S226" parent="Details/Trees" unique_id=207233558 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.108732, -0.125864, 1.49075, -0.130258, 1.4898, 0.116283, -1.49037, -0.121026, -0.118923, 736.461, 184.279, -761.141)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S227" parent="Details/Trees" unique_id=682937670 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.39258, -0.0786857, -0.551836, -0.130258, 1.4898, 0.116283, 0.541985, 0.155877, -1.38995, 750.356, 184.029, -722.088)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S217" parent="Details/Trees" unique_id=352315303 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.572098, -0.258322, 3.95044, -0.347355, 3.97281, 0.310088, -3.94361, -0.387402, 0.545776, 708.137, 171.255, -814.863)
+
+[node name="AcaciaUrban_01_S211" parent="Details/Trees" unique_id=937737013 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.796357, 0.211867, -1.82234, -0.173678, 1.9864, 0.155044, 1.82638, 0.0965149, 0.809341, 507.045, 177.076, -872.55)
+
+[node name="AcaciaUrban_01_S212" parent="Details/Trees" unique_id=1251221165 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.99188, -0.176815, 0.0340679, -0.173678, 1.9864, 0.155044, -0.0475434, 0.151456, -1.99369, 525.351, 175.42, -872.072)
+
+[node name="AcaciaUrban_01_S213" parent="Details/Trees" unique_id=677091405 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.67083, 0.229986, -1.07491, -0.173678, 1.9864, 0.155044, 1.08543, -0.0361817, 1.67944, 514.209, 176.359, -894.628)
+
+[node name="AcaciaUrban_01_S214" parent="Details/Trees" unique_id=580702176 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.620503, -0.0939682, 1.89899, -0.173678, 1.9864, 0.155044, -1.89336, -0.213008, 0.608125, 503.438, 175.671, -886.742)
+
+[node name="AcaciaUrban_01_S126" parent="Details/Trees" unique_id=996367168 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(3.95713, 0.380568, -0.443079, -0.347355, 3.97281, 0.310088, 0.46957, -0.268288, 3.96327, 255.718, 175.308, -410.968)
+
+[node name="AcaciaUrban_01_S127" parent="Details/Trees" unique_id=353532837 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.0772, 0.206063, -3.84671, -0.347355, 3.97281, 0.310088, 3.83653, 0.41755, -1.05198, 279.579, 177.914, -440.647)
+
+[node name="AcaciaUrban_01_S128" parent="Details/Trees" unique_id=397383225 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.538598, 0.103032, -1.92336, -0.173678, 1.9864, 0.155044, 1.91827, 0.208775, -0.525989, 268.129, 177.091, -433.626)
+
+[node name="AcaciaUrban_01_S129" parent="Details/Trees" unique_id=1753471618 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.42183, 0.0145351, 1.40648, -0.173678, 1.9864, 0.155044, -1.3958, -0.23236, 1.41342, 270.536, 174.182, -452.773)
+
+[node name="AcaciaUrban_01_S130" parent="Details/Trees" unique_id=1975553829 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.42183, 0.0145351, 1.40648, -0.173678, 1.9864, 0.155044, -1.3958, -0.23236, 1.41342, 281.212, 178.354, -450.976)
+
+[node name="AcaciaUrban_01_S131" parent="Details/Trees" unique_id=1168974028 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.42183, 0.0145351, 1.40648, -0.173678, 1.9864, 0.155044, -1.3958, -0.23236, 1.41342, 250.12, 178.416, -393.952)
+
+[node name="AcaciaUrban_01_S141" parent="Details/Trees" unique_id=1061447406 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.363003, 0.121481, -1.96303, -0.173678, 1.9864, 0.155044, 1.9591, 0.198608, -0.349985, 236.512, 176.346, -391.283)
+
+[node name="AcaciaUrban_01_S142" parent="Details/Trees" unique_id=943062328 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.812899, 0.212734, -1.81492, -0.173678, 1.9864, 0.155044, 1.81907, 0.094588, 0.825847, 242.991, 173.816, -411.098)
+
+[node name="AcaciaUrban_01_S143" parent="Details/Trees" unique_id=2074438124 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.39243, 0.209266, -1.12132, -0.15631, 1.78776, 0.13954, 1.12991, -0.0105701, 1.40113, 223.165, 176.424, -372.979)
+
+[node name="AcaciaUrban_01_S132" parent="Details/Trees" unique_id=65886428 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.106002, 0.164623, -1.99039, -0.173678, 1.9864, 0.155044, 1.98962, 0.164626, 0.119577, 258.738, 172.531, -435.621)
+
+[node name="AcaciaUrban_01_S133" parent="Details/Trees" unique_id=1580634068 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.557387, -0.100979, 1.9181, -0.173678, 1.9864, 0.155044, -1.91289, -0.209776, 0.544829, 275.87, 172.742, -471.102)
+
+[node name="AcaciaUrban_01_S115" parent="Details/Trees" unique_id=267059235 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-3.6519, -0.441925, 1.57109, -0.347355, 3.97281, 0.310088, -1.59467, 0.146671, -3.66545, 404.791, 179.993, -470.281)
+
+[node name="AcaciaUrban_01_S102" parent="Details/Trees" unique_id=1523007548 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.832863, 0.0560421, 1.92697, 0.071114, 2.09679, -0.0917177, -1.92647, 0.10163, 0.829692, 408.681, 174.067, -586.005)
+
+[node name="AcaciaUrban_01_S70" parent="Details/Trees" unique_id=1092720049 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.27063, 0.0982954, -1.54137, -0.228505, 1.96202, 0.313489, 1.52751, 0.375271, -1.23527, 434.698, 171.988, -576.155)
+
+[node name="AcaciaUrban_01_S71" parent="Details/Trees" unique_id=555245778 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.66008, -0.0515164, 3.13076, -0.278938, 3.18781, -0.00635521, -3.11873, -0.274213, -0.662057, 444.769, 170.775, -578.062)
+
+[node name="AcaciaUrban_01_S72" parent="Details/Trees" unique_id=1503682517 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.70257, 0.00142239, 1.0494, 0.114227, 1.98786, -0.188019, -1.04317, 0.219993, 1.69216, 426.475, 172.881, -576.711)
+
+[node name="AcaciaUrban_01_S74" parent="Details/Trees" unique_id=48691922 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.50898, 0.114864, 1.45595, 0.071114, 2.09679, -0.0917177, -1.45874, -0.0166009, -1.51056, 486.391, 171.924, -589.224)
+
+[node name="AcaciaUrban_01_S35" parent="Details/Trees" unique_id=1417252993 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.25073, 0, -1.56066, 0, 2, 0, 1.56066, 0, -1.25073, 586.154, 172.346, -576.402)
+
+[node name="AcaciaUrban_01_S36" parent="Details/Trees" unique_id=1447160523 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.41315, 0, -1.41528, 0, 2, 0, 1.41528, 0, 1.41315, 571.556, 173.065, -563.288)
+
+[node name="AcaciaUrban_01_S38" parent="Details/Trees" unique_id=818857580 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.41068, 0.126744, -1.41207, 0.118299, 1.97452, 0.295411, 1.4128, -0.291888, 1.38521, 598.408, 186.448, -530.883)
+
+[node name="AcaciaUrban_01_S60" parent="Details/Trees" unique_id=1408085092 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.41068, 0.126744, -1.41207, 0.118299, 1.97452, 0.295411, 1.4128, -0.291888, 1.38521, 634.334, 184.477, -549.918)
+
+[node name="AcaciaUrban_01_S61" parent="Details/Trees" unique_id=2143858511 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.05801, 0.0950579, -1.05905, 0.0887244, 1.48089, 0.221559, 1.0596, -0.218916, 1.03891, 631.096, 180.151, -565.962)
+
+[node name="AcaciaUrban_01_S85" parent="Details/Trees" unique_id=1998726238 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.05801, 0.0950579, -1.05905, 0.0887244, 1.48089, 0.221559, 1.0596, -0.218916, 1.03891, 611.468, 175.7, -577.491)
+
+[node name="AcaciaUrban_01_S62" parent="Details/Trees" unique_id=556473253 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.05929, 0.0481288, -1.06094, -0.0797537, 1.49783, -0.0116818, 1.05903, 0.0646586, 1.06032, 613.372, 173.716, -592.057)
+
+[node name="AcaciaUrban_01_S63" parent="Details/Trees" unique_id=722736651 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.632378, 0.0481288, -1.35933, -0.0383734, 1.49783, 0.0708843, 1.35964, 0.0646586, -0.630233, 621.384, 173.703, -597.719)
+
+[node name="AcaciaUrban_01_S64" parent="Details/Trees" unique_id=1025488493 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.328002, 0.0481288, 1.46291, 0.0526049, 1.49783, -0.0610725, -1.46275, 0.0646586, 0.32584, 624.51, 177.58, -584.649)
+
+[node name="AcaciaUrban_01_S73" parent="Details/Trees" unique_id=2113239605 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.18459, 0.00408472, -0.920173, 0.0526049, 1.49783, -0.0610725, 0.918677, -0.0805011, -1.18303, 633.092, 177.215, -589.93)
+
+[node name="AcaciaUrban_01_S78" parent="Details/Trees" unique_id=822883539 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.18459, 0.00408472, -0.920173, 0.0526049, 1.49783, -0.0610725, 0.918677, -0.0805011, -1.18303, 644.81, 174.25, -601.187)
+
+[node name="AcaciaUrban_01_S79" parent="Details/Trees" unique_id=2104872437 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.76086, -0.0467411, 0.370375, 0.0631258, 1.7974, -0.073287, -0.367936, 0.0846825, 1.75996, 663.945, 173.912, -607.572)
+
+[node name="AcaciaUrban_01_S173" parent="Details/Trees" unique_id=880959999 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.68738, -0.015949, -1.84458, 0.0876748, 2.49639, -0.101787, 1.84257, -0.133391, -1.68438, 675.078, 173.189, -595.053)
+
+[node name="AcaciaUrban_01_S174" parent="Details/Trees" unique_id=391210217 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.68738, -0.015949, -1.84458, 0.0876748, 2.49639, -0.101787, 1.84257, -0.133391, -1.68438, 708.877, 174.549, -592.333)
+
+[node name="AcaciaUrban_01_S175" parent="Details/Trees" unique_id=2101053797 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.808023, 0.0144299, -2.36578, -0.0648587, 2.49915, -0.00690859, 2.36493, 0.0636096, 0.808122, 718.132, 181.202, -568.121)
+
+[node name="AcaciaUrban_01_S178" parent="Details/Trees" unique_id=1523422560 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.808023, 0.0144299, -2.36578, -0.0648587, 2.49915, -0.00690859, 2.36493, 0.0636096, 0.808122, 702.088, 176.084, -546.494)
+
+[node name="AcaciaUrban_01_S176" parent="Details/Trees" unique_id=637812365 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.793337, -0.352473, -2.34444, -0.0104603, 2.47167, -0.375142, 2.37076, 0.128855, 0.782872, 729.851, 184.17, -558.414)
+
+[node name="AcaciaUrban_01_S177" parent="Details/Trees" unique_id=27184410 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.0287692, 0.0621108, 2.49906, -0.148677, 2.49476, -0.0637154, -2.49541, -0.149354, -0.0250148, 725.815, 183.369, -545.516)
+
+[node name="AcaciaUrban_01_S75" parent="Details/Trees" unique_id=1487086760 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.18459, 0.00408472, -0.920173, 0.0526049, 1.49783, -0.0610725, 0.918677, -0.0805011, -1.18303, 648.2, 179.948, -572.178)
+
+[node name="AcaciaUrban_01_S76" parent="Details/Trees" unique_id=1601427464 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.28606, 0.0264023, -0.771593, 0.206871, 1.45609, -0.294979, 0.743813, -0.35932, -1.25205, 655.71, 179.996, -569.4)
+
+[node name="AcaciaUrban_01_S77" parent="Details/Trees" unique_id=1959684088 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.46304, 0.25144, 0.215125, 0.206871, 1.45609, -0.294979, -0.258273, -0.258043, -1.45489, 646.923, 181.923, -557.67)
+
+[node name="AcaciaUrban_01_S86" parent="Details/Trees" unique_id=1595968507 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.46304, 0.25144, 0.215125, 0.206871, 1.45609, -0.294979, -0.258273, -0.258043, -1.45489, 646.923, 181.923, -557.67)
+
+[node name="AcaciaUrban_01_S87" parent="Details/Trees" unique_id=127371329 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.94377, -0.169638, 0.552668, -0.259611, 2.9504, -0.477204, -0.516547, -0.516086, -2.90978, 664.715, 181.706, -542.515)
+
+[node name="AcaciaUrban_01_S172" parent="Details/Trees" unique_id=364531846 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-3.92503, -0.226184, 0.73689, -0.346148, 3.93387, -0.636272, -0.688729, -0.688114, -3.87971, 682.939, 172.647, -571.262)
+
+[node name="AcaciaUrban_01_S88" parent="Details/Trees" unique_id=1491997249 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.92609, 0.50288, 0.43025, 0.413741, 2.91218, -0.589958, -0.516547, -0.516086, -2.90978, 621.443, 184.184, -527.182)
+
+[node name="AcaciaUrban_01_S92" parent="Details/Trees" unique_id=2085587304 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-3.90145, 0.670506, 0.573666, 0.551655, 3.8829, -0.786611, -0.688729, -0.688114, -3.87971, 636.832, 189.776, -495.565)
+
+[node name="AcaciaUrban_01_S154" parent="Details/Trees" unique_id=1770693330 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-3.91937, -0.28534, 0.746379, -0.405158, 3.93002, -0.625114, -0.688729, -0.688114, -3.87971, 723.053, 185.507, -483.424)
+
+[node name="AcaciaUrban_01_S89" parent="Details/Trees" unique_id=1543695693 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.82878, -0.0886278, 0.995063, -0.225484, 2.9677, -0.376683, -0.973222, -0.429975, -2.80499, 654.656, 186.395, -525.256)
+
+[node name="AcaciaUrban_01_S150" parent="Details/Trees" unique_id=967889080 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.82878, -0.0886278, 0.995063, -0.225484, 2.9677, -0.376683, -0.973222, -0.429975, -2.80499, 672.857, 184.007, -505.09)
+
+[node name="AcaciaUrban_01_S155" parent="Details/Trees" unique_id=1353814949 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.82878, -0.0886278, 0.995063, -0.225484, 2.9677, -0.376683, -0.973222, -0.429975, -2.80499, 692.04, 181.629, -519.709)
+
+[node name="AcaciaUrban_01_S156" parent="Details/Trees" unique_id=322393870 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.82878, -0.0886278, 0.995063, -0.225484, 2.9677, -0.376683, -0.973222, -0.429975, -2.80499, 737.469, 181.597, -495.981)
+
+[node name="AcaciaUrban_01_S157" parent="Details/Trees" unique_id=1496118181 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.13588, -0.10478, -2.10405, -0.225484, 2.9677, -0.376683, 2.09456, 0.426327, 2.10501, 768.816, 178.975, -484.637)
+
+[node name="AcaciaUrban_01_S179" parent="Details/Trees" unique_id=1331905836 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.13588, -0.10478, -2.10405, -0.225484, 2.9677, -0.376683, 2.09456, 0.426327, 2.10501, 830.836, 184.561, -489.631)
+
+[node name="AcaciaUrban_01_S261" parent="Details/Trees" unique_id=400907001 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.13588, -0.10478, -2.10405, -0.225484, 2.9677, -0.376683, 2.09456, 0.426327, 2.10501, 876.447, 198.597, -415.987)
+
+[node name="AcaciaUrban_01_S262" parent="Details/Trees" unique_id=1456461655 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.42392, -0.0698536, -1.4027, -0.150323, 1.97847, -0.251123, 1.39637, 0.284218, 1.40334, 774.466, 184.931, -252.539)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S283" parent="Details/Trees" unique_id=1726974309 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.75482, -0.250878, -0.926096, -0.150323, 1.97847, -0.251123, 0.947627, -0.150731, -1.75479, 764.938, 183.91, -255.203)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S284" parent="Details/Trees" unique_id=2015094660 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.40052, 0.284013, 1.39925, -0.150323, 1.97847, -0.251123, -1.41984, 0.0706817, 1.40679, 754.67, 182.503, -253.241)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S265" parent="Details/Trees" unique_id=1823629803 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.75077, -0.0698538, 0.964326, 0.197771, 1.97847, -0.215745, -0.94641, 0.284218, 1.73883, 698.851, 178.031, -226.649)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S285" parent="Details/Trees" unique_id=50228305 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.9288, 0.208256, 0.486161, -0.150322, 1.97847, -0.251122, -0.507076, 0.205642, 1.92369, 686.621, 178.167, -223.791)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S286" parent="Details/Trees" unique_id=1946628868 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.37368, 0.208256, 1.43862, 0.00649284, 1.97847, -0.292604, -1.4536, 0.205642, 1.35821, 533.207, 174.735, -108.105)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S287" parent="Details/Trees" unique_id=817895382 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.58458, -0.271404, -1.18973, -0.150322, 1.97847, -0.251122, 1.211, -0.10954, -1.58792, 556.076, 173.687, -125.842)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S288" parent="Details/Trees" unique_id=2081859211 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.58458, -0.271404, -1.18973, -0.150322, 1.97847, -0.251122, 1.211, -0.10954, -1.58792, 547.803, 174.261, -118.738)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S298" parent="Details/Trees" unique_id=56087407 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.60146, 0, -1.19805, 0, 2, 0, 1.19805, 0, -1.60146, 526.728, 175.796, -87.6821)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S282" parent="Details/Trees" unique_id=521218060 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.40774, -0.283649, -1.39206, -0.150323, 1.97847, -0.251122, 1.41269, -0.072128, -1.4139, 672.087, 177.511, -216.314)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S266" parent="Details/Trees" unique_id=1418816196 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.84784, -0.139707, -2.80541, -0.300645, 3.95694, -0.502244, 2.79275, 0.568436, 2.80668, 882.377, 196.034, -315.503)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S290" parent="Details/Trees" unique_id=1346960010 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.56338, 0, -1.55856, 0, 3, 0, 1.55856, 0, -2.56338, 878.746, 192.301, -334.595)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S291" parent="Details/Trees" unique_id=286724444 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.70892, 0, -1.03904, 0, 2, 0, 1.03904, 0, -1.70892, 867.266, 189.861, -329.665)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S292" parent="Details/Trees" unique_id=294668096 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.70892, 0, -1.03904, 0, 2, 0, 1.03904, 0, -1.70892, 857.979, 195.989, -307.553)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S293" parent="Details/Trees" unique_id=575656081 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.70892, 0, -1.03904, 0, 2, 0, 1.03904, 0, -1.70892, 873.151, 196.55, -298.418)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S263" parent="Details/Trees" unique_id=1839723297 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.13588, -0.10478, -2.10405, -0.225484, 2.9677, -0.376683, 2.09456, 0.426327, 2.10501, 551.261, 177.29, -92.8881)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S264" parent="Details/Trees" unique_id=1637877214 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.45552, 0.0633274, 1.3702, -0.150323, 1.97847, -0.251122, -1.3634, -0.285743, -1.43509, 563.123, 176.448, -110.023)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S180" parent="Details/Trees" unique_id=603612900 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.13588, -0.10478, -2.10405, -0.225484, 2.9677, -0.376683, 2.09456, 0.426327, 2.10501, 749.932, 174.791, -628.822)
+
+[node name="AcaciaUrban_01_S195" parent="Details/Trees" unique_id=61261374 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.978947, -0.430154, -2.80297, -0.225484, 2.9677, -0.376683, 2.8268, 0.0877571, -1.00074, 724.857, 172.949, -661.969)
+
+[node name="AcaciaUrban_01_S196" parent="Details/Trees" unique_id=1148729085 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.978947, -0.430154, -2.80297, -0.225484, 2.9677, -0.376683, 2.8268, 0.0877571, -1.00074, 792.177, 185.604, -589.013)
+
+[node name="AcaciaUrban_01_S197" parent="Details/Trees" unique_id=1026039146 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.978947, -0.430154, -2.80297, -0.225484, 2.9677, -0.376683, 2.8268, 0.0877571, -1.00074, 841.003, 198.281, -556.708)
+
+[node name="AcaciaUrban_01_S300" parent="Details/Trees" unique_id=878988165 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.652632, -0.28677, -1.86865, -0.150323, 1.97847, -0.251123, 1.88454, 0.0585046, -0.66716, 838.522, 200.473, -567.043)
+
+[node name="AcaciaUrban_01_S301" parent="Details/Trees" unique_id=1803032448 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.66253, -0.0147828, -1.11166, -0.150323, 1.97847, -0.251123, 1.10155, 0.292303, 1.64352, 828.281, 196.203, -557.742)
+
+[node name="AcaciaUrban_01_S302" parent="Details/Trees" unique_id=2066880549 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.50226, -0.206162, -1.9249, -0.150323, 1.97847, -0.251123, 1.93006, 0.207743, 0.481358, 826.346, 192.853, -546.322)
+
+[node name="AcaciaUrban_01_S187" parent="Details/Trees" unique_id=1070519198 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.13588, -0.10478, -2.10405, -0.225484, 2.9677, -0.376683, 2.09456, 0.426327, 2.10501, 737.983, 174.702, -575.661)
+
+[node name="AcaciaUrban_01_S188" parent="Details/Trees" unique_id=1354798995 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.66788, 0.188877, 2.48647, -0.225484, 2.9677, -0.376683, -2.48341, -0.396307, -1.63573, 753.709, 177.509, -548.486)
+
+[node name="AcaciaUrban_01_S324" parent="Details/Trees" unique_id=1770915287 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.11192, 0.125918, 1.65764, -0.150323, 1.97847, -0.251123, -1.65561, -0.264205, -1.09049, 755.915, 177.509, -536.42)
+
+[node name="AcaciaUrban_01_S181" parent="Details/Trees" unique_id=665751811 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63566, 0.438592, 2.47634, -0.225484, 2.9677, -0.376683, -2.50475, 0.0192502, 1.65101, 835.097, 189.287, -643.398)
+
+[node name="AcaciaUrban_01_S342" parent="Details/Trees" unique_id=1006974961 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.10969, 0, 1.66391, 0, 2, 0, -1.66391, 0, 1.10969, 857.944, 191.361, -655.4)
+
+[node name="AcaciaUrban_01_S343" parent="Details/Trees" unique_id=45363336 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.18554, 0, -1.61074, 0, 2, 0, 1.61074, 0, 1.18554, 848.087, 187.994, -665.434)
+
+[node name="AcaciaUrban_01_S205" parent="Details/Trees" unique_id=456870326 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63566, 0.438592, 2.47634, -0.225484, 2.9677, -0.376683, -2.50475, 0.0192502, 1.65101, 897.345, 198.354, -678.842)
+
+[node name="AcaciaUrban_01_S189" parent="Details/Trees" unique_id=435880443 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63566, 0.438592, 2.47634, -0.225484, 2.9677, -0.376683, -2.50475, 0.0192502, 1.65101, 800.019, 183.877, -724.339)
+
+[node name="AcaciaUrban_01_S182" parent="Details/Trees" unique_id=763115812 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63566, 0.438592, 2.47634, -0.225484, 2.9677, -0.376683, -2.50475, 0.0192502, 1.65101, 788.002, 187.012, -799.294)
+
+[node name="AcaciaUrban_01_S183" parent="Details/Trees" unique_id=791105257 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.981395, 0.263155, 1.4858, -0.13529, 1.78062, -0.22601, -1.50285, 0.0115501, 0.990609, 786.394, 188.988, -780.353)
+
+[node name="AcaciaUrban_01_S184" parent="Details/Trees" unique_id=1780636160 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.981395, 0.263155, 1.4858, -0.13529, 1.78062, -0.22601, -1.50285, 0.0115501, 0.990609, 786.21, 192.118, -818.198)
+
+[node name="AcaciaUrban_01_S303" parent="Details/Trees" unique_id=102544296 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.45792, -0.0231918, -1.05543, -0.13529, 1.78062, -0.22601, 1.04698, 0.262385, 1.44048, 788.661, 192.755, -830.456)
+
+[node name="AcaciaUrban_01_S304" parent="Details/Trees" unique_id=2031660672 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.917036, -0.263408, -1.52632, -0.299043, 1.77051, -0.125881, 1.51974, 0.189444, -0.945776, 793.721, 197.72, -864.42)
+
+[node name="AcaciaUrban_01_S185" parent="Details/Trees" unique_id=325419667 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.18771, 0.0811228, 1.3501, -0.13529, 1.78062, -0.22601, -1.34575, -0.250605, -1.16883, 798.041, 191.739, -807.737)
+
+[node name="AcaciaUrban_01_S186" parent="Details/Trees" unique_id=876336053 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.7616, -0.0882649, 0.359107, -0.13529, 1.78062, -0.22601, -0.344158, -0.24818, -1.74927, 803.597, 191.244, -789.441)
+
+[node name="AcaciaUrban_01_S190" parent="Details/Trees" unique_id=1106853636 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.63566, 0.438592, 2.47634, -0.225484, 2.9677, -0.376683, -2.50475, 0.0192502, 1.65101, 779.232, 184.64, -745.127)
+
+[node name="AcaciaUrban_01_S191" parent="Details/Trees" unique_id=883913643 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.981395, 0.263155, 1.4858, -0.13529, 1.78062, -0.22601, -1.50285, 0.0115501, 0.990609, 773.805, 184.124, -726.186)
+
+[node name="AcaciaUrban_01_S192" parent="Details/Trees" unique_id=1480935524 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(0.981395, 0.263155, 1.4858, -0.13529, 1.78062, -0.22601, -1.50285, 0.0115501, 0.990609, 777.44, 188.384, -764.031)
+
+[node name="AcaciaUrban_01_S193" parent="Details/Trees" unique_id=405215611 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.18771, 0.0811228, 1.3501, -0.13529, 1.78062, -0.22601, -1.34575, -0.250605, -1.16883, 789.271, 188.085, -753.57)
+
+[node name="AcaciaUrban_01_S194" parent="Details/Trees" unique_id=443705180 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.7616, -0.0882649, 0.359107, -0.13529, 1.78062, -0.22601, -0.344158, -0.24818, -1.74927, 796.375, 189.913, -769.494)
+
+[node name="AcaciaUrban_01_S158" parent="Details/Trees" unique_id=1680943782 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.123, 0.424884, 2.07662, -0.225484, 2.9677, -0.376683, -2.10761, 0.110485, 2.13208, 754.234, 178.975, -489.975)
+
+[node name="AcaciaUrban_01_S306" parent="Details/Trees" unique_id=1941606264 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(1.78253, 0.0203439, -0.906746, -0.150323, 1.97847, -0.251123, 0.89443, 0.291968, 1.76487, 788.454, 183.051, -578.965)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S307" parent="Details/Trees" unique_id=1309268793 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.228276, 0.233111, 1.97321, -0.150323, 1.97847, -0.251123, -1.98124, -0.176972, -0.208297, 782.371, 183.051, -591.007)
+metadata/_edit_group_ = true
+
+[node name="AcaciaUrban_01_S159" parent="Details/Trees" unique_id=1381349875 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(2.123, 0.424884, 2.07662, -0.225484, 2.9677, -0.376683, -2.10761, 0.110485, 2.13208, 754.234, 196.407, -445.006)
+
+[node name="AcaciaUrban_01_S151" parent="Details/Trees" unique_id=1882465269 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.82878, -0.0886278, 0.995063, -0.225484, 2.9677, -0.376683, -0.973222, -0.429975, -2.80499, 729.621, 201.968, -407.803)
+
+[node name="AcaciaUrban_01_S228" parent="Details/Trees" unique_id=818278013 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-2.82878, -0.0886278, 0.995063, -0.225484, 2.9677, -0.376683, -0.973222, -0.429975, -2.80499, 769.082, 191.214, -333.655)
+
+[node name="AcaciaUrban_01_S39" parent="Details/Trees" unique_id=124148121 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-0.000863492, 0.126744, 1.99598, -0.292422, 1.97452, -0.125508, -1.97851, -0.291888, 0.0176787, 582.803, 182.834, -533.18)
+
+[node name="AcaciaUrban_01_S37" parent="Details/Trees" unique_id=800203692 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.25429, 0.0516762, -1.55695, 0.25273, 1.97917, -0.137911, 1.53717, -0.283234, -1.24776, 549.763, 175.787, -553.486)
+
+[node name="AcaciaUrban_01_S11" parent="Details/Trees" unique_id=275155248 instance=ExtResource("17_qoxfn")]
+transform = Transform3D(-1.05409, 0, 1.69968, 0, 2, 0, -1.69968, 0, -1.05409, 374.426, 183.74, -499.354)
+
+[node name="AA-Defences" type="Node3D" parent="." unique_id=673939614]
+
+[node name="VEH_Stationary_AutomaticAA-T1" parent="AA-Defences" unique_id=1348038277 node_paths=PackedStringArray("ProtectionAreaVolume") instance=ExtResource("31_tbdu2")]
+transform = Transform3D(0.4369587, 0, -0.8994814, 0, 1, 0, 0.8994814, 0, 0.4369587, 935.3433, 197.9162, -777.801)
+MaximumEngagementAltitude = 150
+OwnerTeam = 1
+ProtectionAreaVolume = NodePath("../../TEAM_1_HQ/HQ_Team1")
+metadata/_edit_group_ = true
+
+[node name="VEH_Stationary_AutomaticAA-T2" parent="AA-Defences" unique_id=1231179190 node_paths=PackedStringArray("ProtectionAreaVolume") instance=ExtResource("31_tbdu2")]
+transform = Transform3D(-0.9837035, 0, 0.17979817, 0, 1, 0, -0.17979817, 0, -0.9837035, 467.62164, 174.158, 22.479193)
+MaximumEngagementAltitude = 150
+OwnerTeam = 2
+ProtectionAreaVolume = NodePath("../../TEAM_2_HQ/HQ_Team2")
+metadata/_edit_group_ = true

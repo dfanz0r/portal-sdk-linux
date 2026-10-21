@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/BarrelOilExplosive_01_cluster.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/props/BarrelOilExplosive_01_cluster.gd" type="Script" id="2"]
+
+
+[node name="BarrelOilExplosive_01_cluster" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

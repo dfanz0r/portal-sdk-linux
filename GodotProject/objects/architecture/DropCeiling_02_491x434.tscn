@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/DropCeiling_02_491x434.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/DropCeiling_02_491x434.gd" type="Script" id="2"]
+
+
+[node name="DropCeiling_02_491x434" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

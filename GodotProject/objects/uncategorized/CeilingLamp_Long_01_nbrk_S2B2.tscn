@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/CeilingLamp_Long_01_nbrk_S2B2.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/CeilingLamp_Long_01_nbrk_S2B2.gd" type="Script" id="2"]
+
+
+[node name="CeilingLamp_Long_01_nbrk_S2B2" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

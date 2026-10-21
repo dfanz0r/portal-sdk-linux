@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/PalaceHangingLamp_03_Long_Banger_Plaza.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/PalaceHangingLamp_03_Long_Banger_Plaza.gd" type="Script" id="2"]
+
+
+[node name="PalaceHangingLamp_03_Long_Banger_Plaza" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

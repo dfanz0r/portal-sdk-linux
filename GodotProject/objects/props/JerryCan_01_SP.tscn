@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/JerryCan_01_SP.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/props/JerryCan_01_SP.gd" type="Script" id="2"]
+
+
+[node name="JerryCan_01_SP" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

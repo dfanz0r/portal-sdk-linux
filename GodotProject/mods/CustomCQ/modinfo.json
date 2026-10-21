@@ -1,0 +1,131 @@
+{
+    "manifest_version": "1",
+    "name": "Custom Conquest",
+    "mod_version": "14.0",
+    "author": "Viper Studios Andy",
+    "description": "CONQUEST: Capture the sectors to control the field. Deplete the enemy's reinforcements to win. Recommended for 64 players.\nListed below are levels that have been pre-configured to immediately work with this Conquest Template once imported into the Battlefield 6 Web Builder.\nTo use your custom levels, you will need to export them and upload them to the web-builder separately.",
+    "base_skel": "custom_conquest_skel.json",
+    "workspace": "conquest_template_14.0.json",
+    "icon": "conquest.svg",
+    "game_mode": "ModBuilderCustom0",
+    "maps": [
+        {
+            "map_name": "MP_Granite_MainStreet_Portal",
+            "file_stem": "GulfofLyndon_Conquest_Large"
+        },
+        {
+            "map_name": "MP_Abbasid",
+            "file_stem": "MP_Abbasid_CustomConquest"
+        },
+        {
+            "map_name": "MP_Aftermath",
+            "file_stem": "MP_Aftermath_Conquest"
+        },
+        {
+            "map_name": "MP_Aftermath_Portal",
+            "file_stem": "MP_Aftermath_Portal_OperationMetro_Conquest"
+        },
+        {
+            "map_name": "MP_Badlands",
+            "file_stem": "MP_Badlands_Conquest"
+        },
+        {
+            "map_name": "MP_Battery",
+            "file_stem": "MP_Battery_CustomConquest"
+        },
+        {
+            "map_name": "MP_Capstone",
+            "file_stem": "MP_Capstone_Conquest"
+        },
+        {
+            "map_name": "MP_Capstone",
+            "file_stem": "MP_Capstone_Conquest_Winter_Version",
+            "additional_description": "(Winter)"
+        },
+        {
+            "map_name": "MP_Contaminated",
+            "file_stem": "MP_Contaminated_Conquest"
+        },
+        {
+            "map_name": "MP_Contaminated",
+            "file_stem": "MP_Contaminated_Conquest_Winter_Version",
+            "additional_description": "(Winter)"
+        },
+        {
+            "map_name": "MP_Dumbo",
+            "file_stem": "MP_Dumbo_CustomConquest"
+        },
+        {
+            "map_name": "MP_Eastwood",
+            "file_stem": "MP_Eastwood_Conquest"
+        },
+        {
+            "map_name": "MP_FireStorm",
+            "file_stem": "MP_FireStorm_Conquest"
+        },
+        {
+            "map_name": "MP_FireStorm",
+            "file_stem": "MP_FireStorm_Conquest_Winter_Version",
+            "additional_description": "(Winter)"
+        },
+        {
+            "map_name": "MP_GolmudRailway",
+            "file_stem": "MP_GolmudRailway_Conquest"
+        },
+        {
+            "map_name": "MP_Granite_ClubHouse_Portal",
+            "file_stem": "MP_Granite_ClubHouse_Portal_CustomConquest"
+        },
+        {
+            "map_name": "MP_Granite_ClubHouse_Portal",
+            "file_stem": "MP_Granite_ClubHouse_Portal_CustomConquest_Winter_Version",
+            "additional_description": "(Winter)"
+        },
+        {
+            "map_name": "MP_Granite_MilitaryRnD_Portal",
+            "file_stem": "MP_Granite_MilitaryRnD_Portal_Conquest"
+        },
+        {
+            "map_name": "MP_Granite_MilitaryStorage_Portal",
+            "file_stem": "MP_Granite_MilitaryStorage_Portal_Conquest"
+        },
+        {
+            "map_name": "MP_Granite_MilitaryStorage_Portal",
+            "file_stem": "MP_Granite_MilitaryStorage_Portal_Conquest_Winter_Version",
+            "additional_description": "(Winter)"
+        },
+        {
+            "map_name": "MP_Granite_TechCampus_Portal",
+            "file_stem": "MP_Granite_TechCampus_Portal_CustomConquest"
+        },
+        {
+            "map_name": "MP_Granite_Underground_Portal",
+            "file_stem": "MP_Granite_Underground_Portal_Conquest"
+        },
+        {
+            "map_name": "MP_Isolated",
+            "file_stem": "MP_Isolated_Conquest"
+        },
+        {
+            "map_name": "MP_Outskirts",
+            "file_stem": "MP_Outskirts_Conquest"
+        },
+        {
+            "map_name": "MP_Plaza",
+            "file_stem": "MP_Plaza_Conquest"
+        },
+        {
+            "map_name": "MP_Subsurface",
+            "file_stem": "MP_Subsurface_Conquest"
+        },
+        {
+            "map_name": "MP_Tungsten",
+            "file_stem": "MP_Tungsten-Conquest"
+        },
+        {
+            "map_name": "MP_Tungsten",
+            "file_stem": "MP_Tungsten-Conquest_Winter_Version",
+            "additional_description": "(Winter)"
+        }
+    ]
+}

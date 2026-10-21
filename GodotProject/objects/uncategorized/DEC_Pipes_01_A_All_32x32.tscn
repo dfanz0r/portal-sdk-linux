@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/DEC_Pipes_01_A_All_32x32.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/DEC_Pipes_01_A_All_32x32.gd" type="Script" id="2"]
+
+
+[node name="DEC_Pipes_01_A_All_32x32" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

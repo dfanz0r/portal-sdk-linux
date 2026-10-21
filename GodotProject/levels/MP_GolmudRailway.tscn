@@ -1,0 +1,78 @@
+[gd_scene format=3 uid="uid://di31hrt33btct"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_konw8"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_q3yq4"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_negnv"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_qssib"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_y58tx"]
+[ext_resource type="PackedScene" path="res://static/MP_GolmudRailway_Assets.tscn" id="6_konw8"]
+[ext_resource type="PackedScene" path="res://static/MP_GolmudRailway_Terrain.tscn" id="7_q3yq4"]
+
+[node name="MP_GolmudRailway" type="Node3D" unique_id=1910093892]
+
+[node name="TEAM_1_HQ" parent="." unique_id=2077022361 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_konw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -120.14, 728.997, 726.635)
+AltTeam = 0
+ObjId = 1
+HQArea = NodePath("HQ_Team1")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+
+[node name="HQ_Team1" parent="TEAM_1_HQ" unique_id=206686966 instance=ExtResource("2_q3yq4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_1_1" parent="TEAM_1_HQ" unique_id=1849436263 instance=ExtResource("3_negnv")]
+transform = Transform3D(0.999884, 0, -0.0152535, 0, 1, 0, 0.0152535, 0, 0.999884, 0, 0, -3)
+
+[node name="SpawnPoint_1_2" parent="TEAM_1_HQ" unique_id=1910453723 instance=ExtResource("3_negnv")]
+transform = Transform3D(-0.9995, 0, -0.0316198, 0, 1, 0, 0.0316198, 0, -0.9995, 3, 0, 0)
+
+[node name="SpawnPoint_1_3" parent="TEAM_1_HQ" unique_id=2079791515 instance=ExtResource("3_negnv")]
+transform = Transform3D(-0.0428871, 0, 0.99908, 0, 1, 0, -0.99908, 0, -0.0428871, -3, 0, 0)
+
+[node name="SpawnPoint_1_4" parent="TEAM_1_HQ" unique_id=524503226 instance=ExtResource("3_negnv")]
+transform = Transform3D(0.0841819, 0, -0.99645, 0, 1, 0, 0.99645, 0, 0.0841819, 0, 0, 3)
+
+[node name="TEAM_2_HQ" parent="." unique_id=644517299 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_konw8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -152.142, 729.244, 732.414)
+Team = 2
+AltTeam = 0
+ObjId = 2
+HQArea = NodePath("HQ_Team2")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+
+[node name="HQ_Team2" parent="TEAM_2_HQ" unique_id=1917367040 instance=ExtResource("2_q3yq4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_2_1" parent="TEAM_2_HQ" unique_id=1061494607 instance=ExtResource("3_negnv")]
+transform = Transform3D(0.87795, 0, -0.478754, 0, 1, 0, 0.478754, 0, 0.87795, 0, 0, -3)
+
+[node name="SpawnPoint_2_2" parent="TEAM_2_HQ" unique_id=1707767095 instance=ExtResource("3_negnv")]
+transform = Transform3D(-0.997604, 0, 0.0691822, 0, 1, 0, -0.0691822, 0, -0.997604, 3, 0, 0)
+
+[node name="SpawnPoint_2_3" parent="TEAM_2_HQ" unique_id=365830669 instance=ExtResource("3_negnv")]
+transform = Transform3D(0.162758, 0, 0.986666, 0, 1, 0, -0.986666, 0, 0.162758, -3, 0, 0)
+
+[node name="SpawnPoint_2_4" parent="TEAM_2_HQ" unique_id=779015254 instance=ExtResource("3_negnv")]
+transform = Transform3D(-0.165771, 0, -0.986164, 0, 1, 0, 0.986164, 0, -0.165771, 0, 0, 3)
+
+[node name="CombatArea" parent="." unique_id=720873286 node_paths=PackedStringArray("CombatVolume") instance=ExtResource("4_qssib")]
+CombatVolume = NodePath("CombatVolume")
+
+[node name="CombatVolume" parent="CombatArea" unique_id=946141873 instance=ExtResource("2_q3yq4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -127.163, 957.817, 679.146)
+points = PackedVector2Array(66.0602, -598.154, -257.1, -457.621, -544.049, -378.733, -744.198, -147.167, -732.629, 98.5587, -618.45, 272.161, -424.749, 355.936, -64.4036, 445.18, 67.0821, 424.655, 67.0822, 424.655, 206.494, 341.582, 478.288, 190.313, 808.403, 3.72925, 846.065, -215.501, 606.721, -436.711)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1747740909]
+transform = Transform3D(-1, -8.57397e-08, 1.70718e-08, 0, 0.195279, 0.980748, -8.74228e-08, 0.980748, -0.195279, -81.3089, 1459.67, 520.052)
+
+[node name="DeployCam" parent="Camera3D" unique_id=353754790 instance=ExtResource("5_y58tx")]
+
+[node name="Static" type="Node3D" parent="." unique_id=1927840154]
+
+[node name="MP_GolmudRailway_Assets" parent="Static" unique_id=1511505940 instance=ExtResource("6_konw8")]
+metadata/_edit_lock_ = true
+
+[node name="MP_GolmudRailway_Terrain" parent="Static" unique_id=1997805171 instance=ExtResource("7_q3yq4")]
+metadata/_edit_lock_ = true

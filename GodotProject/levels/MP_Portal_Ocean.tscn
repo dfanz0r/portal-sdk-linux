@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://c3rgck8uobg6o"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_vc1v3"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_7id7p"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_fplcs"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_wj7a2"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_lv4sv"]
+[ext_resource type="PackedScene" path="res://static/MP_Portal_Ocean_Assets.tscn" id="6_lxuuv"]
+[ext_resource type="PackedScene" path="res://static/MP_Portal_Ocean_Terrain.tscn" id="7_2bnef"]
+[ext_resource type="PackedScene" path="res://objects/architecture/HighwayStraight_01.tscn" id="8_2bnef"]
+[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="9_75ihb"]
+
+[node name="MP_Portal_Ocean" type="Node3D" unique_id=932931116]
+
+[node name="HighwayStraight_01" parent="." unique_id=770790190 instance=ExtResource("8_2bnef")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 33.36, 71.27664, -30.007)
+
+[node name="TEAM_1_HQ" parent="." unique_id=502807004 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_vc1v3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 65.29379, 71.30049, -20.901447)
+AltTeam = 0
+ObjId = 1
+HQArea = NodePath("HQ_Team1")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+
+[node name="HQ_Team1" parent="TEAM_1_HQ" unique_id=779710374 instance=ExtResource("2_7id7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_1_1" parent="TEAM_1_HQ" unique_id=1617558626 instance=ExtResource("3_fplcs")]
+transform = Transform3D(0.999884, 0, -0.0152535, 0, 1, 0, 0.0152535, 0, 0.999884, 0, 0, -3)
+
+[node name="SpawnPoint_1_2" parent="TEAM_1_HQ" unique_id=1840735605 instance=ExtResource("3_fplcs")]
+transform = Transform3D(-0.9995, 0, -0.0316198, 0, 1, 0, 0.0316198, 0, -0.9995, 3, 0, 0)
+
+[node name="SpawnPoint_1_3" parent="TEAM_1_HQ" unique_id=98488963 instance=ExtResource("3_fplcs")]
+transform = Transform3D(-0.0428871, 0, 0.99908, 0, 1, 0, -0.99908, 0, -0.0428871, -3, 0, 0)
+
+[node name="SpawnPoint_1_4" parent="TEAM_1_HQ" unique_id=256628892 instance=ExtResource("3_fplcs")]
+transform = Transform3D(0.0841819, 0, -0.99645, 0, 1, 0, 0.99645, 0, 0.0841819, 0, 0, 3)
+
+[node name="TEAM_2_HQ" parent="." unique_id=2107407848 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_vc1v3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 40.266907, 71.30049, -20.807669)
+Team = 2
+AltTeam = 0
+ObjId = 2
+HQArea = NodePath("HQ_Team2")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+
+[node name="HQ_Team2" parent="TEAM_2_HQ" unique_id=277068331 instance=ExtResource("2_7id7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_2_1" parent="TEAM_2_HQ" unique_id=1637315260 instance=ExtResource("3_fplcs")]
+transform = Transform3D(0.87795, 0, -0.478754, 0, 1, 0, 0.478754, 0, 0.87795, 0, 0, -3)
+
+[node name="SpawnPoint_2_2" parent="TEAM_2_HQ" unique_id=1488049641 instance=ExtResource("3_fplcs")]
+transform = Transform3D(-0.997604, 0, 0.0691822, 0, 1, 0, -0.0691822, 0, -0.997604, 3, 0, 0)
+
+[node name="SpawnPoint_2_3" parent="TEAM_2_HQ" unique_id=1102070652 instance=ExtResource("3_fplcs")]
+transform = Transform3D(0.162758, 0, 0.986666, 0, 1, 0, -0.986666, 0, 0.162758, -3, 0, 0)
+
+[node name="SpawnPoint_2_4" parent="TEAM_2_HQ" unique_id=1075256480 instance=ExtResource("3_fplcs")]
+transform = Transform3D(-0.165771, 0, -0.986164, 0, 1, 0, 0.986164, 0, -0.165771, 0, 0, 3)
+
+[node name="CombatArea" parent="." unique_id=1863635372 node_paths=PackedStringArray("CombatVolume") instance=ExtResource("4_wj7a2")]
+CombatVolume = NodePath("CombatVolume")
+
+[node name="CombatVolume" parent="CombatArea" unique_id=1655730481 instance=ExtResource("2_7id7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+points = PackedVector2Array(-500, -500, 500, -500, 500, 500, -500, 500)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1680663741]
+transform = Transform3D(1, 0, 0, 0, 0.0871558, 0.996195, 0, -0.996195, 0.0871558, -80.4583, 712.62305, 8.893965)
+
+[node name="DeployCam" parent="Camera3D" unique_id=909515072 instance=ExtResource("5_lv4sv")]
+
+[node name="Static" type="Node3D" parent="." unique_id=1906220689]
+
+[node name="MP_Portal_Ocean_Assets" parent="Static" unique_id=913527599 instance=ExtResource("6_lxuuv")]
+metadata/_edit_lock_ = true
+
+[node name="MP_Portal_Ocean_Terrain" parent="Static" unique_id=485876160 instance=ExtResource("7_2bnef")]
+metadata/_edit_lock_ = true
+
+[node name="WaterPlane" parent="Static" unique_id=308259124 instance=ExtResource("9_75ihb")]
+transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 8192, 0, 70, 0)
+metadata/_edit_lock_ = true

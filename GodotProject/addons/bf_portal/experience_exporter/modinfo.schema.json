@@ -1,0 +1,104 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Portal Mod Manifest (modinfo.json)",
+    "description": "Schema for a Portal custom-experience manifest consumed by the Godot experience_exporter plugin (ModPackage). Describes the workspace, strings, skeleton, and level scenes that make up an exportable experience bundle.",
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+        "manifest_version",
+        "name",
+        "mod_version",
+        "description",
+        "game_mode",
+        "maps"
+    ],
+    "properties": {
+        "$schema": {
+            "type": "string",
+            "description": "Optional reference to this JSON schema."
+        },
+        "manifest_version": {
+            "type": "string",
+            "description": "Manifest schema version. Incremented manually when the manifest schema changes."
+        },
+        "name": {
+            "type": "string",
+            "description": "Display name of the custom experience.",
+            "minLength": 1
+        },
+        "mod_version": {
+            "type": "string",
+            "description": "Author-controlled version of this mod."
+        },
+        "author": {
+            "type": "string",
+            "description": "Name of the person or studio that created the experience."
+        },
+        "description": {
+            "type": "string",
+            "description": "Description of the experience shown in the exporter and web builder."
+        },
+        "base_skel": {
+            "type": "string",
+            "description": "Skeleton (framework) file that levels, strings, and the workspace are appended to. Typically named '*_skel.json'.",
+            "pattern": "\\.json$"
+        },
+        "workspace": {
+            "type": "string",
+            "description": "Workspace (blocks) file for the experience. Its content has the {\"mod\": {\"blocks\": ...}} signature.",
+            "pattern": "\\.json$"
+        },
+        "strings": {
+            "type": "string",
+            "description": "Strings table file for UI text. Typically named '*.strings.json'.",
+            "pattern": "\\.strings\\.json$"
+        },
+        "script": {
+            "type": "string",
+            "description": "Optional compiled script file attached to the experience."
+        },
+        "icon": {
+            "type": "string",
+            "description": "Icon file bundled with the exporter plugin, resolved relative to the plugin's icon directory.",
+            "enum": [
+                "breakthrough.svg",
+                "conquest.svg",
+                "rush.svg"
+            ]
+        },
+        "game_mode": {
+            "type": "string",
+            "description": "Game mode identifier. Combined with each map's map_name to form the map-rotation id.",
+            "default": "ModBuilderCustom0"
+        },
+        "maps": {
+            "type": "array",
+            "description": "The levels included in the experience. Each entry maps a canonical level (map_name) to its level file (file_stem).",
+            "minItems": 1,
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "required": [
+                    "map_name",
+                    "file_stem"
+                ],
+                "properties": {
+                    "map_name": {
+                        "type": "string",
+                        "description": "Canonical level id (matches a key in level_info.json and the level scene's .tscn root node). Combined with game_mode to form the map-rotation id.",
+                        "minLength": 1
+                    },
+                    "file_stem": {
+                        "type": "string",
+                        "description": "Level file name without extension. The exporter attaches '<file_stem>.spatial.json'.",
+                        "minLength": 1
+                    },
+                    "additional_description": {
+                        "type": "string",
+                        "description": "Optional suffix distinguishing variants of the same map (e.g. '(Winter)')."
+                    }
+                }
+            }
+        }
+    }
+}

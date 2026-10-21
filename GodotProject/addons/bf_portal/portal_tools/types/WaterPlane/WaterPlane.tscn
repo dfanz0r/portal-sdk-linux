@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b75wlya1kk2rs"]
+
+[ext_resource type="Script" uid="uid://dfuxs3875w43j" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.gd" id="1_2i3i1"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_kgo8e"]
+size = Vector2(1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgo8e"]
+transparency = 1
+albedo_color = Color(0.09803922, 0.69803923, 0.8745098, 0.29803923)
+
+[node name="WaterPlane" type="MeshInstance3D" unique_id=308259124]
+mesh = SubResource("PlaneMesh_kgo8e")
+surface_material_override/0 = SubResource("StandardMaterial3D_kgo8e")
+script = ExtResource("1_2i3i1")

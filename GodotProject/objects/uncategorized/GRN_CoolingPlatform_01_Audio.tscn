@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/GRN_CoolingPlatform_01_Audio.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/GRN_CoolingPlatform_01_Audio.gd" type="Script" id="2"]
+
+
+[node name="GRN_CoolingPlatform_01_Audio" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/DestroyedWalkwayRail_192.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/DestroyedWalkwayRail_192.gd" type="Script" id="2"]
+
+
+[node name="DestroyedWalkwayRail_192" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

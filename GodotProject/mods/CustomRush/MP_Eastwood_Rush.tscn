@@ -1,0 +1,418 @@
+[gd_scene format=3 uid="uid://dr611gap1x2cn"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_hgna0"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_r4xrq"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_krgxa"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_x4dy5"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_prefs"]
+[ext_resource type="PackedScene" path="res://static/MP_Eastwood_Terrain.tscn" id="6_aixyg"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/Sector.tscn" id="6_ese0r"]
+[ext_resource type="Script" uid="uid://ck5uniw0pl6u8" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.gd" id="7_op5sk"]
+[ext_resource type="PackedScene" path="res://static/MP_Eastwood_Assets.tscn" id="7_u3qdu"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/AreaTrigger.tscn" id="8_t4v7f"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Rush/MCOM.tscn" id="11_oppqw"]
+[ext_resource type="PackedScene" uid="uid://btx1qxeulw3v7" path="res://objects/gameplay/common/VehicleSpawner.tscn" id="12_3pr6d"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/FixedCamera.tscn" id="13_xuslv"]
+
+[node name="MP_Eastwood" type="Node3D" unique_id=1679358697]
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=827957574]
+transform = Transform3D(1, 0, 0, 0, 0.101056, 0.994881, 0, -0.994881, 0.101056, -114.262, 504.195, 56.3131)
+
+[node name="DeployCam" parent="Camera3D" unique_id=1820945894 instance=ExtResource("5_prefs")]
+
+[node name="Static" type="Node3D" parent="." unique_id=960296246]
+
+[node name="MP_Eastwood_Terrain" parent="Static" unique_id=2116846288 instance=ExtResource("6_aixyg")]
+metadata/_edit_lock_ = true
+
+[node name="MP_Eastwood_Assets" parent="Static" unique_id=3942248 instance=ExtResource("7_u3qdu")]
+metadata/_edit_lock_ = true
+
+[node name="Rush" type="Node3D" parent="." unique_id=1530223117]
+
+[node name="CombatArea" parent="Rush" unique_id=2035671357 node_paths=PackedStringArray("CombatVolume", "SurroundingVolume") instance=ExtResource("4_x4dy5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.70943, 234.52255, 39.024815)
+CombatVolume = NodePath("InfantryArea")
+SurroundingVolume = NodePath("AirCombat")
+
+[node name="InfantryArea" parent="Rush/CombatArea" unique_id=568247553 instance=ExtResource("2_r4xrq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
+points = PackedVector2Array(-354.5346, -11.975359, -266.4914, -118.94832, -227.55968, -137.37862, -125.10106, -157.57, -73.85292, -148.90288, -2.8238373, -97.296394, 28.419224, -99.531235, 174.61963, -151.35019, 179.36385, -156.6679, 182.12697, -163.02827, 179.75528, -206.16414, 181.96664, -216.46645, 188.3018, -227.12958, 198.45648, -231.55824, 238.44835, -237.47221, 249.24756, -241.73439, 256.22144, -242.80608, 263.22443, -241.86429, 269.3581, -239.44946, 272.16962, -246.08575, 321.86188, -246.17035, 473.20807, -252.59088, 506.4696, -245.28854, 535.95514, -222.8621, 544.48975, -199.56166, 538.63446, -175.82764, 519.43835, -153.22392, 462.19476, -126.90567, 402.14355, -96.49504, 358.04163, -67.112495, 312.6064, -4.564495, 247.76262, 37.633144, 208.127, 113.70772, 104.03238, 193.56824, 36.82591, 217.62567, -22.927704, 211.77773, -114.795944, 145.79124, -156.519, 122.98726, -199.93477, 115.392365, -326.34198, 171.11597, -381.37762, 140.59532, -391.24, 87.51807)
+
+[node name="AirCombat" parent="Rush/CombatArea" unique_id=1574143633 instance=ExtResource("2_r4xrq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 50, 0)
+points = PackedVector2Array(-363.16028, -56.765762, -252.62437, -160.45462, 41.032093, -251.80196, 363.26965, -276.46014, 507.85614, -263.01022, 565.5788, -222.10005, 558.8538, -150.36722, 333.4892, 63.0674, 139.58624, 217.74146, -6.6815796, 244.08087, -185.45335, 229.5101, -357.55615, 180.84943, -403.51007, 146.10379, -414.71832, 80.53543)
+
+[node name="Sectors" type="Node3D" parent="Rush" unique_id=537539458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -89.70943, 234.52255, 39.024815)
+
+[node name="Sector0" parent="Rush/Sectors" unique_id=1874458257 node_paths=PackedStringArray("SectorArea") instance=ExtResource("6_ese0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -331.8664, -8.043259, 99.13316)
+ObjId = 100
+SectorArea = NodePath("PolygonVolume0")
+
+[node name="PolygonVolume0" type="Node3D" parent="Rush/Sectors/Sector0" unique_id=1510745196]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+script = ExtResource("7_op5sk")
+points = PackedVector2Array(5.4519043, 71.61824, 131.85101, 15.75943, 138.0336, -53.980614, 133.47766, -67.97103, 102.60947, -85.88693, 114.67462, -110.460335, 111.61676, -193.85757, 104.436676, -236.1292, 65.57391, -217.9732, -22.291962, -110.76778, -58.917084, -11.641884, -49.118042, 41.19078)
+height = 100.0
+color = Color(0.067755, 0.524596, 1, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="AreaTrigger" parent="Rush/Sectors/Sector0" unique_id=941634798 node_paths=PackedStringArray("Area") instance=ExtResource("8_t4v7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+ObjId = 600
+Area = NodePath("../PolygonVolume0")
+
+[node name="Sector1" parent="Rush/Sectors" unique_id=2079744466 node_paths=PackedStringArray("SectorArea", "MCOMs") instance=ExtResource("6_ese0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174.76976, -1.5258789e-05, 10.341721)
+ObjId = 101
+SectorArea = NodePath("PolygonVolume1")
+MCOMs = [NodePath("MCOM-A"), NodePath("MCOM-B")]
+
+[node name="PolygonVolume1" type="Node3D" parent="Rush/Sectors/Sector1" unique_id=163555293]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+script = ExtResource("7_op5sk")
+points = PackedVector2Array(18.378693, 112.39317, 60.261337, 135.21161, 105.3555, -68.42696, 89.779434, -104.48728, 100.83362, -158.89832, 49.60991, -167.66457, -52.66272, -147.33719, -45.483154, -105.065544, -42.42285, -21.669271, -54.488647, 2.905201, -23.62085, 20.821247, -19.069397, 34.812077, -25.260376, 104.54846)
+height = 100.0
+color = Color(0, 0.6, 0.7, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="AreaTrigger" parent="Rush/Sectors/Sector1" unique_id=1818698126 node_paths=PackedStringArray("Area") instance=ExtResource("8_t4v7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+ObjId = 601
+Area = NodePath("../PolygonVolume1")
+
+[node name="TEAM_1_HQ1" parent="Rush/Sectors/Sector1" unique_id=365331759 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -146.11569, -7.6492767, 79.5668)
+AltTeam = 0
+ObjId = 301
+HQArea = NodePath("../../Sector0/PolygonVolume0")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_1" parent="Rush/Sectors/Sector1/TEAM_1_HQ1" unique_id=1519104459 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.38799825, 0, 0.9216601, 0, 1, 0, -0.9216601, 0, -0.38799825, -39.441223, 0.06918335, 24.142334)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_2" parent="Rush/Sectors/Sector1/TEAM_1_HQ1" unique_id=1366198815 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.9783359, 0, 0.20702381, 0, 1, 0, -0.20702381, 0, -0.9783359, -27.536285, 0.12646484, 42.03557)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_3" parent="Rush/Sectors/Sector1/TEAM_1_HQ1" unique_id=680804306 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.82667816, 0, 0.562675, 0, 1, 0, -0.562675, 0, -0.82667816, 22.31491, -0.014465332, 18.607239)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_4" parent="Rush/Sectors/Sector1/TEAM_1_HQ1" unique_id=1687216625 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.90064514, 0, 0.43455532, 0, 1, 0, -0.43455532, 0, -0.90064514, -2.6950684, 0.11357117, 39.47917)
+metadata/_edit_group_ = true
+
+[node name="TEAM_2_HQ1" parent="Rush/Sectors/Sector1" unique_id=1864176950 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 151.47964, 0.3720398, 14.136505)
+Team = 2
+AltTeam = 0
+ObjId = 401
+HQArea = NodePath("../../Sector2/PolygonVolume2")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+
+[node name="SpawnPoint_2_1" parent="Rush/Sectors/Sector1/TEAM_2_HQ1" unique_id=702065729 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.8419631, 0, -0.53953505, 0, 1, 0, 0.53953505, 0, -0.8419631, 22.391563, -0.38363647, 109.99643)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_2" parent="Rush/Sectors/Sector1/TEAM_2_HQ1" unique_id=1750733602 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.96417415, 0, -0.26526996, 0, 1, 0, 0.26526996, 0, -0.96417415, 14.534706, 0.0050201416, -50.60396)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_3" parent="Rush/Sectors/Sector1/TEAM_2_HQ1" unique_id=408541284 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.6635345, 0, -0.74814564, 0, 1, 0, 0.74814564, 0, 0.6635345, 13.42572, 0.48414612, -33.703335)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_4" parent="Rush/Sectors/Sector1/TEAM_2_HQ1" unique_id=105046737 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.7101362, 0, -0.70406437, 0, 1, 0, 0.70406437, 0, 0.7101362, 19.841835, 0.08036804, 52.641605)
+metadata/_edit_group_ = true
+
+[node name="MCOM-A" parent="Rush/Sectors/Sector1" unique_id=577308491 instance=ExtResource("11_oppqw")]
+transform = Transform3D(0.16277492, 0, -0.98666346, 0, 1, 0, 0.98666346, 0, 0.16277492, 14.082321, -2.4664764, -40.826157)
+ObjId = 201
+metadata/_edit_group_ = true
+
+[node name="MCOM-B" parent="Rush/Sectors/Sector1" unique_id=1321959792 instance=ExtResource("11_oppqw")]
+transform = Transform3D(-0.98052907, 0, 0.19637404, 0, 1, 0, -0.19637404, 0, -0.98052907, 48.4722, -0.7644043, 24.90752)
+ObjId = 202
+metadata/_edit_group_ = true
+
+[node name="VehicleSpawner" parent="Rush/Sectors/Sector1" unique_id=1272437982 instance=ExtResource("12_3pr6d")]
+transform = Transform3D(-0.5836263, 0, 0.81202245, 0, 1, 0, -0.81202245, 0, -0.5836263, -170.89178, -7.0039215, 92.50192)
+ObjId = 1150
+VehicleType = 13
+P_DefaultRespawnTime = 45
+metadata/_edit_group_ = true
+
+[node name="VehicleSpawner2" parent="Rush/Sectors/Sector1" unique_id=184735039 instance=ExtResource("12_3pr6d")]
+transform = Transform3D(-0.7141429, 0, 0.69999987, 0, 1, 0, -0.69999987, 0, -0.7141429, -161.43124, -7.0320587, 105.55185)
+ObjId = 1151
+VehicleType = 22
+P_DefaultRespawnTime = 45
+metadata/_edit_group_ = true
+
+[node name="Sector2" parent="Rush/Sectors" unique_id=205865265 node_paths=PackedStringArray("SectorArea", "MCOMs") instance=ExtResource("6_ese0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -16.064796, 0, 28.932468)
+ObjId = 102
+SectorArea = NodePath("PolygonVolume2")
+MCOMs = [NodePath("MCOM-A"), NodePath("MCOM-B")]
+
+[node name="PolygonVolume2" type="Node3D" parent="Rush/Sectors/Sector2" unique_id=2081760540]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+script = ExtResource("7_op5sk")
+points = PackedVector2Array(-6.804695, 182.50394, 52.848503, 188.2955, 70.345, 88.68571, 60.397804, 31.44294, 61.67518, -53.229443, 44.714127, -127.94157, 13.161369, -125.83121, -57.872383, -177.49026, -68.92715, -123.07781, -53.350807, -87.0176, -98.44822, 116.61715)
+height = 100.0
+color = Color(0, 0.6, 0.7, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="AreaTrigger" parent="Rush/Sectors/Sector2" unique_id=976518705 node_paths=PackedStringArray("Area") instance=ExtResource("8_t4v7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+ObjId = 602
+Area = NodePath("../PolygonVolume2")
+
+[node name="TEAM_1_HQ2" parent="Rush/Sectors/Sector2" unique_id=817019802 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -150.61176, -3.9743958, -33.83218)
+AltTeam = 0
+ObjId = 302
+HQArea = NodePath("../../Sector1/PolygonVolume1")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_1" parent="Rush/Sectors/Sector2/TEAM_1_HQ2" unique_id=1773100183 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.6730513, 0, 0.7395959, 0, 1, 0, -0.7395959, 0, -0.6730513, -8.5520935, 1.6181641, -36.705162)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_2" parent="Rush/Sectors/Sector2/TEAM_1_HQ2" unique_id=2047470452 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.74399674, 0, 0.6681833, 0, 1, 0, -0.6681833, 0, 0.74399674, -6.717285, 1.693161, -24.727238)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_3" parent="Rush/Sectors/Sector2/TEAM_1_HQ2" unique_id=1307490123 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.9908211, 0, 0.13517961, 0, 1, 0, -0.13517961, 0, 0.9908211, -5.924591, 0.47991943, 30.16183)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_4" parent="Rush/Sectors/Sector2/TEAM_1_HQ2" unique_id=2040995308 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.9998253, 0, -0.018691286, 0, 1, 0, 0.018691286, 0, 0.9998253, 20.297073, 0.5839844, 28.99979)
+metadata/_edit_group_ = true
+
+[node name="TEAM_2_HQ2" parent="Rush/Sectors/Sector2" unique_id=1247253127 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 159.67165, -0.1253357, -42.272377)
+Team = 2
+AltTeam = 0
+ObjId = 402
+HQArea = NodePath("../../Sector3/PolygonVolume3")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_1" parent="Rush/Sectors/Sector2/TEAM_2_HQ2" unique_id=1461270320 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -43.694557, -0.7583008, 10.184235)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_2" parent="Rush/Sectors/Sector2/TEAM_2_HQ2" unique_id=1673848237 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -36.655758, -2.0193024, 67.593666)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_3" parent="Rush/Sectors/Sector2/TEAM_2_HQ2" unique_id=1598913854 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.7205389, 0, -0.69341445, 0, 1, 0, 0.69341445, 0, 0.7205389, 6.9757347, -6.2695923, 97.48967)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_4" parent="Rush/Sectors/Sector2/TEAM_2_HQ2" unique_id=693399729 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.73938435, 0, -0.67328364, 0, 1, 0, 0.67328364, 0, 0.73938435, -7.6138153, 0.13887024, 14.26926)
+metadata/_edit_group_ = true
+
+[node name="MCOM-A" parent="Rush/Sectors/Sector2" unique_id=1918640075 instance=ExtResource("11_oppqw")]
+transform = Transform3D(-0.9738177, 0, 0.22733122, 0, 1, 0, -0.22733122, 0, -0.9738177, -4.018158, 0.26641846, -36.9264)
+ObjId = 203
+metadata/_edit_group_ = true
+
+[node name="MCOM-B" parent="Rush/Sectors/Sector2" unique_id=1323422069 instance=ExtResource("11_oppqw")]
+transform = Transform3D(-0.17339046, 0, -0.98485315, 0, 1, 0, 0.98485315, 0, -0.17339046, 34.023796, 0.6720123, 97.445625)
+ObjId = 204
+metadata/_edit_group_ = true
+
+[node name="Sector3" parent="Rush/Sectors" unique_id=520190072 node_paths=PackedStringArray("SectorArea", "MCOMs") instance=ExtResource("6_ese0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 144.48114, 0, -9.620148)
+ObjId = 103
+SectorArea = NodePath("PolygonVolume3")
+MCOMs = [NodePath("MCOM-A"), NodePath("MCOM-B")]
+
+[node name="PolygonVolume3" type="Node3D" parent="Rush/Sectors/Sector3" unique_id=811075692]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+script = ExtResource("7_op5sk")
+points = PackedVector2Array(-40.848785, 202.8818, 63.26837, 123.106674, 103.05141, 46.941563, 113.26865, 18.151905, 105.91763, -31.048365, 92.28288, -58.295937, 69.59125, -83.86554, 30.397598, -141.48537, -115.83296, -89.38815, -98.87685, -14.674363, -100.1552, 69.99118, -90.20476, 127.23654, -107.714554, 226.83905)
+height = 100.0
+color = Color(0, 0.6, 0.7, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="AreaTrigger" parent="Rush/Sectors/Sector3" unique_id=2143633041 node_paths=PackedStringArray("Area") instance=ExtResource("8_t4v7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+ObjId = 603
+Area = NodePath("../PolygonVolume3")
+
+[node name="TEAM_1_HQ3" parent="Rush/Sectors/Sector3" unique_id=1378744600 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -174.23123, 0.2732849, 33.378094)
+AltTeam = 0
+ObjId = 303
+HQArea = NodePath("../../Sector2/PolygonVolume2")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_1" parent="Rush/Sectors/Sector3/TEAM_1_HQ3" unique_id=686105823 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 20.297379, 0.30126953, -27.746078)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_2" parent="Rush/Sectors/Sector3/TEAM_1_HQ3" unique_id=1101831997 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 21.835548, 0.63253784, 1.5692673)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_3" parent="Rush/Sectors/Sector3/TEAM_1_HQ3" unique_id=327857336 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.5470886, -0.6141052, 62.69989)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_4" parent="Rush/Sectors/Sector3/TEAM_1_HQ3" unique_id=741555254 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -5.6221848, -1.3978424, 52.470566)
+metadata/_edit_group_ = true
+
+[node name="TEAM_2_HQ3" parent="Rush/Sectors/Sector3" unique_id=1293638199 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 130.66675, 0, -140.89899)
+Team = 2
+AltTeam = 0
+ObjId = 403
+HQArea = NodePath("../../Sector4/PolygonVolume4")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+
+[node name="SpawnPoint_2_1" parent="Rush/Sectors/Sector3/TEAM_2_HQ3" unique_id=1498507303 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.42614245, 0, -0.90465605, 0, 1, 0, 0.90465605, 0, 0.42614245, 35.619415, 0.47338867, 29.61805)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_2" parent="Rush/Sectors/Sector3/TEAM_2_HQ3" unique_id=1442608665 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.4267739, 0, -0.9043583, 0, 1, 0, 0.9043583, 0, 0.4267739, -56.380722, 1.0802917, -41.582962)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_3" parent="Rush/Sectors/Sector3/TEAM_2_HQ3" unique_id=1411087215 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.40137234, 0, -0.91591495, 0, 1, 0, 0.91591495, 0, 0.40137234, 37.6335, 5.0638275, 71.67004)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_4" parent="Rush/Sectors/Sector3/TEAM_2_HQ3" unique_id=1853239991 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.30938214, 0, -0.9509378, 0, 1, 0, 0.9509378, 0, 0.30938214, 17.576187, 0.16386414, 28.86036)
+metadata/_edit_group_ = true
+
+[node name="MCOM-A" parent="Rush/Sectors/Sector3" unique_id=754253846 instance=ExtResource("11_oppqw")]
+transform = Transform3D(-0.70710695, 0, -0.70710695, 0, 1, 0, 0.70710695, 0, -0.70710695, 17.50233, -0.20401001, 2.6769018)
+ObjId = 205
+metadata/_edit_group_ = true
+
+[node name="MCOM-B" parent="Rush/Sectors/Sector3" unique_id=1306087975 instance=ExtResource("11_oppqw")]
+transform = Transform3D(-0.7071068, 0, -0.7071067, 0, 1, 0, 0.7071067, 0, -0.7071068, 32.439804, -1.489151, -48.02309)
+ObjId = 206
+metadata/_edit_group_ = true
+
+[node name="Sector4" parent="Rush/Sectors" unique_id=1983284672 node_paths=PackedStringArray("SectorArea", "MCOMs") instance=ExtResource("6_ese0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 276.29248, 0, -184.07329)
+ObjId = 104
+SectorArea = NodePath("PolygonVolume4")
+MCOMs = [NodePath("MCOM-A"), NodePath("MCOM-B")]
+
+[node name="PolygonVolume4" type="Node3D" parent="Rush/Sectors/Sector4" unique_id=262109091]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+script = ExtResource("7_op5sk")
+points = PackedVector2Array(-62.223663, 90.589165, -39.55017, 116.1595, -25.911423, 143.40167, -18.549911, 192.60046, -28.764038, 221.3916, 35.873337, 179.35583, 81.46352, 116.7701, 66.13339, 19.497192, 41.60771, -10.206848, 44.312485, -38.086975, 46.788635, -40.901794, 47.027817, -45.495087, 45.13472, -48.482773, 45.578598, -61.55838, -4.033676, -61.69066, -6.980011, -55.03781, -10.012283, -56.4205, -13.208038, -57.596863, -19.871353, -58.50319, -26.86409, -57.457947, -37.770737, -53.14209, -77.56199, -47.01686, -87.659744, -42.76758, -94.01082, -32.441376, -96.04317, -22.33902, -93.88869, 21.289253, -96.6255, 27.937645, -101.415405, 32.96855)
+height = 100.0
+color = Color(0, 0.6, 0.7, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="AreaTrigger" parent="Rush/Sectors/Sector4" unique_id=1498348406 node_paths=PackedStringArray("Area") instance=ExtResource("8_t4v7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+ObjId = 604
+Area = NodePath("../PolygonVolume4")
+
+[node name="TEAM_1_HQ4" parent="Rush/Sectors/Sector4" unique_id=255998700 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -119.901825, -0.10273743, 164.25398)
+AltTeam = 0
+ObjId = 304
+HQArea = NodePath("../../Sector3/PolygonVolume3")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_1" parent="Rush/Sectors/Sector4/TEAM_1_HQ4" unique_id=2048843055 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.3913255, 0, 0.9202523, 0, 1, 0, -0.9202523, 0, -0.3913255, 48.53058, -5.036255, 10.754015)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_2" parent="Rush/Sectors/Sector4/TEAM_1_HQ4" unique_id=539165239 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.99593174, 0, -0.09011114, 0, 1, 0, 0.09011114, 0, -0.99593174, 38.652657, -5.067566, -11.375239)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_3" parent="Rush/Sectors/Sector4/TEAM_1_HQ4" unique_id=721771499 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 14.720413, 0.014846802, -24.545279)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_1_4" parent="Rush/Sectors/Sector4/TEAM_1_HQ4" unique_id=1271125465 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.99677885, 0, -0.080198914, 0, 1, 0, 0.080198914, 0, -0.99677885, -7.0593376, -1.1084137, -33.502155)
+metadata/_edit_group_ = true
+
+[node name="TEAM_2_HQ4" parent="Rush/Sectors/Sector4" unique_id=448151288 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_hgna0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 183.15358, 7.965683, -32.499603)
+Team = 2
+AltTeam = 0
+ObjId = 404
+HQArea = NodePath("../../Sector5/PolygonVolume5")
+InfantrySpawns = [NodePath("SpawnPoint_2_1"), NodePath("SpawnPoint_2_2"), NodePath("SpawnPoint_2_3"), NodePath("SpawnPoint_2_4")]
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_1" parent="Rush/Sectors/Sector4/TEAM_2_HQ4" unique_id=1574002320 instance=ExtResource("3_krgxa")]
+transform = Transform3D(0.44078532, 0, -0.8976126, 0, 1, 0, 0.8976126, 0, 0.44078532, -9.10083, 1.4638672, -16.393524)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_2" parent="Rush/Sectors/Sector4/TEAM_2_HQ4" unique_id=352422747 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-0.53646034, 0, -0.84392554, 0, 1, 0, 0.84392554, 0, -0.53646034, 3.3044739, -0.15818787, 34.039413)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_3" parent="Rush/Sectors/Sector4/TEAM_2_HQ4" unique_id=1652844580 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 29.047607, 0.54011536, 21.472534)
+metadata/_edit_group_ = true
+
+[node name="SpawnPoint_2_4" parent="Rush/Sectors/Sector4/TEAM_2_HQ4" unique_id=552865884 instance=ExtResource("3_krgxa")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 9.101837, 0.082092285, 1.6899261)
+metadata/_edit_group_ = true
+
+[node name="MCOM-A" parent="Rush/Sectors/Sector4" unique_id=322098284 instance=ExtResource("11_oppqw")]
+transform = Transform3D(1.0000002, 0, 0, 0, 1, 0, 0, 0, 1.0000002, 16.1418, 5.5375366, -23.948761)
+ObjId = 207
+metadata/_edit_group_ = true
+
+[node name="MCOM-B" parent="Rush/Sectors/Sector4" unique_id=294941716 instance=ExtResource("11_oppqw")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 27.974731, 3.14122, 10.848145)
+ObjId = 208
+metadata/_edit_group_ = true
+
+[node name="Sector5" parent="Rush/Sectors" unique_id=1017956114 node_paths=PackedStringArray("SectorArea", "MCOMs") instance=ExtResource("6_ese0r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 445.73254, 0, -185.12358)
+ObjId = 105
+SectorArea = NodePath("PolygonVolume5")
+MCOMs = [null, null]
+
+[node name="PolygonVolume5" type="Node3D" parent="Rush/Sectors/Sector5" unique_id=1711175532]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -10, 0)
+script = ExtResource("7_op5sk")
+points = PackedVector2Array(-43.988464, 88.31755, 16.58966, 57.62403, 73.28467, 31.534721, 92.4256, 9.024963, 98.39758, -14.250427, 89.82245, -37.372696, 60.260437, -59.735184, 27.690033, -67.06299, -123.86629, -60.508087, -124.30406, -47.433548, -122.411026, -44.445435, -122.65077, -39.850266, -125.12633, -37.03679, -127.82814, -9.161957, -103.305725, 20.547699, -87.98053, 117.81383)
+height = 100.0
+color = Color(0, 0.6, 0.7, 0.42)
+metadata/_custom_type_script = "uid://ck5uniw0pl6u8"
+
+[node name="AreaTrigger" parent="Rush/Sectors/Sector5" unique_id=1799592448 node_paths=PackedStringArray("Area") instance=ExtResource("8_t4v7f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, 0)
+ObjId = 605
+Area = NodePath("../PolygonVolume5")
+
+[node name="EndGameCamera" type="Camera3D" parent="Rush" unique_id=1622075352]
+transform = Transform3D(0.9833883, -0.055856027, 0.17270684, 3.7252903e-09, 0.95147634, 0.30772197, -0.18151459, -0.30261016, 0.9356706, 90.99578, 260.21762, 120.83645)
+fov = 70.0
+metadata/_edit_group_ = true
+
+[node name="FixedCamera" parent="Rush/EndGameCamera" unique_id=1512164875 instance=ExtResource("13_xuslv")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 0, 0, 0)
+ObjId = 950

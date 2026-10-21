@@ -1,0 +1,16 @@
+# Godot / SDK generated
+.godot/
+venv/
+*.exe
+export/
+*.log
+
+# Python
+__pycache__/
+.pytest_cache/
+*.egg-info/
+TestGodotProject_Out/
+
+# Linux-port working files (do not commit backups/logs)
+.linux-port-backup/
+linux-port-validation/

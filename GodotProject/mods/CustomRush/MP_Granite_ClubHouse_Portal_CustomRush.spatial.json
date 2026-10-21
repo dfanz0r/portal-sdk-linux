@@ -1,0 +1,5948 @@
+{
+    "Portal_Dynamic": [
+        {
+            "name": "DeployCam",
+            "type": "DeployCam",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 0.101056,
+                "z": -0.994881
+            },
+            "front": {
+                "x": 0,
+                "y": 0.994881,
+                "z": 0.101056
+            },
+            "position": {
+                "x": -490.88,
+                "y": 508.426,
+                "z": -598.183
+            },
+            "id": "Camera3D/DeployCam",
+            "ObjId": 0
+        },
+        {
+            "name": "CombatArea",
+            "CombatVolume": "PlayArea/CombatArea/InfantryArea",
+            "type": "CombatArea",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "PlayArea/CombatArea",
+            "linked": [
+                "CombatVolume"
+            ]
+        },
+        {
+            "name": "InfantryArea",
+            "type": "PolygonVolume",
+            "id": "PlayArea/CombatArea/InfantryArea",
+            "height": 0,
+            "points": [
+                {
+                    "x": -245.38853,
+                    "y": 278.35986,
+                    "z": -776.39642
+                },
+                {
+                    "x": -262.4093,
+                    "y": 278.35986,
+                    "z": -820.53051
+                },
+                {
+                    "x": -290.0037,
+                    "y": 278.35986,
+                    "z": -825.29403
+                },
+                {
+                    "x": -356.4847,
+                    "y": 278.35986,
+                    "z": -788.12903
+                },
+                {
+                    "x": -405.5327,
+                    "y": 278.35986,
+                    "z": -748.80803
+                },
+                {
+                    "x": -422.4557,
+                    "y": 278.35986,
+                    "z": -699.94603
+                },
+                {
+                    "x": -438.8853,
+                    "y": 278.35986,
+                    "z": -649.74753
+                },
+                {
+                    "x": -430.7897,
+                    "y": 278.35986,
+                    "z": -562.53973
+                },
+                {
+                    "x": -434.8049,
+                    "y": 278.35986,
+                    "z": -501.88363
+                },
+                {
+                    "x": -454.045,
+                    "y": 278.35986,
+                    "z": -470.19813
+                },
+                {
+                    "x": -488.981,
+                    "y": 278.35986,
+                    "z": -423.48503
+                },
+                {
+                    "x": -568.8191,
+                    "y": 278.35986,
+                    "z": -389.99703
+                },
+                {
+                    "x": -605.3092,
+                    "y": 278.35986,
+                    "z": -394.16203
+                },
+                {
+                    "x": -623.6584,
+                    "y": 278.35986,
+                    "z": -421.44403
+                },
+                {
+                    "x": -621.1486,
+                    "y": 278.35986,
+                    "z": -462.03303
+                },
+                {
+                    "x": -600.1167,
+                    "y": 278.35986,
+                    "z": -548.14273
+                },
+                {
+                    "x": -578.2382,
+                    "y": 278.35986,
+                    "z": -622.83383
+                },
+                {
+                    "x": -613.7048,
+                    "y": 278.35986,
+                    "z": -710.98603
+                },
+                {
+                    "x": -593.4726,
+                    "y": 278.35986,
+                    "z": -780.50403
+                },
+                {
+                    "x": -620.3516,
+                    "y": 278.35986,
+                    "z": -876.05693
+                },
+                {
+                    "x": -714.47874,
+                    "y": 278.35986,
+                    "z": -892.23938
+                },
+                {
+                    "x": -781.8557,
+                    "y": 278.35986,
+                    "z": -868.05303
+                },
+                {
+                    "x": -806.3637,
+                    "y": 278.35986,
+                    "z": -798.48503
+                },
+                {
+                    "x": -831.6315,
+                    "y": 278.35986,
+                    "z": -633.708005
+                },
+                {
+                    "x": -808.5877,
+                    "y": 278.35986,
+                    "z": -563.17767
+                },
+                {
+                    "x": -824.3197,
+                    "y": 278.35986,
+                    "z": -458.99503
+                },
+                {
+                    "x": -839.0177,
+                    "y": 278.35986,
+                    "z": -334.75903
+                },
+                {
+                    "x": -819.4367,
+                    "y": 278.35986,
+                    "z": -277.01103
+                },
+                {
+                    "x": -726.8857,
+                    "y": 278.35986,
+                    "z": -234.89503
+                },
+                {
+                    "x": -624.6719,
+                    "y": 278.35986,
+                    "z": -229.74803
+                },
+                {
+                    "x": -586.9582,
+                    "y": 278.35986,
+                    "z": -235.46803
+                },
+                {
+                    "x": -528.89829,
+                    "y": 278.35986,
+                    "z": -233.73203
+                },
+                {
+                    "x": -448.0378,
+                    "y": 278.35986,
+                    "z": -210.46603
+                },
+                {
+                    "x": -408.8107,
+                    "y": 278.35986,
+                    "z": -209.42103
+                },
+                {
+                    "x": -358.7177,
+                    "y": 278.35986,
+                    "z": -246.66703
+                },
+                {
+                    "x": -347.7837,
+                    "y": 278.35986,
+                    "z": -316.15103
+                },
+                {
+                    "x": -351.8987,
+                    "y": 278.35986,
+                    "z": -388.94903
+                },
+                {
+                    "x": -334.3747,
+                    "y": 278.35986,
+                    "z": -455.52003
+                },
+                {
+                    "x": -300.3247,
+                    "y": 278.35986,
+                    "z": -535.71263
+                },
+                {
+                    "x": -267.0537,
+                    "y": 278.35986,
+                    "z": -639.82133
+                },
+                {
+                    "x": -240.7615,
+                    "y": 278.35986,
+                    "z": -729.20678
+                }
+            ]
+        },
+        {
+            "name": "Sector0",
+            "ObjId": 100,
+            "SectorArea": "Sector0/PolygonVolume0",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -714.191,
+                "y": 207.543,
+                "z": -862.687
+            },
+            "id": "Sector0",
+            "linked": [
+                "SectorArea"
+            ]
+        },
+        {
+            "name": "PolygonVolume0",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Sector0/PolygonVolume0",
+            "height": 100,
+            "points": [
+                {
+                    "x": -714.36818,
+                    "y": 145.9619,
+                    "z": -891.86283
+                },
+                {
+                    "x": -781.64354,
+                    "y": 145.9619,
+                    "z": -867.91063
+                },
+                {
+                    "x": -805.98194,
+                    "y": 145.9619,
+                    "z": -798.31383
+                },
+                {
+                    "x": -689.58284,
+                    "y": 145.9619,
+                    "z": -764.02643
+                },
+                {
+                    "x": -613.80784,
+                    "y": 145.9619,
+                    "z": -710.72533
+                },
+                {
+                    "x": -593.53004,
+                    "y": 145.9619,
+                    "z": -780.50503
+                },
+                {
+                    "x": -620.47424,
+                    "y": 145.9619,
+                    "z": -875.95743
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 600,
+            "Area": "Sector0/PolygonVolume0",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -709.3547,
+                "y": 179.1842,
+                "z": -853.91814
+            },
+            "id": "Sector0/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "Sector1",
+            "ObjId": 101,
+            "MCOMs": [
+                "Sector1/MCOM",
+                "Sector1/MCOM2"
+            ],
+            "SectorArea": "Sector1/PolygonVolume1",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -717.966,
+                "y": 201.418,
+                "z": -632.065
+            },
+            "id": "Sector1",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume1",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Sector1/PolygonVolume1",
+            "height": 100,
+            "points": [
+                {
+                    "x": -689.563043,
+                    "y": 135.6874,
+                    "z": -764.04833
+                },
+                {
+                    "x": -805.97863,
+                    "y": 135.6874,
+                    "z": -798.31939
+                },
+                {
+                    "x": -831.03704,
+                    "y": 135.6874,
+                    "z": -633.68628
+                },
+                {
+                    "x": -808.240594,
+                    "y": 135.6874,
+                    "z": -563.06787
+                },
+                {
+                    "x": -717.4223569,
+                    "y": 135.6874,
+                    "z": -556.909665
+                },
+                {
+                    "x": -600.23437,
+                    "y": 135.6874,
+                    "z": -548.17694
+                },
+                {
+                    "x": -578.67346,
+                    "y": 135.6874,
+                    "z": -622.815122
+                },
+                {
+                    "x": -613.81591,
+                    "y": 135.6874,
+                    "z": -710.755124
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 601,
+            "Area": "Sector1/PolygonVolume1",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -713.1297,
+                "y": 173.0592,
+                "z": -623.29614
+            },
+            "id": "Sector1/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 301,
+            "InfantrySpawns": [
+                "Sector1/TEAM_1_HQ/SpawnPoint_1_1",
+                "Sector1/TEAM_1_HQ/SpawnPoint_1_2",
+                "Sector1/TEAM_1_HQ/SpawnPoint_1_3",
+                "Sector1/TEAM_1_HQ/SpawnPoint_1_4"
+            ],
+            "HQArea": "Sector0/PolygonVolume0",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -693.4957,
+                "y": 159.228,
+                "z": -833.851
+            },
+            "id": "Sector1/TEAM_1_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.999884,
+                "y": 0,
+                "z": 0.0152535
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.0152535,
+                "y": 0,
+                "z": 0.999884
+            },
+            "position": {
+                "x": -632.9729,
+                "y": 168.98873,
+                "z": -835.14592
+            },
+            "id": "Sector1/TEAM_1_HQ/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.908545,
+                "y": 0,
+                "z": -0.417788
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.417788,
+                "y": 0,
+                "z": 0.908545
+            },
+            "position": {
+                "x": -646.143,
+                "y": 167.46152,
+                "z": -824.04112
+            },
+            "id": "Sector1/TEAM_1_HQ/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.919698,
+                "y": 0,
+                "z": 0.392626
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.392626,
+                "y": 0,
+                "z": 0.919698
+            },
+            "position": {
+                "x": -764.0273,
+                "y": 146.561,
+                "z": -861.2515
+            },
+            "id": "Sector1/TEAM_1_HQ/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.942262,
+                "y": 0,
+                "z": 0.334876
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.334876,
+                "y": 0,
+                "z": 0.942262
+            },
+            "position": {
+                "x": -727.4317,
+                "y": 152.15354,
+                "z": -849.4093
+            },
+            "id": "Sector1/TEAM_1_HQ/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 401,
+            "InfantrySpawns": [
+                "Sector1/TEAM_2_HQ/SpawnPoint_2_1",
+                "Sector1/TEAM_2_HQ/SpawnPoint_2_2",
+                "Sector1/TEAM_2_HQ/SpawnPoint_2_3",
+                "Sector1/TEAM_2_HQ/SpawnPoint_2_4"
+            ],
+            "HQArea": "Sector2/PolygonVolume2",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -673.2491,
+                "y": 157.9694,
+                "z": -509.921
+            },
+            "id": "Sector1/TEAM_2_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.998391,
+                "y": 0,
+                "z": 0.0567097
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.0567097,
+                "y": 0,
+                "z": -0.998391
+            },
+            "position": {
+                "x": -664.2773,
+                "y": 157.9694,
+                "z": -502.41029
+            },
+            "id": "Sector1/TEAM_2_HQ/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.686974,
+                "y": 0,
+                "z": 0.726682
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.726682,
+                "y": 0,
+                "z": -0.686974
+            },
+            "position": {
+                "x": -630.4209,
+                "y": 170.6989,
+                "z": -506.54273
+            },
+            "id": "Sector1/TEAM_2_HQ/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.992248,
+                "y": 0,
+                "z": -0.124277
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.124277,
+                "y": 0,
+                "z": -0.992248
+            },
+            "position": {
+                "x": -709.6549,
+                "y": 144.8493,
+                "z": -481.5034
+            },
+            "id": "Sector1/TEAM_2_HQ/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.917491,
+                "y": 0,
+                "z": 0.397756
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.397756,
+                "y": 0,
+                "z": -0.917491
+            },
+            "position": {
+                "x": -662.2773,
+                "y": 157.9694,
+                "z": -495.0049
+            },
+            "id": "Sector1/TEAM_2_HQ/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM",
+            "ObjId": 201,
+            "type": "MCOM",
+            "right": {
+                "x": -0.973825,
+                "y": 0,
+                "z": 0.227297
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.227297,
+                "y": 0,
+                "z": -0.973825
+            },
+            "position": {
+                "x": -680.3491,
+                "y": 172.3475,
+                "z": -628.66809
+            },
+            "id": "Sector1/MCOM"
+        },
+        {
+            "name": "MCOM2",
+            "ObjId": 202,
+            "type": "MCOM",
+            "right": {
+                "x": -0.976909,
+                "y": -0.055815,
+                "z": -0.206238
+            },
+            "up": {
+                "x": -0.0570413,
+                "y": 0.998372,
+                "z": 0
+            },
+            "front": {
+                "x": 0.205903,
+                "y": 0.0117641,
+                "z": -0.978502
+            },
+            "position": {
+                "x": -793.7501,
+                "y": 144.0377,
+                "z": -613.4894
+            },
+            "id": "Sector1/MCOM2"
+        },
+        {
+            "name": "Bradly",
+            "ObjId": 1100,
+            "VehicleType": "M2Bradley",
+            "P_DefaultRespawnTime": 45,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 0.910965,
+                "y": 0,
+                "z": -0.412484
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.412484,
+                "y": 0,
+                "z": 0.910965
+            },
+            "position": {
+                "x": -624.0184,
+                "y": 172.3499,
+                "z": -829.354
+            },
+            "id": "Sector1/Bradly"
+        },
+        {
+            "name": "Sector2",
+            "ObjId": 102,
+            "MCOMs": [
+                "Sector2/MCOM",
+                "Sector2/MCOM2"
+            ],
+            "SectorArea": "Sector2/PolygonVolume2",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -720.269,
+                "y": 201.418,
+                "z": -396.764
+            },
+            "id": "Sector2",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume2",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Sector2/PolygonVolume2",
+            "height": 100,
+            "points": [
+                {
+                    "x": -717.42305,
+                    "y": 130.8584,
+                    "z": -556.91833
+                },
+                {
+                    "x": -808.24004,
+                    "y": 130.8584,
+                    "z": -563.07233
+                },
+                {
+                    "x": -824.03175,
+                    "y": 130.8584,
+                    "z": -454.693413
+                },
+                {
+                    "x": -838.16048,
+                    "y": 130.8584,
+                    "z": -335.663506
+                },
+                {
+                    "x": -817.955215,
+                    "y": 130.8584,
+                    "z": -276.743126
+                },
+                {
+                    "x": -725.8320463,
+                    "y": 130.8584,
+                    "z": -235.02752
+                },
+                {
+                    "x": -624.652725,
+                    "y": 130.8584,
+                    "z": -230.68694
+                },
+                {
+                    "x": -586.93666,
+                    "y": 130.8584,
+                    "z": -235.71619
+                },
+                {
+                    "x": -568.47504,
+                    "y": 130.8584,
+                    "z": -389.57793
+                },
+                {
+                    "x": -605.62129,
+                    "y": 130.8584,
+                    "z": -393.82289885
+                },
+                {
+                    "x": -623.917435,
+                    "y": 130.8584,
+                    "z": -421.237755
+                },
+                {
+                    "x": -621.58028,
+                    "y": 130.8584,
+                    "z": -462.003136
+                },
+                {
+                    "x": -600.23204,
+                    "y": 130.8584,
+                    "z": -548.18033
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 602,
+            "Area": "Sector2/PolygonVolume2",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -715.4327,
+                "y": 173.0592,
+                "z": -387.99514
+            },
+            "id": "Sector2/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 302,
+            "InfantrySpawns": [
+                "Sector2/TEAM_1_HQ/SpawnPoint_1_1",
+                "Sector2/TEAM_1_HQ/SpawnPoint_1_2",
+                "Sector2/TEAM_1_HQ/SpawnPoint_1_3",
+                "Sector2/TEAM_1_HQ/SpawnPoint_1_4"
+            ],
+            "HQArea": "Sector1/PolygonVolume1",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -711.54457,
+                "y": 178.3719,
+                "z": -648.542
+            },
+            "id": "Sector2/TEAM_1_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.750111,
+                "y": 0,
+                "z": 0.661312
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.661312,
+                "y": 0,
+                "z": 0.750111
+            },
+            "position": {
+                "x": -628.68747,
+                "y": 179.83928,
+                "z": -620.375
+            },
+            "id": "Sector2/TEAM_1_HQ/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.993643,
+                "y": 0,
+                "z": 0.112579
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.112579,
+                "y": 0,
+                "z": 0.993643
+            },
+            "position": {
+                "x": -714.69856,
+                "y": 158.3204,
+                "z": -598.2097
+            },
+            "id": "Sector2/TEAM_1_HQ/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.999124,
+                "y": 0,
+                "z": -0.0418409
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.0418409,
+                "y": 0,
+                "z": 0.999124
+            },
+            "position": {
+                "x": -747.54287,
+                "y": 153.4159,
+                "z": -621.2076
+            },
+            "id": "Sector2/TEAM_1_HQ/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.985591,
+                "y": 0,
+                "z": -0.169143
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.169143,
+                "y": 0,
+                "z": 0.985591
+            },
+            "position": {
+                "x": -794.21457,
+                "y": 146.3718,
+                "z": -633.0268
+            },
+            "id": "Sector2/TEAM_1_HQ/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 402,
+            "InfantrySpawns": [
+                "Sector2/TEAM_2_HQ/SpawnPoint_2_1",
+                "Sector2/TEAM_2_HQ/SpawnPoint_2_2",
+                "Sector2/TEAM_2_HQ/SpawnPoint_2_3",
+                "Sector2/TEAM_2_HQ/SpawnPoint_2_4"
+            ],
+            "HQArea": "Sector3/PolygonVolume3",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -451.655,
+                "y": 170.6479,
+                "z": -318.2087
+            },
+            "id": "Sector2/TEAM_2_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.237958,
+                "y": 0,
+                "z": 0.971276
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.971276,
+                "y": 0,
+                "z": -0.237958
+            },
+            "position": {
+                "x": -541.246,
+                "y": 161.61024,
+                "z": -270.7536
+            },
+            "id": "Sector2/TEAM_2_HQ/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.0382311,
+                "y": 0,
+                "z": 0.999269
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.999269,
+                "y": 0,
+                "z": -0.0382311
+            },
+            "position": {
+                "x": -517.6762,
+                "y": 170.6479152588,
+                "z": -343.9442
+            },
+            "id": "Sector2/TEAM_2_HQ/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.245273,
+                "y": 0,
+                "z": 0.969454
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.969454,
+                "y": 0,
+                "z": 0.245273
+            },
+            "position": {
+                "x": -502.9076,
+                "y": 170.458218,
+                "z": -360.7734
+            },
+            "id": "Sector2/TEAM_2_HQ/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.165771,
+                "y": 0,
+                "z": 0.986164
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.986164,
+                "y": 0,
+                "z": -0.165771
+            },
+            "position": {
+                "x": -490.2714,
+                "y": 170.6479,
+                "z": -322.81978
+            },
+            "id": "Sector2/TEAM_2_HQ/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM",
+            "ObjId": 203,
+            "type": "MCOM",
+            "right": {
+                "x": -0.998612,
+                "y": 0,
+                "z": 0.052667
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.052667,
+                "y": 0,
+                "z": -0.998612
+            },
+            "position": {
+                "x": -754.3138,
+                "y": 140.1525,
+                "z": -366.5524
+            },
+            "id": "Sector2/MCOM"
+        },
+        {
+            "name": "MCOM2",
+            "ObjId": 204,
+            "type": "MCOM",
+            "right": {
+                "x": 0.316791,
+                "y": 0,
+                "z": -0.948495
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.948495,
+                "y": 0,
+                "z": 0.316791
+            },
+            "position": {
+                "x": -680.0377,
+                "y": 144.3144,
+                "z": -370.0638
+            },
+            "id": "Sector2/MCOM2"
+        },
+        {
+            "name": "Bradly",
+            "ObjId": 1200,
+            "VehicleType": "M2Bradley",
+            "P_DefaultRespawnTime": 45,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 0.722171,
+                "y": 0,
+                "z": -0.691714
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.691714,
+                "y": 0,
+                "z": 0.722171
+            },
+            "position": {
+                "x": -788.3059,
+                "y": 145.862,
+                "z": -591.699
+            },
+            "id": "Sector2/Bradly"
+        },
+        {
+            "name": "CV90",
+            "ObjId": 1201,
+            "VehicleType": "CV90",
+            "P_DefaultRespawnTime": 45,
+            "type": "VehicleSpawner",
+            "right": {
+                "x": 0.499743,
+                "y": 0,
+                "z": 0.866174
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.866174,
+                "y": 0,
+                "z": 0.499743
+            },
+            "position": {
+                "x": -533.908,
+                "y": 171.9344,
+                "z": -389.43914
+            },
+            "id": "Sector2/CV90"
+        },
+        {
+            "name": "Sector3",
+            "ObjId": 103,
+            "MCOMs": [
+                "Sector3/MCOM",
+                "Sector3/MCOM2"
+            ],
+            "SectorArea": "Sector3/PolygonVolume3",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -429.067,
+                "y": 201.418,
+                "z": -338.599
+            },
+            "id": "Sector3",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume3",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Sector3/PolygonVolume3",
+            "height": 100,
+            "points": [
+                {
+                    "x": -453.55014,
+                    "y": 153.6502,
+                    "z": -470.01833
+                },
+                {
+                    "x": -488.60404,
+                    "y": 153.6502,
+                    "z": -423.15103
+                },
+                {
+                    "x": -568.48494,
+                    "y": 153.6502,
+                    "z": -389.574433
+                },
+                {
+                    "x": -586.94178,
+                    "y": 153.6502,
+                    "z": -235.718385
+                },
+                {
+                    "x": -528.19868,
+                    "y": 153.6502,
+                    "z": -234.014344
+                },
+                {
+                    "x": -447.82534,
+                    "y": 153.6502,
+                    "z": -210.71433
+                },
+                {
+                    "x": -408.61274,
+                    "y": 153.6502,
+                    "z": -209.71333
+                },
+                {
+                    "x": -358.88424,
+                    "y": 153.6502,
+                    "z": -246.78453
+                },
+                {
+                    "x": -347.90894,
+                    "y": 153.6502,
+                    "z": -316.24933
+                },
+                {
+                    "x": -352.08294,
+                    "y": 153.6502,
+                    "z": -389.00793
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 603,
+            "Area": "Sector3/PolygonVolume3",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -424.2307,
+                "y": 173.0592,
+                "z": -329.83014
+            },
+            "id": "Sector3/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 303,
+            "InfantrySpawns": [
+                "Sector3/TEAM_1_HQ/SpawnPoint_1_1",
+                "Sector3/TEAM_1_HQ/SpawnPoint_1_2",
+                "Sector3/TEAM_1_HQ/SpawnPoint_1_3",
+                "Sector3/TEAM_1_HQ/SpawnPoint_1_4"
+            ],
+            "HQArea": "Sector2/PolygonVolume2",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -718.939,
+                "y": 142.5755,
+                "z": -378.096
+            },
+            "id": "Sector3/TEAM_1_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.700374,
+                "y": 0,
+                "z": -0.713777
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.713777,
+                "y": 0,
+                "z": 0.700374
+            },
+            "position": {
+                "x": -684.1944,
+                "y": 143.465438,
+                "z": -377.06304
+            },
+            "id": "Sector3/TEAM_1_HQ/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.124866,
+                "y": 0,
+                "z": -0.992174
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.992174,
+                "y": 0,
+                "z": 0.124866
+            },
+            "position": {
+                "x": -744.7825,
+                "y": 142.5755,
+                "z": -313.6142
+            },
+            "id": "Sector3/TEAM_1_HQ/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.483527,
+                "y": 0,
+                "z": -0.87533
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.87533,
+                "y": 0,
+                "z": 0.483527
+            },
+            "position": {
+                "x": -690.5375,
+                "y": 147.08183,
+                "z": -399.6232
+            },
+            "id": "Sector3/TEAM_1_HQ/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.619258,
+                "y": 0,
+                "z": -0.785187
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.785187,
+                "y": 0,
+                "z": 0.619258
+            },
+            "position": {
+                "x": -707.9303,
+                "y": 142.5755,
+                "z": -334.3778
+            },
+            "id": "Sector3/TEAM_1_HQ/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 403,
+            "InfantrySpawns": [
+                "Sector3/TEAM_2_HQ/SpawnPoint_2_1",
+                "Sector3/TEAM_2_HQ/SpawnPoint_2_2",
+                "Sector3/TEAM_2_HQ/SpawnPoint_2_3",
+                "Sector3/TEAM_2_HQ/SpawnPoint_2_4"
+            ],
+            "HQArea": "Sector4/PolygonVolume4",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -371.5083,
+                "y": 188.9793,
+                "z": -513.412
+            },
+            "id": "Sector3/TEAM_2_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.87795,
+                "y": 0,
+                "z": 0.478754
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.478754,
+                "y": 0,
+                "z": 0.87795
+            },
+            "position": {
+                "x": -342.8612,
+                "y": 188.046866,
+                "z": -514.151258
+            },
+            "id": "Sector3/TEAM_2_HQ/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.975002,
+                "y": 0,
+                "z": -0.222195
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.222195,
+                "y": 0,
+                "z": 0.975002
+            },
+            "position": {
+                "x": -368.5083,
+                "y": 188.9793,
+                "z": -513.412
+            },
+            "id": "Sector3/TEAM_2_HQ/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.958422,
+                "y": 0,
+                "z": 0.285354
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.285354,
+                "y": 0,
+                "z": 0.958422
+            },
+            "position": {
+                "x": -374.5083,
+                "y": 188.9793,
+                "z": -513.412
+            },
+            "id": "Sector3/TEAM_2_HQ/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.989139,
+                "y": 0,
+                "z": 0.146981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.146981,
+                "y": 0,
+                "z": 0.989139
+            },
+            "position": {
+                "x": -388.4456,
+                "y": 189.299139,
+                "z": -555.6887
+            },
+            "id": "Sector3/TEAM_2_HQ/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM",
+            "ObjId": 205,
+            "type": "MCOM",
+            "right": {
+                "x": 0.629931,
+                "y": 0,
+                "z": -0.776652
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.776652,
+                "y": 0,
+                "z": 0.629931
+            },
+            "position": {
+                "x": -502.3621,
+                "y": 171.4437,
+                "z": -356.9399
+            },
+            "id": "Sector3/MCOM"
+        },
+        {
+            "name": "MCOM2",
+            "ObjId": 206,
+            "type": "MCOM",
+            "right": {
+                "x": -0.797963,
+                "y": 0,
+                "z": -0.602707
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.602707,
+                "y": 0,
+                "z": -0.797963
+            },
+            "position": {
+                "x": -406.3022,
+                "y": 171.4329,
+                "z": -386.4594
+            },
+            "id": "Sector3/MCOM2"
+        },
+        {
+            "name": "CommandPost_01_Drone_Props",
+            "visible": false,
+            "type": "CommandPost_01_Drone_Props",
+            "right": {
+                "x": 0.766639,
+                "y": 0,
+                "z": 0.642079
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.642079,
+                "y": 0,
+                "z": 0.766639
+            },
+            "position": {
+                "x": -502.0449,
+                "y": 170.5305,
+                "z": -353.6505
+            },
+            "id": "Sector3/CommandPost_01_Drone_Props"
+        },
+        {
+            "name": "Sector4",
+            "ObjId": 104,
+            "MCOMs": [
+                "Sector4/MCOM",
+                "Sector4/MCOM2"
+            ],
+            "SectorArea": "Sector4/PolygonVolume4",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -322.761,
+                "y": 201.418,
+                "z": -596.972
+            },
+            "id": "Sector4",
+            "linked": [
+                "SectorArea",
+                "MCOMs"
+            ]
+        },
+        {
+            "name": "PolygonVolume4",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Sector4/PolygonVolume4",
+            "height": 100,
+            "points": [
+                {
+                    "x": -438.23404,
+                    "y": 167.2142,
+                    "z": -649.52163
+                },
+                {
+                    "x": -430.44504,
+                    "y": 167.2142,
+                    "z": -562.65633
+                },
+                {
+                    "x": -434.42904,
+                    "y": 167.2142,
+                    "z": -501.53833
+                },
+                {
+                    "x": -453.55104,
+                    "y": 167.2142,
+                    "z": -470.01726
+                },
+                {
+                    "x": -352.083904,
+                    "y": 167.2142,
+                    "z": -389.00682
+                },
+                {
+                    "x": -334.47134,
+                    "y": 167.2142,
+                    "z": -455.64433
+                },
+                {
+                    "x": -300.48464,
+                    "y": 167.2142,
+                    "z": -535.69883
+                },
+                {
+                    "x": -267.27334,
+                    "y": 167.2142,
+                    "z": -640.01633
+                },
+                {
+                    "x": -422.17704,
+                    "y": 167.2142,
+                    "z": -699.86133
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 604,
+            "Area": "Sector4/PolygonVolume4",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -317.9247,
+                "y": 173.0592,
+                "z": -588.20314
+            },
+            "id": "Sector4/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "TEAM_1_HQ",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 304,
+            "InfantrySpawns": [
+                "Sector4/TEAM_1_HQ/SpawnPoint_1_1",
+                "Sector4/TEAM_1_HQ/SpawnPoint_1_2",
+                "Sector4/TEAM_1_HQ/SpawnPoint_1_3",
+                "Sector4/TEAM_1_HQ/SpawnPoint_1_4"
+            ],
+            "HQArea": "Sector3/PolygonVolume3",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -448.303,
+                "y": 170.8532,
+                "z": -335.251
+            },
+            "id": "Sector4/TEAM_1_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_1_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.954016,
+                "y": 0,
+                "z": -0.299757
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.299757,
+                "y": 0,
+                "z": -0.954016
+            },
+            "position": {
+                "x": -446.19707,
+                "y": 170.8532,
+                "z": -391.7761
+            },
+            "id": "Sector4/TEAM_1_HQ/SpawnPoint_1_1"
+        },
+        {
+            "name": "SpawnPoint_1_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.264395,
+                "y": 0,
+                "z": -0.964415
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.964415,
+                "y": 0,
+                "z": -0.264395
+            },
+            "position": {
+                "x": -417.8588,
+                "y": 171.538472,
+                "z": -373.2081
+            },
+            "id": "Sector4/TEAM_1_HQ/SpawnPoint_1_2"
+        },
+        {
+            "name": "SpawnPoint_1_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.987251,
+                "y": 0,
+                "z": -0.159175
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.159175,
+                "y": 0,
+                "z": -0.987251
+            },
+            "position": {
+                "x": -390.2697,
+                "y": 171.088307,
+                "z": -350.425
+            },
+            "id": "Sector4/TEAM_1_HQ/SpawnPoint_1_3"
+        },
+        {
+            "name": "SpawnPoint_1_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": -0.968622,
+                "y": 0,
+                "z": -0.248538
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.248538,
+                "y": 0,
+                "z": -0.968622
+            },
+            "position": {
+                "x": -444.5393,
+                "y": 170.8532,
+                "z": -378.6794
+            },
+            "id": "Sector4/TEAM_1_HQ/SpawnPoint_1_4"
+        },
+        {
+            "name": "TEAM_2_HQ",
+            "Team": "Team2",
+            "AltTeam": "TeamNeutral",
+            "ObjId": 404,
+            "InfantrySpawns": [
+                "Sector4/TEAM_2_HQ/SpawnPoint_2_1",
+                "Sector4/TEAM_2_HQ/SpawnPoint_2_2",
+                "Sector4/TEAM_2_HQ/SpawnPoint_2_3",
+                "Sector4/TEAM_2_HQ/SpawnPoint_2_4"
+            ],
+            "HQArea": "Sector5/PolygonVolume5",
+            "type": "HQ_PlayerSpawner",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -316.51945,
+                "y": 192.13167,
+                "z": -735.107
+            },
+            "id": "Sector4/TEAM_2_HQ",
+            "linked": [
+                "HQArea",
+                "InfantrySpawns"
+            ]
+        },
+        {
+            "name": "SpawnPoint_2_1",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.998559,
+                "y": 0,
+                "z": -0.0536774
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.0536774,
+                "y": 0,
+                "z": 0.998559
+            },
+            "position": {
+                "x": -352.29105,
+                "y": 192.449114,
+                "z": -727.00007
+            },
+            "id": "Sector4/TEAM_2_HQ/SpawnPoint_2_1"
+        },
+        {
+            "name": "SpawnPoint_2_2",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.99917,
+                "y": 0,
+                "z": -0.040742
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.040742,
+                "y": 0,
+                "z": 0.99917
+            },
+            "position": {
+                "x": -348.77205,
+                "y": 192.13167,
+                "z": -722.4185
+            },
+            "id": "Sector4/TEAM_2_HQ/SpawnPoint_2_2"
+        },
+        {
+            "name": "SpawnPoint_2_3",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.894833,
+                "y": 0,
+                "z": -0.446401
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.446401,
+                "y": 0,
+                "z": 0.894833
+            },
+            "position": {
+                "x": -266.07185,
+                "y": 192.13167,
+                "z": -742.10254
+            },
+            "id": "Sector4/TEAM_2_HQ/SpawnPoint_2_3"
+        },
+        {
+            "name": "SpawnPoint_2_4",
+            "type": "SpawnPoint",
+            "right": {
+                "x": 0.310045,
+                "y": 0,
+                "z": 0.950721
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.950721,
+                "y": 0,
+                "z": 0.310045
+            },
+            "position": {
+                "x": -290.42425,
+                "y": 190.55248,
+                "z": -750.2389
+            },
+            "id": "Sector4/TEAM_2_HQ/SpawnPoint_2_4"
+        },
+        {
+            "name": "MCOM",
+            "ObjId": 207,
+            "type": "MCOM",
+            "right": {
+                "x": -0.941164,
+                "y": 0,
+                "z": -0.33795
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.33795,
+                "y": 0,
+                "z": -0.941164
+            },
+            "position": {
+                "x": -349.3189,
+                "y": 193.38562,
+                "z": -629.9392
+            },
+            "id": "Sector4/MCOM"
+        },
+        {
+            "name": "MCOM2",
+            "ObjId": 208,
+            "type": "MCOM",
+            "right": {
+                "x": -0.937191,
+                "y": 0,
+                "z": -0.348818
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.348818,
+                "y": 0,
+                "z": -0.937191
+            },
+            "position": {
+                "x": -318.02089,
+                "y": 192.09879,
+                "z": -611.2036
+            },
+            "id": "Sector4/MCOM2"
+        },
+        {
+            "name": "Sector5",
+            "ObjId": 105,
+            "SectorArea": "Sector5/PolygonVolume5",
+            "type": "Sector",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -269.374,
+                "y": 201.418,
+                "z": -777.999
+            },
+            "id": "Sector5",
+            "linked": [
+                "SectorArea"
+            ]
+        },
+        {
+            "name": "PolygonVolume5",
+            "type": "PolygonVolume",
+            "metadata/_custom_type_script": "uid://ck5uniw0pl6u8",
+            "color": [
+                0,
+                0.6,
+                0.7,
+                0.42
+            ],
+            "id": "Sector5/PolygonVolume5",
+            "height": 100,
+            "points": [
+                {
+                    "x": -356.18594,
+                    "y": 178.0912,
+                    "z": -787.90133
+                },
+                {
+                    "x": -405.24504,
+                    "y": 178.0912,
+                    "z": -748.64593
+                },
+                {
+                    "x": -422.17768,
+                    "y": 178.0912,
+                    "z": -699.85923
+                },
+                {
+                    "x": -267.27380782,
+                    "y": 178.0912,
+                    "z": -640.01413
+                },
+                {
+                    "x": -241.19384,
+                    "y": 178.0912,
+                    "z": -729.30153
+                },
+                {
+                    "x": -245.60914,
+                    "y": 178.0912,
+                    "z": -776.37113
+                },
+                {
+                    "x": -262.53104,
+                    "y": 178.0912,
+                    "z": -820.37453
+                },
+                {
+                    "x": -289.80894,
+                    "y": 178.0912,
+                    "z": -825.07043
+                }
+            ]
+        },
+        {
+            "name": "AreaTrigger",
+            "ObjId": 605,
+            "Area": "Sector5/PolygonVolume5",
+            "type": "AreaTrigger",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -264.5377,
+                "y": 173.0592,
+                "z": -769.23014
+            },
+            "id": "Sector5/AreaTrigger",
+            "linked": [
+                "Area"
+            ]
+        },
+        {
+            "name": "CommandPost_01_A",
+            "type": "CommandPost_01_A",
+            "right": {
+                "x": 0.762826,
+                "y": 0,
+                "z": 0.646603
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.646603,
+                "y": 0,
+                "z": 0.762826
+            },
+            "position": {
+                "x": -502.065,
+                "y": 170.526,
+                "z": -353.703
+            },
+            "id": "Map Details/Outpost/CommandPost_01_A"
+        },
+        {
+            "name": "CrateAmmo_01_StackB",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.838994,
+                "y": 0,
+                "z": 0.544141
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.544141,
+                "y": 0,
+                "z": 0.838994
+            },
+            "position": {
+                "x": -509.197,
+                "y": 170.456,
+                "z": -347.736
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB"
+        },
+        {
+            "name": "CrateAmmo_01_StackB4",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.171637,
+                "y": 0,
+                "z": 0.98516
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.98516,
+                "y": 0,
+                "z": 0.171637
+            },
+            "position": {
+                "x": -487.332,
+                "y": 170.456,
+                "z": -382.311
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB4"
+        },
+        {
+            "name": "CrateAmmo_01_StackB5",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.171637,
+                "y": 0,
+                "z": 0.98516
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.98516,
+                "y": 0,
+                "z": 0.171637
+            },
+            "position": {
+                "x": -488.831,
+                "y": 170.456,
+                "z": -380.844
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB5"
+        },
+        {
+            "name": "CrateAmmo_01_StackB6",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.379682,
+                "y": 0,
+                "z": 0.925117
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.925117,
+                "y": 0,
+                "z": 0.379682
+            },
+            "position": {
+                "x": -488.529,
+                "y": 170.456,
+                "z": -378.465
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB6"
+        },
+        {
+            "name": "CrateAmmo_01_StackB3",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.838994,
+                "y": 0,
+                "z": 0.544141
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.544141,
+                "y": 0,
+                "z": 0.838994
+            },
+            "position": {
+                "x": -522.028,
+                "y": 170.456,
+                "z": -338.481
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB3"
+        },
+        {
+            "name": "CrateAmmo_01_StackB2",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.838994,
+                "y": 0,
+                "z": 0.544141
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.544141,
+                "y": 0,
+                "z": 0.838994
+            },
+            "position": {
+                "x": -523.816,
+                "y": 170.456,
+                "z": -339.545
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB2"
+        },
+        {
+            "name": "CrateAmmo_01_StackB7",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.838994,
+                "y": 0,
+                "z": 0.544141
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.544141,
+                "y": 0,
+                "z": 0.838994
+            },
+            "position": {
+                "x": -513.625,
+                "y": 170.456,
+                "z": -331.61
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB7"
+        },
+        {
+            "name": "CrateAmmo_01_StackB8",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.838994,
+                "y": 0,
+                "z": 0.544141
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.544141,
+                "y": 0,
+                "z": 0.838994
+            },
+            "position": {
+                "x": -515.412,
+                "y": 170.456,
+                "z": -332.675
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB8"
+        },
+        {
+            "name": "CrateAmmo_01_StackB9",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.133675,
+                "y": 0,
+                "z": 0.991025
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.991025,
+                "y": 0,
+                "z": 0.133675
+            },
+            "position": {
+                "x": -476.071,
+                "y": 170.456,
+                "z": -370.797
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB9"
+        },
+        {
+            "name": "CrateAmmo_01_StackB10",
+            "type": "CrateAmmo_01_StackB",
+            "right": {
+                "x": 0.133675,
+                "y": 0,
+                "z": 0.991025
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.991025,
+                "y": 0,
+                "z": 0.133675
+            },
+            "position": {
+                "x": -476.427,
+                "y": 170.456,
+                "z": -372.847
+            },
+            "id": "Map Details/Outpost/CrateAmmo_01_StackB10"
+        },
+        {
+            "name": "SandBags_01_256x180",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -530.668,
+                "y": 170.777,
+                "z": -340.085
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x180"
+        },
+        {
+            "name": "SandBags_01_256x187",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": -0.131063,
+                "y": 0,
+                "z": -0.991374
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.991374,
+                "y": 0,
+                "z": -0.131063
+            },
+            "position": {
+                "x": -530.326,
+                "y": 170.777,
+                "z": -337.819
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x187"
+        },
+        {
+            "name": "SandBags_01_256x181",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -529.1,
+                "y": 170.777,
+                "z": -342.042
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x181"
+        },
+        {
+            "name": "SandBags_01_256x182",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -527.531,
+                "y": 170.777,
+                "z": -343.998
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x182"
+        },
+        {
+            "name": "SandBags_01_256x183",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -525.963,
+                "y": 170.777,
+                "z": -345.955
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x183"
+        },
+        {
+            "name": "SandBags_01_256x184",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -524.394,
+                "y": 170.777,
+                "z": -347.912
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x184"
+        },
+        {
+            "name": "SandBags_01_256x185",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -522.826,
+                "y": 170.777,
+                "z": -349.868
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x185"
+        },
+        {
+            "name": "SandBags_01_256x186",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -521.257,
+                "y": 170.777,
+                "z": -351.825
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x186"
+        },
+        {
+            "name": "SandBags_01_256x189",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -516.552,
+                "y": 170.777,
+                "z": -357.695
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x189"
+        },
+        {
+            "name": "SandBags_01_256x190",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -514.984,
+                "y": 170.777,
+                "z": -359.652
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x190"
+        },
+        {
+            "name": "SandBags_01_256x191",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -513.415,
+                "y": 170.777,
+                "z": -361.609
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x191"
+        },
+        {
+            "name": "SandBags_01_256x192",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -511.847,
+                "y": 170.777,
+                "z": -363.565
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x192"
+        },
+        {
+            "name": "SandBags_01_256x193",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -510.278,
+                "y": 170.777,
+                "z": -365.522
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x193"
+        },
+        {
+            "name": "SandBags_01_256x194",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -508.71,
+                "y": 170.777,
+                "z": -367.479
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x194"
+        },
+        {
+            "name": "SandBags_01_256x195",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -507.141,
+                "y": 170.777,
+                "z": -369.435
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x195"
+        },
+        {
+            "name": "SandBags_01_256x196",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -505.573,
+                "y": 170.777,
+                "z": -371.392
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x196"
+        },
+        {
+            "name": "SandBags_01_256x197",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -504.004,
+                "y": 170.777,
+                "z": -373.349
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x197"
+        },
+        {
+            "name": "SandBags_01_256x198",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -502.436,
+                "y": 170.777,
+                "z": -375.305
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x198"
+        },
+        {
+            "name": "SandBags_01_256x200",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.625447,
+                "y": 0,
+                "z": -0.780267
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.780267,
+                "y": 0,
+                "z": 0.625447
+            },
+            "position": {
+                "x": -496.802,
+                "y": 170.602,
+                "z": -382.001
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x200"
+        },
+        {
+            "name": "SandBags_01_256x201",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.717446,
+                "y": 0,
+                "z": -0.696614
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.696614,
+                "y": 0,
+                "z": 0.717446
+            },
+            "position": {
+                "x": -495.23,
+                "y": 170.66,
+                "z": -383.862
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x201"
+        },
+        {
+            "name": "SandBags_01_256x209",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.924433,
+                "y": 0,
+                "z": -0.381345
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.381345,
+                "y": 0,
+                "z": 0.924433
+            },
+            "position": {
+                "x": -493.484,
+                "y": 170.62,
+                "z": -385.668
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x209"
+        },
+        {
+            "name": "SandBags_01_256x188",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -530.881,
+                "y": 170.777,
+                "z": -337.476
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x188"
+        },
+        {
+            "name": "SandBags_01_256x199",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -528.931,
+                "y": 170.777,
+                "z": -335.899
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x199"
+        },
+        {
+            "name": "SandBags_01_256x202",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -523.083,
+                "y": 170.777,
+                "z": -331.167
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x202"
+        },
+        {
+            "name": "SandBags_01_256x205",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.865493,
+                "y": 0,
+                "z": 0.500922
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.500922,
+                "y": 0,
+                "z": 0.865493
+            },
+            "position": {
+                "x": -484.396,
+                "y": 170.777,
+                "z": -386.557
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x205"
+        },
+        {
+            "name": "SandBags_01_256x203",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -521.133,
+                "y": 170.777,
+                "z": -329.59
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x203"
+        },
+        {
+            "name": "SandBags_01_256x204",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -519.184,
+                "y": 170.777,
+                "z": -328.013
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x204"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.37828,
+                "y": 0.242108,
+                "z": 0.540122
+            },
+            "up": {
+                "x": -0.273539,
+                "y": 1.47438,
+                "z": 0.0371292
+            },
+            "front": {
+                "x": -0.524904,
+                "y": -0.132613,
+                "z": 1.39889
+            },
+            "position": {
+                "x": -581.665,
+                "y": 163.256,
+                "z": -349.41
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D5",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.37828,
+                "y": 0.242108,
+                "z": 0.540122
+            },
+            "up": {
+                "x": -0.273539,
+                "y": 1.47438,
+                "z": 0.0371292
+            },
+            "front": {
+                "x": -0.524904,
+                "y": -0.132613,
+                "z": 1.39889
+            },
+            "position": {
+                "x": -585.505,
+                "y": 162.037,
+                "z": -338.007
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D5"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D6",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.43363,
+                "y": 0.230427,
+                "z": 0.376301
+            },
+            "up": {
+                "x": -0.342648,
+                "y": 1.38736,
+                "z": 0.455873
+            },
+            "front": {
+                "x": -0.278013,
+                "y": -0.521662,
+                "z": 1.37861
+            },
+            "position": {
+                "x": -588.563,
+                "y": 160.288,
+                "z": -328.611
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D6"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D7",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.4613,
+                "y": -0.0191007,
+                "z": 0.338003
+            },
+            "up": {
+                "x": 0.00527113,
+                "y": 1.49871,
+                "z": 0.0619041
+            },
+            "front": {
+                "x": -0.338501,
+                "y": -0.059119,
+                "z": 1.46011
+            },
+            "position": {
+                "x": -593.542,
+                "y": 160.41,
+                "z": -315.504
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D7"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D8",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.4613,
+                "y": -0.0191007,
+                "z": 0.338003
+            },
+            "up": {
+                "x": -0.0699295,
+                "y": 1.44828,
+                "z": 0.384171
+            },
+            "front": {
+                "x": -0.331241,
+                "y": -0.390016,
+                "z": 1.41002
+            },
+            "position": {
+                "x": -597.072,
+                "y": 158.306,
+                "z": -303.391
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D8"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D2",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.24884,
+                "y": 0.159236,
+                "z": 0.815501
+            },
+            "up": {
+                "x": -0.181629,
+                "y": 1.48891,
+                "z": -0.0125837
+            },
+            "front": {
+                "x": -0.810807,
+                "y": -0.0882694,
+                "z": 1.25889
+            },
+            "position": {
+                "x": -568.654,
+                "y": 166.053,
+                "z": -375.077
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D2"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D4",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.12171,
+                "y": 0.145162,
+                "z": 0.985238
+            },
+            "up": {
+                "x": -0.181629,
+                "y": 1.48891,
+                "z": -0.0125837
+            },
+            "front": {
+                "x": -0.979171,
+                "y": -0.109889,
+                "z": 1.13099
+            },
+            "position": {
+                "x": -559.475,
+                "y": 167.07,
+                "z": -387.062
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D4"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D9",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.10617,
+                "y": 0.249442,
+                "z": 0.981917
+            },
+            "up": {
+                "x": -0.260013,
+                "y": 1.47503,
+                "z": -0.0817938
+            },
+            "front": {
+                "x": -0.979171,
+                "y": -0.109889,
+                "z": 1.13099
+            },
+            "position": {
+                "x": -549.067,
+                "y": 167.834,
+                "z": -398.274
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D9"
+        },
+        {
+            "name": "BarrierStoneBlock_01_D3",
+            "type": "BarrierStoneBlock_01_D",
+            "right": {
+                "x": 1.32555,
+                "y": 0.167464,
+                "z": 0.681823
+            },
+            "up": {
+                "x": -0.213888,
+                "y": 1.48378,
+                "z": 0.0513909
+            },
+            "front": {
+                "x": -0.668714,
+                "y": -0.142637,
+                "z": 1.33509
+            },
+            "position": {
+                "x": -576.21,
+                "y": 164.71,
+                "z": -362.083
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_D3"
+        },
+        {
+            "name": "SandBags_01_256x206",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -482.285,
+                "y": 170.777,
+                "z": -385.27
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x206"
+        },
+        {
+            "name": "SandBags_01_256x207",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -480.335,
+                "y": 170.777,
+                "z": -383.692
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x207"
+        },
+        {
+            "name": "SandBags_01_256x208",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -478.385,
+                "y": 170.777,
+                "z": -382.115
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x208"
+        },
+        {
+            "name": "SandBags_01_256x211",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -472.537,
+                "y": 170.777,
+                "z": -377.383
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x211"
+        },
+        {
+            "name": "SandBags_01_256x212",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -470.587,
+                "y": 170.777,
+                "z": -375.806
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x212"
+        },
+        {
+            "name": "SandBags_01_256x214",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -477.966,
+                "y": 170.777,
+                "z": -412.608
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x214"
+        },
+        {
+            "name": "SandBags_01_256x213",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -468.638,
+                "y": 170.777,
+                "z": -374.228
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x213"
+        },
+        {
+            "name": "SandBags_01_256x215",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -476.016,
+                "y": 170.777,
+                "z": -411.031
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x215"
+        },
+        {
+            "name": "SandBags_01_256x216",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -474.067,
+                "y": 170.777,
+                "z": -409.453
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x216"
+        },
+        {
+            "name": "SandBags_01_256x217",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -472.117,
+                "y": 170.777,
+                "z": -407.876
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x217"
+        },
+        {
+            "name": "SandBags_01_256x220",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -466.268,
+                "y": 170.777,
+                "z": -403.144
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x220"
+        },
+        {
+            "name": "SandBags_01_256x221",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -464.319,
+                "y": 170.777,
+                "z": -401.567
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x221"
+        },
+        {
+            "name": "SandBags_01_256x222",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -462.369,
+                "y": 170.777,
+                "z": -399.99
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x222"
+        },
+        {
+            "name": "SandBags_01_256x223",
+            "type": "SandBags_01_256x180",
+            "right": {
+                "x": 0.777421,
+                "y": 0,
+                "z": 0.628981
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.628981,
+                "y": 0,
+                "z": 0.777421
+            },
+            "position": {
+                "x": -460.42,
+                "y": 170.777,
+                "z": -398.412
+            },
+            "id": "Map Details/Outpost/SandBags_01_256x223"
+        },
+        {
+            "name": "BarrelOilExplosive_01",
+            "type": "BarrelOilExplosive_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -524.908,
+                "y": 170.598,
+                "z": -344.966
+            },
+            "id": "Map Details/Outpost/BarrelOilExplosive_01"
+        },
+        {
+            "name": "BarrelOilExplosive_02",
+            "type": "BarrelOilExplosive_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -524.427,
+                "y": 170.598,
+                "z": -344.508
+            },
+            "id": "Map Details/Outpost/BarrelOilExplosive_02"
+        },
+        {
+            "name": "BarrelOilExplosive_03",
+            "type": "BarrelOilExplosive_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -523.925,
+                "y": 170.598,
+                "z": -344.022
+            },
+            "id": "Map Details/Outpost/BarrelOilExplosive_03"
+        },
+        {
+            "name": "BarrelOilExplosive_04",
+            "type": "BarrelOilExplosive_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -432.012,
+                "y": 171.473,
+                "z": -396.227
+            },
+            "id": "Map Details/Outpost/BarrelOilExplosive_04"
+        },
+        {
+            "name": "BarrelOilExplosive_05",
+            "type": "BarrelOilExplosive_01",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -432.57,
+                "y": 171.473,
+                "z": -395.814
+            },
+            "id": "Map Details/Outpost/BarrelOilExplosive_05"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.961631,
+                "y": 0,
+                "z": -0.274345
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.274345,
+                "y": 0,
+                "z": 0.961631
+            },
+            "position": {
+                "x": -452.717,
+                "y": 170.609,
+                "z": -372.128
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A8",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.961631,
+                "y": 0,
+                "z": -0.274345
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.274345,
+                "y": 0,
+                "z": 0.961631
+            },
+            "position": {
+                "x": -456.136,
+                "y": 170.609,
+                "z": -363.316
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A8"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A9",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.982359,
+                "y": 0,
+                "z": 0.187004
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.187004,
+                "y": 0,
+                "z": 0.982359
+            },
+            "position": {
+                "x": -456.089,
+                "y": 170.609,
+                "z": -364.866
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A9"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A10",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.698977,
+                "y": 0,
+                "z": -0.715144
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.715144,
+                "y": 0,
+                "z": 0.698977
+            },
+            "position": {
+                "x": -454.656,
+                "y": 170.609,
+                "z": -364.067
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A10"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A2",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.867071,
+                "y": 0,
+                "z": 0.498185
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.498185,
+                "y": 0,
+                "z": 0.867071
+            },
+            "position": {
+                "x": -453.148,
+                "y": 170.609,
+                "z": -373.805
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A2"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A3",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.610048,
+                "y": 0,
+                "z": 0.792364
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.792364,
+                "y": 0,
+                "z": 0.610048
+            },
+            "position": {
+                "x": -442.71,
+                "y": 170.609,
+                "z": -365.641
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A3"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A6",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.610048,
+                "y": 0,
+                "z": 0.792364
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.792364,
+                "y": 0,
+                "z": 0.610048
+            },
+            "position": {
+                "x": -447.705,
+                "y": 170.609,
+                "z": -368.439
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A6"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A7",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.610048,
+                "y": 0,
+                "z": 0.792364
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.792364,
+                "y": 0,
+                "z": 0.610048
+            },
+            "position": {
+                "x": -450.513,
+                "y": 173.03,
+                "z": -371.974
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A7"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A4",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.968947,
+                "y": 0,
+                "z": 0.24727
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.24727,
+                "y": 0,
+                "z": 0.968947
+            },
+            "position": {
+                "x": -433.05,
+                "y": 170.609,
+                "z": -357.299
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A4"
+        },
+        {
+            "name": "BarrierStoneBlock_01_A5",
+            "type": "BarrierStoneBlock_01_A",
+            "right": {
+                "x": 0.848547,
+                "y": 0,
+                "z": -0.52912
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.52912,
+                "y": 0,
+                "z": 0.848547
+            },
+            "position": {
+                "x": -437.509,
+                "y": 170.609,
+                "z": -360.867
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_A5"
+        },
+        {
+            "name": "BarrierStoneBlock_01_E",
+            "type": "BarrierStoneBlock_01_E",
+            "right": {
+                "x": 0.804417,
+                "y": 0,
+                "z": 0.594065
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.594065,
+                "y": 0,
+                "z": 0.804417
+            },
+            "position": {
+                "x": -451.023,
+                "y": 170.653,
+                "z": -371.489
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_E"
+        },
+        {
+            "name": "BarrierStoneBlock_01_E2",
+            "type": "BarrierStoneBlock_01_E",
+            "right": {
+                "x": 0.804417,
+                "y": 0,
+                "z": 0.594065
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.594065,
+                "y": 0,
+                "z": 0.804417
+            },
+            "position": {
+                "x": -449.987,
+                "y": 170.653,
+                "z": -370.651
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_E2"
+        },
+        {
+            "name": "BarrierStoneBlock_01_E3",
+            "type": "BarrierStoneBlock_01_E",
+            "right": {
+                "x": -0.626536,
+                "y": 0,
+                "z": -0.779393
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.779393,
+                "y": 0,
+                "z": -0.626536
+            },
+            "position": {
+                "x": -448.823,
+                "y": 170.653,
+                "z": -369.707
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_E3"
+        },
+        {
+            "name": "BarriersPedestrian_01_B",
+            "type": "BarriersPedestrian_01_B",
+            "right": {
+                "x": 0.554496,
+                "y": 0,
+                "z": -0.832186
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.832186,
+                "y": 0,
+                "z": 0.554496
+            },
+            "position": {
+                "x": -492.753,
+                "y": 170.51,
+                "z": -410.359
+            },
+            "id": "Map Details/Outpost/BarriersPedestrian_01_B"
+        },
+        {
+            "name": "BarriersPedestrian_01_B2",
+            "type": "BarriersPedestrian_01_B",
+            "right": {
+                "x": 0.715863,
+                "y": 0,
+                "z": -0.69824
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.69824,
+                "y": 0,
+                "z": 0.715863
+            },
+            "position": {
+                "x": -490.517,
+                "y": 170.51,
+                "z": -412.841
+            },
+            "id": "Map Details/Outpost/BarriersPedestrian_01_B2"
+        },
+        {
+            "name": "BarriersPedestrian_01_B3",
+            "type": "BarriersPedestrian_01_B",
+            "right": {
+                "x": 0.881847,
+                "y": 0,
+                "z": -0.471535
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.471535,
+                "y": 0,
+                "z": 0.881847
+            },
+            "position": {
+                "x": -487.539,
+                "y": 170.51,
+                "z": -415.028
+            },
+            "id": "Map Details/Outpost/BarriersPedestrian_01_B3"
+        },
+        {
+            "name": "BarrierStoneBlock_01_G",
+            "type": "BarrierStoneBlock_01_G",
+            "right": {
+                "x": 0.623061,
+                "y": 0,
+                "z": -0.782173
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.782173,
+                "y": 0,
+                "z": 0.623061
+            },
+            "position": {
+                "x": -440.079,
+                "y": 170.675,
+                "z": -363.32
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_G"
+        },
+        {
+            "name": "BarrierStoneBlock_01_G2",
+            "type": "BarrierStoneBlock_01_G",
+            "right": {
+                "x": 0.623061,
+                "y": 0,
+                "z": -0.782173
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.782173,
+                "y": 0,
+                "z": 0.623061
+            },
+            "position": {
+                "x": -430.225,
+                "y": 170.675,
+                "z": -355.203
+            },
+            "id": "Map Details/Outpost/BarrierStoneBlock_01_G2"
+        },
+        {
+            "name": "ContainerStandard_01_1280",
+            "type": "ContainerStandard_01_1280",
+            "right": {
+                "x": -0.632476,
+                "y": 0,
+                "z": 0.77458
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.77458,
+                "y": 0,
+                "z": -0.632476
+            },
+            "position": {
+                "x": -487.985,
+                "y": 170.503,
+                "z": -371.428
+            },
+            "id": "Map Details/Outpost/ContainerStandard_01_1280"
+        },
+        {
+            "name": "ContainerStandard_01_1281",
+            "type": "ContainerStandard_01_1280",
+            "right": {
+                "x": 0.71792,
+                "y": 0,
+                "z": 0.696126
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.696126,
+                "y": 0,
+                "z": 0.71792
+            },
+            "position": {
+                "x": -501.457,
+                "y": 170.503,
+                "z": -366.599
+            },
+            "id": "Map Details/Outpost/ContainerStandard_01_1281"
+        },
+        {
+            "name": "SandBags_01_C90_B",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": 0.783281,
+                "y": 0,
+                "z": 0.621667
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.621667,
+                "y": 0,
+                "z": 0.783281
+            },
+            "position": {
+                "x": -509.884,
+                "y": 170.228,
+                "z": -341.084
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B"
+        },
+        {
+            "name": "SandBags_01_C90_B2",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": -0.709641,
+                "y": 0.00431336,
+                "z": 0.704551
+            },
+            "up": {
+                "x": 0.0046658,
+                "y": 0.999988,
+                "z": -0.00142256
+            },
+            "front": {
+                "x": -0.704548,
+                "y": 0.00227779,
+                "z": -0.709652
+            },
+            "position": {
+                "x": -509.834,
+                "y": 170.228,
+                "z": -344.59
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B2"
+        },
+        {
+            "name": "SandBags_01_C90_B3",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": 0.740488,
+                "y": 0,
+                "z": 0.67207
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.67207,
+                "y": 0,
+                "z": 0.740488
+            },
+            "position": {
+                "x": -444.65,
+                "y": 170.504,
+                "z": -386.584
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B3"
+        },
+        {
+            "name": "SandBags_01_C90_B4",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": -0.644377,
+                "y": 0,
+                "z": 0.764708
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.764708,
+                "y": 0,
+                "z": -0.644377
+            },
+            "position": {
+                "x": -444.863,
+                "y": 170.504,
+                "z": -390.059
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B4"
+        },
+        {
+            "name": "SandBags_01_C90_B5",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": 0.740488,
+                "y": 0,
+                "z": 0.67207
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.67207,
+                "y": 0,
+                "z": 0.740488
+            },
+            "position": {
+                "x": -436.816,
+                "y": 170.504,
+                "z": -380.36
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B5"
+        },
+        {
+            "name": "SandBags_01_C90_B6",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": -0.644377,
+                "y": 0,
+                "z": 0.764708
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.764708,
+                "y": 0,
+                "z": -0.644377
+            },
+            "position": {
+                "x": -437.029,
+                "y": 170.504,
+                "z": -383.835
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B6"
+        },
+        {
+            "name": "SandBags_01_C90_B7",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": 0.740488,
+                "y": 0,
+                "z": 0.67207
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.67207,
+                "y": 0,
+                "z": 0.740488
+            },
+            "position": {
+                "x": -425.085,
+                "y": 170.504,
+                "z": -370.42
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B7"
+        },
+        {
+            "name": "SandBags_01_C90_B8",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": -0.644377,
+                "y": 0,
+                "z": 0.764708
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.764708,
+                "y": 0,
+                "z": -0.644377
+            },
+            "position": {
+                "x": -425.298,
+                "y": 170.504,
+                "z": -373.895
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B8"
+        },
+        {
+            "name": "SandBags_01_C90_B9",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": 0.740488,
+                "y": 0,
+                "z": 0.67207
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.67207,
+                "y": 0,
+                "z": 0.740488
+            },
+            "position": {
+                "x": -415.21,
+                "y": 170.504,
+                "z": -362.805
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B9"
+        },
+        {
+            "name": "SandBags_01_C90_B10",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": -0.644377,
+                "y": 0,
+                "z": 0.764708
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.764708,
+                "y": 0,
+                "z": -0.644377
+            },
+            "position": {
+                "x": -415.422,
+                "y": 170.504,
+                "z": -366.281
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B10"
+        },
+        {
+            "name": "SandBags_01_C90_B11",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": 0.740488,
+                "y": 0,
+                "z": 0.67207
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.67207,
+                "y": 0,
+                "z": 0.740488
+            },
+            "position": {
+                "x": -400.071,
+                "y": 170.504,
+                "z": -350.642
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B11"
+        },
+        {
+            "name": "SandBags_01_C90_B12",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": -0.644377,
+                "y": 0,
+                "z": 0.764708
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.764708,
+                "y": 0,
+                "z": -0.644377
+            },
+            "position": {
+                "x": -400.283,
+                "y": 170.504,
+                "z": -354.117
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B12"
+        },
+        {
+            "name": "SandBags_01_C90_B13",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": 0.740488,
+                "y": 0,
+                "z": 0.67207
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.67207,
+                "y": 0,
+                "z": 0.740488
+            },
+            "position": {
+                "x": -387.255,
+                "y": 170.504,
+                "z": -339.749
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B13"
+        },
+        {
+            "name": "SandBags_01_C90_B14",
+            "type": "SandBags_01_C90_B",
+            "right": {
+                "x": -0.644377,
+                "y": 0,
+                "z": 0.764708
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.764708,
+                "y": 0,
+                "z": -0.644377
+            },
+            "position": {
+                "x": -387.467,
+                "y": 170.504,
+                "z": -343.224
+            },
+            "id": "Map Details/Outpost/SandBags_01_C90_B14"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x60",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -444.115,
+                "y": 170.595,
+                "z": -358.131
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x60"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x61",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 0.539976,
+                "y": 0,
+                "z": -0.84168
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.84168,
+                "y": 0,
+                "z": 0.539976
+            },
+            "position": {
+                "x": -442.313,
+                "y": 170.595,
+                "z": -357.712
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x61"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x62",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 0.380586,
+                "y": 0,
+                "z": -0.924745
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.924745,
+                "y": 0,
+                "z": 0.380586
+            },
+            "position": {
+                "x": -443.643,
+                "y": 170.595,
+                "z": -356.767
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x62"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x63",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -471.15,
+                "y": 170.401,
+                "z": -371.889
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x63"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x64",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 0.539976,
+                "y": 0,
+                "z": -0.84168
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.84168,
+                "y": 0,
+                "z": 0.539976
+            },
+            "position": {
+                "x": -469.348,
+                "y": 170.401,
+                "z": -371.47
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x64"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x65",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 0.380586,
+                "y": 0,
+                "z": -0.924745
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.924745,
+                "y": 0,
+                "z": 0.380586
+            },
+            "position": {
+                "x": -470.677,
+                "y": 170.401,
+                "z": -370.524
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x65"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x66",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -495.972,
+                "y": 170.427,
+                "z": -365.066
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x66"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x67",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 0.539976,
+                "y": 0,
+                "z": -0.84168
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.84168,
+                "y": 0,
+                "z": 0.539976
+            },
+            "position": {
+                "x": -494.17,
+                "y": 170.427,
+                "z": -364.647
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x67"
+        },
+        {
+            "name": "SandBagsPlatform_01_320x68",
+            "type": "SandBagsPlatform_01_320x60",
+            "right": {
+                "x": 0.380586,
+                "y": 0,
+                "z": -0.924745
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.924745,
+                "y": 0,
+                "z": 0.380586
+            },
+            "position": {
+                "x": -495.499,
+                "y": 170.427,
+                "z": -363.701
+            },
+            "id": "Map Details/Outpost/SandBagsPlatform_01_320x68"
+        },
+        {
+            "name": "FiringRangeCrate_01",
+            "type": "FiringRangeCrate_01",
+            "right": {
+                "x": -0.671708,
+                "y": 0,
+                "z": -0.740816
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.740816,
+                "y": 0,
+                "z": -0.671708
+            },
+            "position": {
+                "x": -486.876,
+                "y": 170.494,
+                "z": -379.543
+            },
+            "id": "Map Details/Outpost/FiringRangeCrate_01"
+        },
+        {
+            "name": "FiringRangeCrate_02",
+            "type": "FiringRangeCrate_01",
+            "right": {
+                "x": -0.99975,
+                "y": 0,
+                "z": 0.0223557
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.0223557,
+                "y": 0,
+                "z": -0.99975
+            },
+            "position": {
+                "x": -486.119,
+                "y": 170.494,
+                "z": -382.295
+            },
+            "id": "Map Details/Outpost/FiringRangeCrate_02"
+        },
+        {
+            "name": "GTruckPickup_01",
+            "type": "GTruckPickup_01",
+            "right": {
+                "x": -0.60162,
+                "y": 0,
+                "z": 0.798783
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.798783,
+                "y": 0,
+                "z": -0.60162
+            },
+            "position": {
+                "x": -453.593,
+                "y": 170.207,
+                "z": -388.825
+            },
+            "id": "Map Details/Outpost/GTruckPickup_01"
+        },
+        {
+            "name": "WreckTruck_01_Canopy_3",
+            "type": "WreckTruck_01_Canopy_3",
+            "right": {
+                "x": 0.825202,
+                "y": 0,
+                "z": -0.564838
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.564838,
+                "y": 0,
+                "z": 0.825202
+            },
+            "position": {
+                "x": -443.567,
+                "y": 170.411,
+                "z": -344.005
+            },
+            "id": "Map Details/Outpost/WreckTruck_01_Canopy_3"
+        },
+        {
+            "name": "LandSlideRocks_03",
+            "type": "LandSlideRocks_03",
+            "right": {
+                "x": 1.77059,
+                "y": 0.895456,
+                "z": -0.251361
+            },
+            "up": {
+                "x": -0.886566,
+                "y": 1.78834,
+                "z": 0.125861
+            },
+            "front": {
+                "x": 0.281111,
+                "y": 0,
+                "z": 1.98015
+            },
+            "position": {
+                "x": -589.638,
+                "y": 159.203,
+                "z": -367.124
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_03"
+        },
+        {
+            "name": "LandSlideRocks_04",
+            "type": "LandSlideRocks_03",
+            "right": {
+                "x": 0.936043,
+                "y": 0.458199,
+                "z": -1.70701
+            },
+            "up": {
+                "x": -0.937364,
+                "y": 1.76628,
+                "z": -0.0398966
+            },
+            "front": {
+                "x": 1.49839,
+                "y": 0.818716,
+                "z": 1.04141
+            },
+            "position": {
+                "x": -595.77,
+                "y": 157.171,
+                "z": -350.089
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_04"
+        },
+        {
+            "name": "LandSlideRocks_05",
+            "type": "LandSlideRocks_03",
+            "right": {
+                "x": 0.936043,
+                "y": 0.458199,
+                "z": -1.70701
+            },
+            "up": {
+                "x": -0.937364,
+                "y": 1.76628,
+                "z": -0.0398966
+            },
+            "front": {
+                "x": 1.49839,
+                "y": 0.818716,
+                "z": 1.04141
+            },
+            "position": {
+                "x": -600.026,
+                "y": 154.915,
+                "z": -365.55
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_05"
+        },
+        {
+            "name": "LandSlideRocks_02",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": 2.45446,
+                "y": 1.5015,
+                "z": -0.84919
+            },
+            "up": {
+                "x": -1.5307,
+                "y": 2.57674,
+                "z": 0.131828
+            },
+            "front": {
+                "x": 0.795361,
+                "y": 0.325429,
+                "z": 2.87428
+            },
+            "position": {
+                "x": -601.132,
+                "y": 154.709,
+                "z": -363.525
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_02"
+        },
+        {
+            "name": "LandSlideRocks_06",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": -2.40823,
+                "y": 0,
+                "z": -1.78897
+            },
+            "up": {
+                "x": -0.665351,
+                "y": 2.7848,
+                "z": 0.895667
+            },
+            "front": {
+                "x": 1.66064,
+                "y": 1.11576,
+                "z": -2.23548
+            },
+            "position": {
+                "x": -664.838,
+                "y": 148.625,
+                "z": -473.86
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_06"
+        },
+        {
+            "name": "LandSlideRocks_08",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": 3.4283,
+                "y": 0.2324,
+                "z": 3.63219
+            },
+            "up": {
+                "x": -1.74113,
+                "y": 4.48651,
+                "z": 1.35633
+            },
+            "front": {
+                "x": -3.19613,
+                "y": -2.19481,
+                "z": 3.15715
+            },
+            "position": {
+                "x": -684.912,
+                "y": 149.598,
+                "z": -509.373
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_08"
+        },
+        {
+            "name": "LandSlideRocks_09",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": -1.83633,
+                "y": -0.536299,
+                "z": -0.583325
+            },
+            "up": {
+                "x": -0.696453,
+                "y": 1.79461,
+                "z": 0.542534
+            },
+            "front": {
+                "x": 0.377939,
+                "y": 0.701265,
+                "z": -1.8345
+            },
+            "position": {
+                "x": -686.966,
+                "y": 148.971,
+                "z": -503.651
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_09"
+        },
+        {
+            "name": "LandSlideRocks_10",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": -1.87403,
+                "y": -0.649549,
+                "z": -0.257104
+            },
+            "up": {
+                "x": -0.696453,
+                "y": 1.79461,
+                "z": 0.542534
+            },
+            "front": {
+                "x": 0.0544993,
+                "y": 0.597892,
+                "z": -1.90776
+            },
+            "position": {
+                "x": -683.499,
+                "y": 149.439,
+                "z": -500.504
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_10"
+        },
+        {
+            "name": "LandSlideRocks_07",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": -0.0407109,
+                "y": 0.603414,
+                "z": -1.90637
+            },
+            "up": {
+                "x": -0.718852,
+                "y": 1.77487,
+                "z": 0.577142
+            },
+            "front": {
+                "x": 1.8659,
+                "y": 0.696946,
+                "z": 0.180754
+            },
+            "position": {
+                "x": -671.129,
+                "y": 148.114,
+                "z": -481.197
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_07"
+        },
+        {
+            "name": "LandSlideRocks_11",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": 1.72692,
+                "y": 0.397994,
+                "z": 0.927007
+            },
+            "up": {
+                "x": -0.718852,
+                "y": 1.77487,
+                "z": 0.577142
+            },
+            "front": {
+                "x": -0.707808,
+                "y": -0.83153,
+                "z": 1.67558
+            },
+            "position": {
+                "x": -671.745,
+                "y": 146.92,
+                "z": -478.292
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_11"
+        },
+        {
+            "name": "WreckTruck_01_Canopy_4",
+            "type": "WreckTruck_01_Canopy_3",
+            "right": {
+                "x": -0.712412,
+                "y": -0.238269,
+                "z": 0.660073
+            },
+            "up": {
+                "x": -0.409977,
+                "y": 0.9047,
+                "z": -0.115912
+            },
+            "front": {
+                "x": -0.56955,
+                "y": -0.353193,
+                "z": -0.742205
+            },
+            "position": {
+                "x": -585.376,
+                "y": 162.001,
+                "z": -361.187
+            },
+            "id": "Map Details/Outpost/WreckTruck_01_Canopy_4"
+        },
+        {
+            "name": "LandSlideRocks_12",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": 1.41345,
+                "y": 2.98023e-08,
+                "z": -2.64616
+            },
+            "up": {
+                "x": -0.410803,
+                "y": 2.96363,
+                "z": -0.219431
+            },
+            "front": {
+                "x": 2.61408,
+                "y": 0.465735,
+                "z": 1.39631
+            },
+            "position": {
+                "x": -541.933,
+                "y": 167.936,
+                "z": -352.024
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_12"
+        },
+        {
+            "name": "LandSlideRocks_13",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": 2.96687,
+                "y": 0.421686,
+                "z": 0.140917
+            },
+            "up": {
+                "x": -0.410803,
+                "y": 2.96363,
+                "z": -0.219431
+            },
+            "front": {
+                "x": -0.170052,
+                "y": 0.197712,
+                "z": 2.98864
+            },
+            "position": {
+                "x": -554.956,
+                "y": 164.908,
+                "z": -337.658
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_13"
+        },
+        {
+            "name": "LandSlideRocks_14",
+            "type": "LandSlideRocks_03",
+            "right": {
+                "x": 2.78183,
+                "y": 1.12314,
+                "z": 0
+            },
+            "up": {
+                "x": -1.12314,
+                "y": 2.78183,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 3
+            },
+            "position": {
+                "x": -555.104,
+                "y": 164.956,
+                "z": -332.148
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_14"
+        },
+        {
+            "name": "LandSlideRocks_15",
+            "type": "LandSlideRocks_03",
+            "right": {
+                "x": 0.960045,
+                "y": 0.279846,
+                "z": 0
+            },
+            "up": {
+                "x": -0.279846,
+                "y": 0.960045,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": -529.383,
+                "y": 168.902,
+                "z": -376.986
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_15"
+        },
+        {
+            "name": "LandSlideRocks_16",
+            "type": "LandSlideRocks_02",
+            "right": {
+                "x": -0.537086,
+                "y": -0.0664451,
+                "z": -0.840906
+            },
+            "up": {
+                "x": -0.0839471,
+                "y": 0.996154,
+                "z": -0.0250952
+            },
+            "front": {
+                "x": 0.83934,
+                "y": 0.0571133,
+                "z": -0.540599
+            },
+            "position": {
+                "x": -533.086,
+                "y": 169.147,
+                "z": -369.538
+            },
+            "id": "Map Details/Outpost/LandSlideRocks_16"
+        },
+        {
+            "name": "ResidentialHouse_02_Ruin_D",
+            "type": "ResidentialHouse_02_Ruin_D",
+            "right": {
+                "x": 0.157831,
+                "y": 0,
+                "z": -0.987466
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.987466,
+                "y": 0,
+                "z": 0.157831
+            },
+            "position": {
+                "x": -808.319,
+                "y": 139.255,
+                "z": -396.926
+            },
+            "id": "Map Details/Construction/ResidentialHouse_02_Ruin_D"
+        },
+        {
+            "name": "CarSUV_01_Wreck_B",
+            "type": "CarSUV_01_Wreck_B",
+            "right": {
+                "x": 0.824265,
+                "y": 0,
+                "z": -0.566205
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.566205,
+                "y": 0,
+                "z": 0.824265
+            },
+            "position": {
+                "x": -793.099,
+                "y": 142.952,
+                "z": -599.768
+            },
+            "id": "Map Details/Construction/CarSUV_01_Wreck_B"
+        },
+        {
+            "name": "CarSUV_01_Wreck",
+            "type": "CarSUV_01_Wreck",
+            "right": {
+                "x": -0.99216,
+                "y": 0.12482,
+                "z": 0.00623136
+            },
+            "up": {
+                "x": 0.124926,
+                "y": 0.989142,
+                "z": 0.0774114
+            },
+            "front": {
+                "x": 0.00349879,
+                "y": 0.077583,
+                "z": -0.99698
+            },
+            "position": {
+                "x": -783.209,
+                "y": 142.591,
+                "z": -597.06
+            },
+            "id": "Map Details/Construction/CarSUV_01_Wreck"
+        },
+        {
+            "name": "GCarSUV_01_PoliceUS",
+            "type": "GCarSUV_01_PoliceUS",
+            "right": {
+                "x": -0.0317946,
+                "y": 0,
+                "z": 0.999494
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": -0.999494,
+                "y": 0,
+                "z": -0.0317946
+            },
+            "position": {
+                "x": -747.654,
+                "y": 141.839,
+                "z": -553.367
+            },
+            "id": "Map Details/Construction/GCarSUV_01_PoliceUS"
+        },
+        {
+            "name": "GCarSUV_01_PoliceUS2",
+            "type": "GCarSUV_01_PoliceUS",
+            "right": {
+                "x": -0.815663,
+                "y": 0,
+                "z": -0.578527
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.578527,
+                "y": 0,
+                "z": -0.815663
+            },
+            "position": {
+                "x": -753.47,
+                "y": 141.787,
+                "z": -549.8
+            },
+            "id": "Map Details/Construction/GCarSUV_01_PoliceUS2"
+        },
+        {
+            "name": "BarrierPlastic_01",
+            "type": "BarrierPlastic_01",
+            "right": {
+                "x": 0.948837,
+                "y": 0,
+                "z": -0.315765
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.315765,
+                "y": 0,
+                "z": 0.948837
+            },
+            "position": {
+                "x": -745.083,
+                "y": 141.961,
+                "z": -550.155
+            },
+            "id": "Map Details/Construction/BarrierPlastic_01"
+        },
+        {
+            "name": "BarrierPlastic_02",
+            "type": "BarrierPlastic_01",
+            "right": {
+                "x": 0.761402,
+                "y": 0,
+                "z": -0.648279
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.648279,
+                "y": 0,
+                "z": 0.761402
+            },
+            "position": {
+                "x": -748.386,
+                "y": 141.961,
+                "z": -547.445
+            },
+            "id": "Map Details/Construction/BarrierPlastic_02"
+        },
+        {
+            "name": "BarrierPlastic_03",
+            "type": "BarrierPlastic_01",
+            "right": {
+                "x": 0.614161,
+                "y": 0,
+                "z": -0.789181
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0.789181,
+                "y": 0,
+                "z": 0.614161
+            },
+            "position": {
+                "x": -750.918,
+                "y": 141.961,
+                "z": -544.482
+            },
+            "id": "Map Details/Construction/BarrierPlastic_03"
+        },
+        {
+            "name": "FixedCamera",
+            "ObjId": 950,
+            "type": "FixedCamera",
+            "right": {
+                "x": 0.5870791684501343,
+                "y": 2.895459236422e-08,
+                "z": 0.8095295503592667
+            },
+            "up": {
+                "x": -0.20562953,
+                "y": 0.9672013,
+                "z": 0.14912464
+            },
+            "front": {
+                "x": -0.7829780086759013,
+                "y": -0.2540111499999994,
+                "z": 0.5678237207713444
+            },
+            "position": {
+                "x": -283.5863,
+                "y": 212.124,
+                "z": -671.4797
+            },
+            "id": "EndGameCamera/FixedCamera"
+        }
+    ],
+    "Static": [
+        {
+            "name": "MP_Granite_ClubHouse_Portal_Terrain",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Granite_ClubHouse_Portal_Terrain",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Granite_ClubHouse_Portal_Terrain"
+        },
+        {
+            "name": "MP_Granite_ClubHouse_Portal_Assets",
+            "metadata/_edit_lock_": true,
+            "type": "MP_Granite_ClubHouse_Portal_Assets",
+            "right": {
+                "x": 1,
+                "y": 0,
+                "z": 0
+            },
+            "up": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "front": {
+                "x": 0,
+                "y": 0,
+                "z": 1
+            },
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 0
+            },
+            "id": "Static/MP_Granite_ClubHouse_Portal_Assets"
+        }
+    ]
+}

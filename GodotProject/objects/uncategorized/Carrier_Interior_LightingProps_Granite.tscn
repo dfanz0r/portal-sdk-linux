@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/Carrier_Interior_LightingProps_Granite.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/Carrier_Interior_LightingProps_Granite.gd" type="Script" id="2"]
+
+
+[node name="Carrier_Interior_LightingProps_Granite" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

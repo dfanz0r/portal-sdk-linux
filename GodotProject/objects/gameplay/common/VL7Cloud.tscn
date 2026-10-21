@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/VL7Cloud.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/gameplay/common/VL7Cloud.gd" type="Script" id="2"]
+
+
+[node name="VL7Cloud" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

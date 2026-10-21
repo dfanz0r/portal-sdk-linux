@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/M1000Trailer_01_FenderFlapFL.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/props/M1000Trailer_01_FenderFlapFL.gd" type="Script" id="2"]
+
+
+[node name="M1000Trailer_01_FenderFlapFL" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

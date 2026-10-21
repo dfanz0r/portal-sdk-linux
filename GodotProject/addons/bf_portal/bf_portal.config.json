@@ -1,0 +1,20 @@
+{
+  "setupEnabled": true,
+  "python": "../python",
+  "venv": "../venv",
+  "gdconverter": "../code/gdconverter",
+  "fbExportData": "../FbExportData",
+  "export": "../export/levels",
+  "mods": "mods",
+  "modInfoFile": "modinfo.json",
+  "modIconFile": "icon",
+  "modIconFileExtensions": [
+    "svg",
+    "png"
+  ],
+  "modExportDir": "../export",
+  "dataVersion": "",
+  "downloadUrl": "https://download.portal.battlefield.com/",
+  "sdkModels": "PortalSDKModels.zip",
+  "portalUrl": "https://portal.battlefield.com/bf6/"
+}

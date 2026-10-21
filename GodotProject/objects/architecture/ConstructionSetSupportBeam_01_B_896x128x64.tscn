@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/ConstructionSetSupportBeam_01_B_896x128x64.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/ConstructionSetSupportBeam_01_B_896x128x64.gd" type="Script" id="2"]
+
+
+[node name="ConstructionSetSupportBeam_01_B_896x128x64" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

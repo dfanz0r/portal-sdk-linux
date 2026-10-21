@@ -1,0 +1,237 @@
+[gd_scene format=3 uid="uid://dvs2nk8mqx8hx"]
+
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/HQ_PlayerSpawner.tscn" id="1_vc1v3"]
+[ext_resource type="PackedScene" uid="uid://jv31so3xcr7p" path="res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume.tscn" id="2_7id7p"]
+[ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_fplcs"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_wj7a2"]
+[ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_lv4sv"]
+[ext_resource type="PackedScene" path="res://static/MP_Portal_Ocean_Assets.tscn" id="6_lxuuv"]
+[ext_resource type="PackedScene" path="res://static/MP_Portal_Ocean_Terrain.tscn" id="7_2bnef"]
+[ext_resource type="PackedScene" path="res://objects/props/HescoBastionPlatform_01.tscn" id="8_jdfjm"]
+[ext_resource type="PackedScene" path="res://objects/architecture/ConstructionSetStairs_01_A_320x288x384.tscn" id="9_jr3ak"]
+[ext_resource type="PackedScene" path="res://objects/uncategorized/Loot_TableFoldable_01_B.tscn" id="10_6qtr7"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/InteractPoint.tscn" id="11_5vhr6"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/common/WorldIcon.tscn" id="12_c5ylw"]
+[ext_resource type="PackedScene" path="res://objects/gameplay/vehicles/VEH_RHIB.tscn" id="12_uprh3"]
+[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="13_x85md"]
+
+[node name="MP_Portal_Ocean" type="Node3D" unique_id=932931116]
+
+[node name="TEAM_1_HQ" parent="." unique_id=502807004 node_paths=PackedStringArray("HQArea", "InfantrySpawns") instance=ExtResource("1_vc1v3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.572592, 71.86232, 12.044613)
+AltTeam = 0
+ObjId = 1
+HQArea = NodePath("HQ_Team1")
+InfantrySpawns = [NodePath("SpawnPoint_1_1"), NodePath("SpawnPoint_1_2"), NodePath("SpawnPoint_1_3"), NodePath("SpawnPoint_1_4")]
+
+[node name="HQ_Team1" parent="TEAM_1_HQ" unique_id=779710374 instance=ExtResource("2_7id7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5, 0)
+points = PackedVector2Array(5, 5, 5, -5, -5, -5, -5, 5)
+
+[node name="SpawnPoint_1_1" parent="TEAM_1_HQ" unique_id=1617558626 instance=ExtResource("3_fplcs")]
+transform = Transform3D(0.999884, 0, -0.0152535, 0, 1, 0, 0.0152535, 0, 0.999884, 0, 0, -3)
+
+[node name="SpawnPoint_1_2" parent="TEAM_1_HQ" unique_id=1840735605 instance=ExtResource("3_fplcs")]
+transform = Transform3D(-0.9995, 0, -0.0316198, 0, 1, 0, 0.0316198, 0, -0.9995, 3, 0, 0)
+
+[node name="SpawnPoint_1_3" parent="TEAM_1_HQ" unique_id=98488963 instance=ExtResource("3_fplcs")]
+transform = Transform3D(-0.0428871, 0, 0.99908, 0, 1, 0, -0.99908, 0, -0.0428871, -3, 0, 0)
+
+[node name="SpawnPoint_1_4" parent="TEAM_1_HQ" unique_id=256628892 instance=ExtResource("3_fplcs")]
+transform = Transform3D(0.0841819, 0, -0.99645, 0, 1, 0, 0.99645, 0, 0.0841819, 0, 0, 3)
+
+[node name="CombatArea" parent="." unique_id=1863635372 node_paths=PackedStringArray("CombatVolume") instance=ExtResource("4_wj7a2")]
+CombatVolume = NodePath("CombatVolume")
+
+[node name="CombatVolume" parent="CombatArea" unique_id=1655730481 instance=ExtResource("2_7id7p")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 100, 0)
+points = PackedVector2Array(-500, -500, 500, -500, 500, 500, -500, 500)
+
+[node name="Camera3D" type="Camera3D" parent="." unique_id=1680663741]
+transform = Transform3D(1, 0, 0, 0, 0.0871558, 0.996195, 0, -0.996195, 0.0871558, -80.4583, 712.62305, 8.893965)
+
+[node name="DeployCam" parent="Camera3D" unique_id=909515072 instance=ExtResource("5_lv4sv")]
+
+[node name="Static" type="Node3D" parent="." unique_id=1906220689]
+
+[node name="MP_Portal_Ocean_Assets" parent="Static" unique_id=913527599 instance=ExtResource("6_lxuuv")]
+metadata/_edit_lock_ = true
+
+[node name="MP_Portal_Ocean_Terrain" parent="Static" unique_id=485876160 instance=ExtResource("7_2bnef")]
+metadata/_edit_lock_ = true
+
+[node name="WaterPlane" parent="Static" unique_id=386572864 instance=ExtResource("13_x85md")]
+transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 8192, 0, 70, 0)
+metadata/_edit_lock_ = true
+
+[node name="TestingPlatform" type="Node3D" parent="." unique_id=2063527968]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.094, 70, 7.914)
+
+[node name="HescoBastionPlatform_01" parent="TestingPlatform" unique_id=411979807 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 1.4634628, 0)
+
+[node name="HescoBastionPlatform_03" parent="TestingPlatform" unique_id=1200430068 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 1.4634628, 0)
+
+[node name="HescoBastionPlatform_04" parent="TestingPlatform" unique_id=646945997 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 1.4634628, 10)
+
+[node name="HescoBastionPlatform_05" parent="TestingPlatform" unique_id=1392413446 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.3411045e-07, 1.4634628, 10)
+
+[node name="HescoBastionPlatform_06" parent="TestingPlatform" unique_id=909433363 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.3411045e-07, 6.7404175, 10)
+
+[node name="HescoBastionPlatform_07" parent="TestingPlatform" unique_id=447984149 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 6.7404175, 10)
+
+[node name="HescoBastionPlatform_08" parent="TestingPlatform" unique_id=760056206 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 6.7404175, -4.7683716e-07)
+
+[node name="HescoBastionPlatform_02" parent="TestingPlatform" unique_id=587893515 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.9782944, 4.504402, -2.076501)
+
+[node name="ConstructionSetStairs_01_A_320x288x384" parent="TestingPlatform" unique_id=14919956 instance=ExtResource("9_jr3ak")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.0248749, 4.528801, -5.1907654)
+
+[node name="ConstructionSetStairs_01_A_320x288x385" parent="TestingPlatform" unique_id=87221896 instance=ExtResource("9_jr3ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0435553, 2.1534653, 4.8231378)
+
+[node name="HescoBastionPlatform_09" parent="TestingPlatform" unique_id=1772528852 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.3411045e-07, 11.551903, 10)
+
+[node name="HescoBastionPlatform_10" parent="TestingPlatform" unique_id=778814257 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 11.551903, 10)
+
+[node name="HescoBastionPlatform_11" parent="TestingPlatform" unique_id=1263428931 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 11.551903, -4.7683716e-07)
+
+[node name="HescoBastionPlatform_12" parent="TestingPlatform" unique_id=657245352 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.9782944, 9.315887, -2.076501)
+
+[node name="ConstructionSetStairs_01_A_320x288x386" parent="TestingPlatform" unique_id=1752423826 instance=ExtResource("9_jr3ak")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.0248749, 9.340286, -5.1907654)
+
+[node name="ConstructionSetStairs_01_A_320x288x387" parent="TestingPlatform" unique_id=1345049228 instance=ExtResource("9_jr3ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0435553, 6.9649506, 4.8231378)
+
+[node name="HescoBastionPlatform_13" parent="TestingPlatform" unique_id=2130860445 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -1.3411045e-07, 16.551903, 10)
+
+[node name="HescoBastionPlatform_14" parent="TestingPlatform" unique_id=124274733 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 16.551903, 10)
+
+[node name="HescoBastionPlatform_15" parent="TestingPlatform" unique_id=1346937130 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 10, 16.551903, -4.7683716e-07)
+
+[node name="HescoBastionPlatform_16" parent="TestingPlatform" unique_id=1998525991 instance=ExtResource("8_jdfjm")]
+transform = Transform3D(1.2, 0, 0, 0, 1.2, 0, 0, 0, 1.2, -1.9782944, 14.315887, -2.076501)
+
+[node name="ConstructionSetStairs_01_A_320x288x388" parent="TestingPlatform" unique_id=704199570 instance=ExtResource("9_jr3ak")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 1.0248749, 14.340286, -5.1907654)
+
+[node name="ConstructionSetStairs_01_A_320x288x389" parent="TestingPlatform" unique_id=1333433725 instance=ExtResource("9_jr3ak")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.0435553, 11.964951, 4.8231378)
+
+[node name="Loot_TableFoldable_01_B" parent="TestingPlatform" unique_id=1852558307 instance=ExtResource("10_6qtr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.2952695, 16.921906, 14.075863)
+
+[node name="Loot_TableFoldable_01_B2" parent="TestingPlatform" unique_id=1523215129 instance=ExtResource("10_6qtr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.561344, 11.878967, 14.075863)
+
+[node name="Loot_TableFoldable_01_B3" parent="TestingPlatform" unique_id=845188479 instance=ExtResource("10_6qtr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.320914, 11.878967, 14.075863)
+
+[node name="Loot_TableFoldable_01_B4" parent="TestingPlatform" unique_id=78714975 instance=ExtResource("10_6qtr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.320747, 7.096115, 14.075863)
+
+[node name="Loot_TableFoldable_01_B5" parent="TestingPlatform" unique_id=1984237829 instance=ExtResource("10_6qtr7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.5704184, 7.096115, 14.075863)
+
+[node name="VEH_RHIB" parent="TestingPlatform" unique_id=1874911999 instance=ExtResource("12_uprh3")]
+transform = Transform3D(-4.371139e-08, 0, -1, 0, 1, 0, 1, 0, -4.371139e-08, 7.4265947, 1.7132416, -8.289576)
+
+[node name="Portal_Dynamic" type="Node3D" parent="." unique_id=643098918]
+
+[node name="WorldIcon_BeaufortScaleTUTORIAL" parent="." unique_id=1679932453 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.226913, 80.73356, 22.150366)
+ObjId = 47
+IconStringKey = "BEAUFORTSCALETUTORIAL"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="InteractPoint_BeaufortScaleRaise" parent="." unique_id=741614073 instance=ExtResource("11_5vhr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6388597, 78.35056, 22.150366)
+ObjId = 1
+
+[node name="WorldIcon_BeauforScaleRaise" parent="." unique_id=1232769140 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.639, 79.674, 22.15)
+ObjId = 41
+IconStringKey = "BEAUFORTSCALERAISE"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="InteractPoint_BeaufortScaleLower" parent="." unique_id=1670456669 instance=ExtResource("11_5vhr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.403166, 78.35746, 22.150366)
+ObjId = 2
+
+[node name="WorldIcon_BeauforScaleLower" parent="." unique_id=1642583577 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.403, 79.681, 22.15)
+ObjId = 42
+IconStringKey = "BEAUFORTSCALELOWER"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="WorldIcon_WaveAmplitudeTUTORIAL" parent="." unique_id=1447053951 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.226913, 84.965385, 22.150366)
+ObjId = 48
+IconStringKey = "WAVEAMPLITUDETUTORIAL"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="InteractPoint_RaiseAmplitude" parent="." unique_id=1172330272 instance=ExtResource("11_5vhr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.686999, 83.298, 22.15)
+ObjId = 3
+
+[node name="WorldIcon_RaiseAmplitude" parent="." unique_id=1592531787 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.687202, 84.13209, 22.150366)
+ObjId = 43
+IconStringKey = "RAISEAMPLITUDE"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="InteractPoint_LowerAmplitude" parent="." unique_id=31204430 instance=ExtResource("11_5vhr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.403332, 83.29765, 22.150366)
+ObjId = 4
+
+[node name="WorldIcon_LowerAmplitude" parent="." unique_id=1319706730 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.403, 84.132, 22.15)
+ObjId = 44
+IconStringKey = "LOWERAMPLITUDE"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="InteractPoint_WaterPowerUp" parent="." unique_id=2115985832 instance=ExtResource("11_5vhr6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3518147, 88.53484, 22.150366)
+ObjId = 5
+
+[node name="WorldIcon_PowerUpTUTORIAL" parent="." unique_id=1355224280 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.226913, 89.48346, 22.150366)
+ObjId = 49
+IconStringKey = "POWERUPTUTORIAL"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="WorldIcon_PowerUp" parent="." unique_id=1928858300 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.3518147, 89.68275, 22.150366)
+ObjId = 45
+IconStringKey = "POWERUP"
+iconTextVisible = true
+iconImagePicker = 15
+
+[node name="WorldIcon_TUTORIAL" parent="." unique_id=195188639 instance=ExtResource("12_c5ylw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7852807, 73.79622, 12.475084)
+ObjId = 46
+IconStringKey = "TUTORIAL"
+iconTextVisible = true
+iconImagePicker = 15

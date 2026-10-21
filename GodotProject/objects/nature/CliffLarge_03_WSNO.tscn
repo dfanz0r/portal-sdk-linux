@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/CliffLarge_03_WSNO.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/nature/CliffLarge_03_WSNO.gd" type="Script" id="2"]
+
+
+[node name="CliffLarge_03_WSNO" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

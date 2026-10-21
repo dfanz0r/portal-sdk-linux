@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/Military_StorageFacility_05_PropsC.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/Military_StorageFacility_05_PropsC.gd" type="Script" id="2"]
+
+
+[node name="Military_StorageFacility_05_PropsC" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

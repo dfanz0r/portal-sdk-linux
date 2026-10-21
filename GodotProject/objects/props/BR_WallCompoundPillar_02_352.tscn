@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/BR_WallCompoundPillar_02_352.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/props/BR_WallCompoundPillar_02_352.gd" type="Script" id="2"]
+
+
+[node name="BR_WallCompoundPillar_02_352" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/OB_Dinosaur_Standing.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/OB_Dinosaur_Standing.gd" type="Script" id="2"]
+
+
+[node name="OB_Dinosaur_Standing" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]
