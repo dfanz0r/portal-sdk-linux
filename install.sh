@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # Install this Linux-port overlay onto an official PortalSDK extract.
 #
-# Usage: ./install.sh /path/to/PortalSDK-2.1.1.0 [--force]
+# Usage: ./install.sh /path/to/PortalSDK-2.1.2.0 [--force]
 #
 # Refuses to install when the target's sdk.version.json does not match this
 # repo's, unless --force is given.

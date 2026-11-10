@@ -1,4 +1,4 @@
-# Portal SDK 2.1.1.0 — Linux / Godot 4.7
+# Portal SDK 2.1.2.0 — Linux / Godot 4.7
 
 ## Prerequisites
 
@@ -10,11 +10,11 @@
 
 ## Install (overlay)
 
-This repo is a patch set, not a full SDK: `docs/`, `python/` (Windows-only bundle), `FbExportData/` (level list, export data, thumbnails — required at runtime), `GodotProject/raw/` (editor-ignored source metadata), and `code/gdplugins/terrain_3d/` (dormant, unwired upstream staging) are pruned and must come from the official SDK. Extract pristine **2.1.1.0**, then point the installer at it — it refuses to install on a version mismatch unless forced:
+This repo is a patch set, not a full SDK: `docs/`, `python/` (Windows-only bundle), `FbExportData/` (level list, export data, thumbnails — required at runtime), `GodotProject/raw/` (editor-ignored source metadata), and `code/gdplugins/terrain_3d/` (dormant, unwired upstream staging) are pruned and must come from the official SDK. Extract pristine **2.1.2.0**, then point the installer at it — it refuses to install on a version mismatch unless forced:
 
 ```bash
-./install.sh /path/to/PortalSDK-2.1.1.0
-./install.sh /path/to/PortalSDK-2.1.1.0 --force
+./install.sh /path/to/PortalSDK-2.1.2.0
+./install.sh /path/to/PortalSDK-2.1.2.0 --force
 ```
 
 ## Start
@@ -33,13 +33,13 @@ Opening the project needs no setup. Exporting levels or experience bundles does 
 
 ## Provenance and changes
 
-Linux port originally developed against 1.3.2.0/1.3.3.0 and refined on 1.4.3.0, re-applied here onto pristine **2.1.1.0** (which retains its new carrier/community-map data, terrain_3d plugin, and bundle exporter schema — no older SDK files were substituted wholesale).
+Linux port originally developed against 1.3.2.0/1.3.3.0 and refined on 1.4.3.0, re-applied onto pristine 2.1.1.0 and now **2.1.2.0** (which retains its carrier/community-map data, new MP_DryLake/MP_Paradise maps, WaterPlane/WaterPlaneStatic split, terrain_3d plugin, and bundle exporter schema — no older SDK files were substituted wholesale).
 
 - Native setup and level export, with project-relative paths resolved to absolute paths (`portal_plugin.gd`: `read_config()` + `venv_python()`).
 - Setup calls `python3 -m venv` / `pip` directly via `OS.execute` argv arrays — no shell strings, no helper scripts; existing environments are updated, not recursively deleted (`portal_tools_dock.gd`).
 - Native cryptographic UUIDv4 generation for experience attachments, no Windows-Python subprocess (`attachment.gd`).
 - Fixed experience export directory creation and write-error handling (`experience_exporter_export.gd`, also `.spatial.json` export-path lookup).
-- Corrected gameplay resource capitalization in 89 supplied scenes (`tests/fix_resource_case.py`; originals under `.linux-port-backup/`, which is git-ignored and not committed).
+- Corrected gameplay resource capitalization in 93 supplied scenes (`tests/fix_resource_case.py`; originals under `.linux-port-backup/`, which is git-ignored and not committed).
 - Fixed the detached object-library preview viewport leaking at shutdown (`scene_library.gd`).
 - Matching plugin changes live in the single canonical copy at `GodotProject/addons` (the copy Godot loads; upstream's `code/gdplugins` staging duplicates are untracked — they had already drifted, e.g. stale `terrain_decal/bounds.json`).
 - New: `tests/` (scene case-fix audit), `export/levels/`.
