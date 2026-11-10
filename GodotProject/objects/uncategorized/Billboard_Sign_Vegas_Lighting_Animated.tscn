@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/Billboard_Sign_Vegas_Lighting_Animated.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/uncategorized/Billboard_Sign_Vegas_Lighting_Animated.gd" type="Script" id="2"]
+
+
+[node name="Billboard_Sign_Vegas_Lighting_Animated" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

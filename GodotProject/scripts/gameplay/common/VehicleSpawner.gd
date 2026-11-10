@@ -10,7 +10,7 @@ enum MatchingTeam_selection {TeamNeutral, Team1, Team2, Team3, Team4, Team5, Tea
 @export var EnableRespawn = true
 @export var ObjId = -1
 
-enum VehicleType_selection {Abrams, Leopard, Cheetah, CV90, Gepard, UH60, Eurocopter, AH6M, AH64, Vector, Quadbike, GolfCart, Marauder, Flyer60, JAS39, F22, F16, M2Bradley, SU57, UH60_Pax, Marauder_Pax, RHIB, DirtBike, DirtBike_Pax, AH6M_Pax, Couch, RCB_90_Patrol_Boat, RCB_90_Patrol_Boat_Pax, F_74A_Seacat, F_74A_Seacat_Pax, FA_81F_Super_Spectre, FA_81F_Super_Spectre_Pax}
+enum VehicleType_selection {Abrams, Leopard, Cheetah, CV90, Gepard, UH60, Eurocopter, AH6M, AH64, Vector, Quadbike, GolfCart, Marauder, Flyer60, JAS39, F22, F16, M2Bradley, SU57, UH60_Pax, Marauder_Pax, RHIB, DirtBike, DirtBike_Pax, AH6M_Pax, Couch, RCB_90_Patrol_Boat, RCB_90_Patrol_Boat_Pax, F_74A_Seacat, F_74A_Seacat_Pax, FA_81F_Super_Spectre, FA_81F_Super_Spectre_Pax, M142_MRAS, M142_MRAS_Pax}
 @export var VehicleType: VehicleType_selection = VehicleType_selection.Abrams
 
 @export var P_AutoSpawnEnabled = false
@@ -20,6 +20,7 @@ enum VehicleType_selection {Abrams, Leopard, Cheetah, CV90, Gepard, UH60, Euroco
 @export var P_TimeUntilAbandon = 10
 @export var P_KeepAliveAbandonRadius = 50
 @export var P_KeepAliveSpawnerRadius = 50
+@export var SpawnPointOverride : Array[SpawnPoint]
 @export var id = ""
 
 var global_name = self.get_script().get_global_name()

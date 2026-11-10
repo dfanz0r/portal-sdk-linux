@@ -1,0 +1,2 @@
+class_name WaterPlaneStatic
+extends MeshInstance3D

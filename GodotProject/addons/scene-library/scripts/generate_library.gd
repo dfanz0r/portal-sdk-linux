@@ -29,40 +29,19 @@ static func generate_library() -> String:
 		new_library[level] = collection
 
 	var asset_types = _get_asset_types()
-	var objects: Array[String] = _get_all_file_paths("res://objects")
-	for object in objects:
-		if object.get_extension() != "tscn":
-			continue
-		var object_name = object.get_file().get_basename()
-		if object_name in asset_types:
-			var asset_type = asset_types[object_name]
-			var id: int = SceneLibrary.get_path_hash(object)
-			var new_asset: Dictionary[StringName, Variant] = SceneLibrary.create_asset_no_thumbnail(id, object)
-			var add_to_every_level = true
-			if "levelRestrictions" in asset_type:
-				var levels = asset_type["levelRestrictions"]
-				if levels.size() > 0:
-					add_to_every_level = false
-					for level in levels:
-						var collection = new_library.get(level, null)
-						if collection != null:
-							collection.get("assets").append(new_asset)
-							
-			if add_to_every_level:
-				# no restrictions aka add to every collection
-				for collection in new_library:
-					var assets = new_library[collection].get("assets")
-					assets.append(new_asset)
+	var object_paths: Array[String] = _get_all_file_paths("res://objects")
+	var addon_paths: Array[String] = _get_all_file_paths("res://addons/bf_portal/portal_tools/types")
 	
-	var addon_types: Array[String] = _get_all_file_paths("res://addons/bf_portal/portal_tools/types")
-	for addon_type in addon_types:
-		if addon_type.get_extension() != "tscn":
+	for type_path in (object_paths + addon_paths):
+		if type_path.get_extension() != "tscn":
 			continue
-		var id: int = SceneLibrary.get_path_hash(addon_type)
-		var new_asset: Dictionary[StringName, Variant] = SceneLibrary.create_asset_no_thumbnail(id, addon_type)
-		for collection in new_library:
-			var assets = new_library[collection].get("assets")
-			assets.append(new_asset)
+		var type_name = type_path.get_file().get_basename()
+		if type_name in asset_types:
+			var asset_type = asset_types[type_name]
+			_add_asset_type_to_library(type_path, asset_type, new_library)
+		else:
+			print(type_path)
+			_add_asset_type_to_library(type_path, null, new_library)
 
 	var new_library_as_array: Array[Dictionary] = []
 	for collection in new_library:
@@ -134,3 +113,23 @@ static func _get_all_file_paths(path: String) -> Array[String]:
 			file_paths.append(file_path)
 		file_name = dir.get_next()
 	return file_paths
+
+
+static func _add_asset_type_to_library(object_path: String, asset_obj: Variant, new_library: Variant) -> void:
+	var id: int = SceneLibrary.get_path_hash(object_path)
+	var new_asset: Dictionary[StringName, Variant] = SceneLibrary.create_asset_no_thumbnail(id, object_path)
+	var add_to_every_level = true
+	if asset_obj != null && "levelRestrictions" in asset_obj:
+		var levels = asset_obj["levelRestrictions"]
+		if levels.size() > 0:
+			add_to_every_level = false
+			for level in levels:
+				var collection = new_library.get(level, null)
+				if collection != null:
+					collection.get("assets").append(new_asset)
+					
+	if add_to_every_level:
+		# no restrictions aka add to every collection
+		for collection in new_library:
+			var assets = new_library[collection].get("assets")
+			assets.append(new_asset)

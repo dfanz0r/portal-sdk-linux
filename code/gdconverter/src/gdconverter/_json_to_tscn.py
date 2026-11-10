@@ -39,14 +39,24 @@ def create_godot_files_from_assets(
     missing_meshes: set[str] = set()
 
     dst_dir = str(dst_dir)
+    addon_path = "addons/bf_portal/portal_tools/types"
 
     for asset_id, asset in assets.items():
         asset_rsrcs: jstype.ResourceExtAndBlob = {}
         category_prop = asset.consts.get(const.CONST_KEY_CATEGORY)
         assert category_prop
         category: str = category_prop.get_val()
+        dst = os.path.join(asset.dst, asset.id)
 
         if category == const.CONST_CATEGORY_SPATIAL:
+            if asset_id == "waterplane":
+                asset.ext = ".tscn"
+                dst_gd = Path(dst.replace(config.dst_assets.stem, config.dst_scripts.stem, 1) + ".gd")
+                asset_rsrcs[".tscn"] = jstype.create_resource(Path(f"{dst_dir}/{addon_path}/WaterPlane/WaterPlane.tscn"))
+                if _create_gd_file(asset, dst_gd, custom_icon=f"res://{addon_path}/WaterPlane/WaterPlane.svg"):
+                    asset_rsrcs[".gd"] = jstype.create_resource(dst_gd)
+                asset_resources[asset_id] = asset_rsrcs
+                continue
             mesh = asset.consts.get(const.CONST_KEY_MESH)
             assert mesh
             mesh_id = mesh.get_val().lower()
@@ -64,21 +74,18 @@ def create_godot_files_from_assets(
         elif category == const.CONST_CATEGORY_WAYPOINTPATH:
             continue  # don't create gd or tscn
         elif category == const.CONST_CATEGORY_POLYGON_VOLUME:
-            addon_path = "addons/bf_portal/portal_tools/types"
             asset.ext = ".tscn"
             asset_rsrcs[".gd"] = jstype.create_resource(Path(f"{dst_dir}/{addon_path}/PolygonVolume/PolygonVolume.gd"))
             asset_rsrcs[".tscn"] = jstype.create_resource(Path(f"{dst_dir}/{addon_path}/PolygonVolume/PolygonVolume.tscn"))
             asset_resources[asset_id] = asset_rsrcs
             continue
         elif category == const.CONST_CATEGORY_OBB_VOLUME:
-            addon_path = "addons/bf_portal/portal_tools/types"
             asset.ext = ".tscn"
             asset_rsrcs[".gd"] = jstype.create_resource(Path(f"{dst_dir}/{addon_path}/OBBVolume/OBBVolume.gd"))
             asset_rsrcs[".tscn"] = jstype.create_resource(Path(f"{dst_dir}/{addon_path}/OBBVolume/OBBVolume.tscn"))
             asset_resources[asset_id] = asset_rsrcs
             continue
 
-        dst = os.path.join(asset.dst, asset.id)
         project_dir = Path(dst.removeprefix(dst_dir + os.path.sep))
         if project_dir.parts[0] == config.dst_assets.stem:  # assumption that all spatials will be present here
             dst_gd = Path(dst.replace(config.dst_assets.stem, config.dst_scripts.stem, 1) + ".gd")
@@ -215,7 +222,7 @@ def _create_warning_check(prop_name: str, prop_rule: const.PropCheckRule) -> str
 		warnings.append("{prop_rule.warning.format(prop = prop_name)}")"""
 
 
-def _create_gd_file(asset: jstype.Asset, dst: Path) -> Path | None:
+def _create_gd_file(asset: jstype.Asset, dst: Path, custom_icon: str = "") -> Path | None:
     """Create script file (.gd) used by assets. Returns path of created file"""
 
     if not asset.props:
@@ -231,6 +238,8 @@ def _create_gd_file(asset: jstype.Asset, dst: Path) -> Path | None:
     os.makedirs(os.path.dirname(dst), exist_ok=True)
     with open(dst, "w", encoding="utf-8") as gd_file:
         gd_file.write("@tool\n")
+        if custom_icon != "":
+            gd_file.write(f'@icon("{custom_icon}")')
         gd_file.write(f"class_name {asset.id}\n")
         gd_file.write(f"extends {tscn_type}\n\n")
         for prop_data in asset.props.values():

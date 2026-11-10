@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/InteractPoint.tscn" id="11_5vhr6"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/WorldIcon.tscn" id="12_c5ylw"]
 [ext_resource type="PackedScene" path="res://objects/gameplay/vehicles/VEH_RHIB.tscn" id="12_uprh3"]
-[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="13_x85md"]
+[ext_resource type="PackedScene" uid="uid://bwpadniour8hw" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="13_x85md"]
 
 [node name="MP_Portal_Ocean" type="Node3D" unique_id=932931116]
 
@@ -52,16 +52,15 @@ transform = Transform3D(1, 0, 0, 0, 0.0871558, 0.996195, 0, -0.996195, 0.0871558
 
 [node name="DeployCam" parent="Camera3D" unique_id=909515072 instance=ExtResource("5_lv4sv")]
 
+[node name="WaterPlane" parent="." unique_id=386572864 instance=ExtResource("13_x85md")]
+transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 8192, 0, 70, 0)
+
 [node name="Static" type="Node3D" parent="." unique_id=1906220689]
 
 [node name="MP_Portal_Ocean_Assets" parent="Static" unique_id=913527599 instance=ExtResource("6_lxuuv")]
 metadata/_edit_lock_ = true
 
 [node name="MP_Portal_Ocean_Terrain" parent="Static" unique_id=485876160 instance=ExtResource("7_2bnef")]
-metadata/_edit_lock_ = true
-
-[node name="WaterPlane" parent="Static" unique_id=386572864 instance=ExtResource("13_x85md")]
-transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 8192, 0, 70, 0)
 metadata/_edit_lock_ = true
 
 [node name="TestingPlatform" type="Node3D" parent="." unique_id=2063527968]

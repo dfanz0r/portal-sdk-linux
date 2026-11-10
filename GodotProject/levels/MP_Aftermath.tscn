@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_luhxc"]
 [ext_resource type="PackedScene" path="res://static/MP_Aftermath_Terrain.tscn" id="5_tlxhh"]
 [ext_resource type="PackedScene" path="res://static/MP_Aftermath_Assets.tscn" id="6_lmucn"]
-[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_5ur4y"]
+[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlaneStatic/WaterPlaneStatic.tscn" id="8_5ur4y"]
 
 [node name="MP_Aftermath" type="Node3D" unique_id=296383327]
 
@@ -78,6 +78,6 @@ metadata/_edit_lock_ = true
 [node name="MP_Aftermath_Assets" parent="Static" unique_id=2055542175 instance=ExtResource("6_lmucn")]
 metadata/_edit_lock_ = true
 
-[node name="WaterPlane" parent="Static" unique_id=308259124 instance=ExtResource("8_5ur4y")]
+[node name="WaterPlaneStatic" parent="Static" unique_id=308259124 instance=ExtResource("8_5ur4y")]
 transform = Transform3D(10000, 0, 0, 0, 1, 0, 0, 0, 9999.999, -35.746, 49.7, 1.634)
 metadata/_edit_lock_ = true

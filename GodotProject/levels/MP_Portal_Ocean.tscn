@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" path="res://static/MP_Portal_Ocean_Assets.tscn" id="6_lxuuv"]
 [ext_resource type="PackedScene" path="res://static/MP_Portal_Ocean_Terrain.tscn" id="7_2bnef"]
 [ext_resource type="PackedScene" path="res://objects/architecture/HighwayStraight_01.tscn" id="8_2bnef"]
-[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="9_75ihb"]
+[ext_resource type="PackedScene" uid="uid://bwpadniour8hw" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="9_75ihb"]
 
 [node name="MP_Portal_Ocean" type="Node3D" unique_id=932931116]
 
@@ -82,6 +82,5 @@ metadata/_edit_lock_ = true
 [node name="MP_Portal_Ocean_Terrain" parent="Static" unique_id=485876160 instance=ExtResource("7_2bnef")]
 metadata/_edit_lock_ = true
 
-[node name="WaterPlane" parent="Static" unique_id=308259124 instance=ExtResource("9_75ihb")]
+[node name="WaterPlane" parent="." unique_id=308259124 instance=ExtResource("9_75ihb")]
 transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 8192, 0, 70, 0)
-metadata/_edit_lock_ = true

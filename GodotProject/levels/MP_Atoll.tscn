@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_lv4sv"]
 [ext_resource type="PackedScene" path="res://static/MP_Atoll_Assets.tscn" id="6_wre05"]
 [ext_resource type="PackedScene" path="res://static/MP_Atoll_Terrain.tscn" id="7_325s3"]
-[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_325s3"]
+[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlaneStatic/WaterPlaneStatic.tscn" id="8_325s3"]
 
 [node name="MP_Atoll" type="Node3D" unique_id=932931116]
 
@@ -78,6 +78,6 @@ metadata/_edit_lock_ = true
 [node name="MP_Atoll_Terrain" parent="Static" unique_id=485876160 instance=ExtResource("7_325s3")]
 metadata/_edit_lock_ = true
 
-[node name="WaterPlane" parent="Static" unique_id=308259124 instance=ExtResource("8_325s3")]
+[node name="WaterPlaneStatic" parent="Static" unique_id=308259124 instance=ExtResource("8_325s3")]
 transform = Transform3D(4096, 0, 0, 0, 1, 0, 0, 0, 4096, 22.714, 97.462, -17.912)
 metadata/_edit_lock_ = true

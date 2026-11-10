@@ -1,15 +1,15 @@
-[gd_scene format=3 uid="uid://b75wlya1kk2rs"]
+[gd_scene format=3 uid="uid://bwpadniour8hw"]
 
-[ext_resource type="Script" uid="uid://dfuxs3875w43j" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.gd" id="1_2i3i1"]
+[ext_resource type="Script" path="res://scripts/gameplay/WaterPlane.gd" id="1_2i3i1"]
+[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlaneStatic/WaterPlaneStatic.tscn" id="2_svntl"]
 
-[sub_resource type="PlaneMesh" id="PlaneMesh_kgo8e"]
-size = Vector2(1, 1)
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_kgo8e"]
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_svntl"]
 transparency = 1
-albedo_color = Color(0.09803922, 0.69803923, 0.8745098, 0.29803923)
+albedo_color = Color(0.048299994, 0.2622001, 0.69, 0.29803923)
 
-[node name="WaterPlane" type="MeshInstance3D" unique_id=308259124]
-mesh = SubResource("PlaneMesh_kgo8e")
-surface_material_override/0 = SubResource("StandardMaterial3D_kgo8e")
+[node name="WaterPlane" type="Node3D" unique_id=789803598]
+transform = Transform3D(4096, 0, 0, 0, 1, 0, 0, 0, 4096, 0, 0, 0)
 script = ExtResource("1_2i3i1")
+
+[node name="WaterPlaneStatic" parent="." unique_id=308259124 instance=ExtResource("2_svntl")]
+surface_material_override/0 = SubResource("StandardMaterial3D_svntl")

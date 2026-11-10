@@ -1,2 +1,0 @@
-class_name WaterPlane
-extends MeshInstance3D

@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="5_2on1q"]
 [ext_resource type="PackedScene" path="res://static/MP_Granite_MilitaryStorage_Portal_Terrain.tscn" id="6_r0lb4"]
 [ext_resource type="PackedScene" path="res://static/MP_Granite_MilitaryStorage_Portal_Assets.tscn" id="7_ey7ld"]
-[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_7m8m6"]
+[ext_resource type="PackedScene" uid="uid://bwpadniour8hw" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_7m8m6"]
 
 [node name="MP_Granite_MilitaryStorage_Portal" type="Node3D" unique_id=1757193277]
 
@@ -79,6 +79,5 @@ metadata/_edit_lock_ = true
 [node name="MP_Granite_MilitaryStorage_Portal_Assets" parent="Static" unique_id=499023247 instance=ExtResource("7_ey7ld")]
 metadata/_edit_lock_ = true
 
-[node name="WaterPlane" parent="Static" unique_id=308259124 instance=ExtResource("8_7m8m6")]
+[node name="WaterPlane" parent="." unique_id=308259124 instance=ExtResource("8_7m8m6")]
 transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 8192, -6.707, 99.873, -4.249)
-metadata/_edit_lock_ = true

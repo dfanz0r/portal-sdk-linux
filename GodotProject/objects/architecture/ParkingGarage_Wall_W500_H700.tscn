@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/ParkingGarage_Wall_W500_H700.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/ParkingGarage_Wall_W500_H700.gd" type="Script" id="2"]
+
+
+[node name="ParkingGarage_Wall_W500_H700" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

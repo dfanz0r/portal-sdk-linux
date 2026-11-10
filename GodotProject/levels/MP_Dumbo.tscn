@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" path="res://objects/entities/SpawnPoint.tscn" id="3_0y012"]
 [ext_resource type="PackedScene" path="res://objects/Gameplay/Common/CombatArea.tscn" id="4_lfldh"]
 [ext_resource type="PackedScene" path="res://objects/Gameplay/Common/DeployCam.tscn" id="5_01xix"]
-[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_5cjto"]
+[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlaneStatic/WaterPlaneStatic.tscn" id="8_5cjto"]
 
 [node name="MP_Dumbo" type="Node3D" unique_id=691842084]
 
@@ -78,6 +78,6 @@ metadata/_edit_lock_ = true
 [node name="MP_Dumbo_Assets" parent="Static" unique_id=292531588 instance=ExtResource("2_j7sg7")]
 metadata/_edit_lock_ = true
 
-[node name="WaterPlane" parent="Static" unique_id=308259124 instance=ExtResource("8_5cjto")]
+[node name="WaterPlaneStatic" parent="Static" unique_id=308259124 instance=ExtResource("8_5cjto")]
 transform = Transform3D(4096, 0, 0, 0, 1, 0, 0, 0, 4096, 0, 49.8, -285.235)
 metadata/_edit_lock_ = true

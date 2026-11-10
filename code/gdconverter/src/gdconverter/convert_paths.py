@@ -72,12 +72,16 @@ def convert_paths(args: ConvertPathsArgs) -> bool:
             continue
         asset = assets[type_name]
         expected_path = "res://" + asset.dst.removeprefix(str(temp_output) + os.path.sep).replace("\\", "/") + f"/{asset.id}"
+        custom_types_path = "res://addons/bf_portal/portal_tools/types"
+
         if type_name == "volume":
             expected_path = expected_path.replace(config.dst_assets.stem, config.dst_scripts.stem)
         elif type_name == "polygonvolume":
-            expected_path = "res://addons/bf_portal/portal_tools/types/PolygonVolume/PolygonVolume"
+            expected_path = f"{custom_types_path}/PolygonVolume/PolygonVolume"
         elif type_name == "obbvolume":
-            expected_path = "res://addons/bf_portal/portal_tools/types/OBBVolume/OBBVolume"
+            expected_path = f"{custom_types_path}/OBBVolume/OBBVolume"
+        elif type_name == "waterplane":
+            expected_path = f"{custom_types_path}/WaterPlane/WaterPlane"
         actual_path = "res://" + str(Path(ext_resource.path).with_suffix("")).replace("\\", "/")
 
         path_mismatch = expected_path != actual_path if not args.ignore_case else expected_path.lower() != actual_path.lower()

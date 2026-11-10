@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/Olympus_Balcony_A_Floor.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/Olympus_Balcony_A_Floor.gd" type="Script" id="2"]
+
+
+[node name="Olympus_Balcony_A_Floor" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

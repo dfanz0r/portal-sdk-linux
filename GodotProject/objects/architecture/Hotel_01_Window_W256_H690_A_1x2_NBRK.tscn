@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/Hotel_01_Window_W256_H690_A_1x2_NBRK.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/Hotel_01_Window_W256_H690_A_1x2_NBRK.gd" type="Script" id="2"]
+
+
+[node name="Hotel_01_Window_W256_H690_A_1x2_NBRK" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

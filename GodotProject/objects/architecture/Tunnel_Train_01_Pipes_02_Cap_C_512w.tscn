@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource path="res://raw/models/Tunnel_Train_01_Pipes_02_Cap_C_512w.glb" type="PackedScene" id="1"]
+[ext_resource path="res://scripts/architecture/Tunnel_Train_01_Pipes_02_Cap_C_512w.gd" type="Script" id="2"]
+
+
+[node name="Tunnel_Train_01_Pipes_02_Cap_C_512w" type="Node3D"]
+script = ExtResource("2")
+
+[node name="Mesh" parent="." instance=ExtResource("1")]

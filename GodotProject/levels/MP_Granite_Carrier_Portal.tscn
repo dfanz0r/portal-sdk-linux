@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" path="res://objects/gameplay/common/DeployCam.tscn" id="5_yn0kq"]
 [ext_resource type="PackedScene" path="res://static/MP_Granite_Carrier_Portal_Assets.tscn" id="6_7ds3h"]
 [ext_resource type="PackedScene" path="res://static/MP_Granite_Carrier_Portal_Terrain.tscn" id="7_kay2f"]
-[ext_resource type="PackedScene" uid="uid://b75wlya1kk2rs" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_tchmv"]
+[ext_resource type="PackedScene" uid="uid://bwpadniour8hw" path="res://addons/bf_portal/portal_tools/types/WaterPlane/WaterPlane.tscn" id="8_tchmv"]
 
 [node name="MP_Granite_Carrier_Portal" type="Node3D" unique_id=235859678]
 
@@ -76,6 +76,5 @@ transform = Transform3D(1, 0, 0, 0, 0.10105598, 0.99488074, 0, -0.99488074, 0.10
 
 [node name="MP_Granite_Carrier_Portal_Terrain" parent="Static" unique_id=415685632 instance=ExtResource("7_kay2f")]
 
-[node name="WaterPlane" parent="Static" unique_id=308259124 instance=ExtResource("8_tchmv")]
+[node name="WaterPlane" parent="." unique_id=308259124 instance=ExtResource("8_tchmv")]
 transform = Transform3D(8192, 0, 0, 0, 1, 0, 0, 0, 8192, 5.917, 0, 3.698)
-metadata/_edit_lock_ = true
