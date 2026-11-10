@@ -10,7 +10,7 @@
 
 ## Install (overlay)
 
-This repo is a patch set, not a full SDK: `docs/`, `python/` (Windows-only bundle), `FbExportData/` (level list, export data, thumbnails — required at runtime), `GodotProject/raw/` (editor-ignored source metadata), and `code/gdplugins/terrain_3d/` (dormant, unwired upstream staging) are pruned and must come from the official SDK. Extract pristine **2.1.2.0**, then point the installer at it — it refuses to install on a version mismatch unless forced:
+This repo is a patch set, not a full SDK: `docs/`, `python/` (Windows-only bundle), `FbExportData/` (level list, export data, thumbnails — required at runtime), `GodotProject/raw/` (editor-ignored source metadata), and `code/gdplugins/terrain_3d/` (dormant, unwired upstream staging) are pruned and must come from the official SDK. Extract pristine **2.1.2.0**, then point the installer at it — it copies only files tracked by this repo (never ignored local state such as `.linux-port-backup/`, editor `.uid` noise, or `code/gdplugins/` staging copies) and refuses to install on a version mismatch unless forced:
 
 ```bash
 ./install.sh /path/to/PortalSDK-2.1.2.0

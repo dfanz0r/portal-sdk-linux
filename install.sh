@@ -15,8 +15,7 @@ if [ "${2:-}" = "--force" ]; then
 fi
 
 if [ -z "$target" ]; then
-	echo "Usage: $0 /path/to/PortalSDK [-force]" >&2
-	echo "       $0 /path/to/PortalSDK --force" >&2
+	echo "Usage: $0 /path/to/PortalSDK [--force]" >&2
 	exit 2
 fi
 
@@ -38,14 +37,26 @@ if [ "$expected" != "$actual" ]; then
 	echo "Continuing with --force." >&2
 fi
 
-rsync -a \
-	--exclude='/.git/' \
-	--exclude='/.godot/' \
-	--exclude='/venv/' \
-	--exclude='/export/' \
-	--exclude='__pycache__/' \
-	"$repo/" "$target/"
+# Install only files tracked by this repo. A checkout accumulates ignored
+# local state (editor .uid noise, scene_library.json, .linux-port-backup/,
+# code/gdplugins/ staging copies, ...) that must not leak into the SDK.
+if git -C "$repo" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+	git -C "$repo" ls-files -z |
+		rsync -a --from0 --files-from=- "$repo/" "$target/"
+	revision="$(git -C "$repo" rev-parse --short HEAD)"
+	if [ -n "$(git -C "$repo" status --porcelain --untracked-files=no)" ]; then
+		revision="$revision-dirty"
+	fi
+else
+	# Not a git checkout (e.g. a downloaded archive): no ignored state to skip.
+	rsync -a \
+		--exclude='/.godot/' \
+		--exclude='/venv/' \
+		--exclude='/export/' \
+		--exclude='__pycache__/' \
+		"$repo/" "$target/"
+	revision=unknown
+fi
 mkdir -p "$target/export/levels"
 
-revision="$(git -C "$repo" rev-parse --short HEAD 2>/dev/null || echo unknown)"
 echo "Installed Linux port ($revision, SDK $expected) into $target"
